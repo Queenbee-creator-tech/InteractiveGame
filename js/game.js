@@ -105,6 +105,7 @@
   }
   function renderInteraction(s){
     els.interaction.innerHTML="";
+    if(s.id==="explore" && !state.hotspots.explore){const p=document.createElement("p");p.className="interaction-setup";p.textContent="Find the boa in the scene above and use the Scan boa hotspot to collect the tooth-geometry observation.";els.interaction.appendChild(p);return}
     if(s.id==="final" && state.finalChainDone && !state.completed.has(state.section)){renderFollowup(s);return}
     if(s.interaction.type==="sequence")renderSequence(s);
     if(s.interaction.type==="choice")renderChoice(s);
