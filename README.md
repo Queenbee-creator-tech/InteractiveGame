@@ -21,37 +21,128 @@ The finished project must directly support the PRTT rubric categories: **Biology
 
 ## What the Final Experience Should Feel Like
 
-The final product should feel like a **mini scientific mission/game**, not a static webpage.
+The final product should feel like a **short interactive role-playing scientific discovery game**, not primarily a webpage that alternates between reading and multiple-choice questions. The player is the scientist working alongside WartsWorth.
 
-Target player journey:
+### Core Gameplay Loop
 
-1. **Mission Briefing**
-   - Introduce the medical problem: a dangerous blood clot needs to be captured/removed.
-   - Introduce the player as the researcher/designer.
+**Explore → click/discover → WartsWorth reacts and explains → interact with something → observe what happens → apply what was learned → short comprehension check if needed → continue the story.**
 
-2. **Biology Investigation**
-   - Examine a snake tooth.
-   - Learn which tooth structures/features matter.
-   - Include a small interaction such as clicking hotspots, matching structure to function, or choosing the most useful feature.
+Large illustrated environments should carry the experience. Each major environment can contain multiple keyboard-accessible hotspots: some advance the investigation, while others reward exploration with scientific facts, environmental details, source-supported context, or brief WartsWorth reactions. Multiple-choice remains available when it genuinely checks understanding or evidence boundaries, but it is a supporting mechanic rather than the main gameplay.
 
-3. **Mechanism Challenge**
-   - Show how the tooth feature interacts with tissue/prey.
-   - Ask the player to identify the biological mechanism that could transfer to engineering.
+WartsWorth is an active research partner rather than a static narrator box. He may change clothing/equipment for each environment, use his tablet and other research tools, react to discoveries, explain scientific evidence, and use occasional humor without compromising scientific accuracy.
 
-4. **Engineering Transfer**
-   - Move from snake biology into the lab.
-   - Show how the biological principle informs the clot-removal device.
+### Target Story / Environment Progression
+
+1. **Hospital / Medical Problem**
+   - Receive the mission and investigate the medical context.
+   - Explore the hospital/computer scan to understand the clot, blockage, aspiration, and design need.
+
+2. **Field Exploration**
+   - Enter a large visual habitat and explore multiple hotspots.
+   - Find the camouflaged/hidden boa rather than having it immediately presented.
+   - Activate WartsWorth's tablet only after the boa is discovered.
+
+3. **Tablet Scan → Tooth Investigation**
+   - Use the tablet/camera to photograph or scan the boa without harming it.
+   - Transition/zoom into the teeth.
+   - Investigate clickable tooth structures and connect structure to biological function.
+
+4. **Laboratory / Biological-to-Engineering Translation**
+   - Compare the biological structure with the engineered design.
+   - Interact with corresponding features through highlighting, selecting, placing, matching, or simple assembly.
    - Make the biology → mechanism → engineered feature relationship visually explicit.
 
-5. **Clot Capture / Design Test**
-   - Let the player make or test a design choice.
-   - Demonstrate what happens when the device interacts with a clot.
+5. **Computer / Testing Station**
+   - Run a simplified clot/device experiment or simulation.
+   - Observe consequences of design choices.
+   - When practical, ineffective choices should produce informative consequences and WartsWorth guidance rather than a generic WRONG message.
 
-6. **Debrief**
-   - Reinforce the biological inspiration, problem solved, technology, course connection, and limitations.
-   - Display references/credits and accessibility options.
+6. **Return to Medical Context / Debrief**
+   - Reconnect the design to the original medical problem.
+   - Reinforce what the evidence supports, the bioinspiration/course connection, usefulness, and limitations.
+   - Use a short final comprehension check only where it strengthens learning/rubric coverage.
+   - Provide references, credits, and accessibility materials.
 
-The experience should take roughly **4–5 minutes** for a first-time player.
+### Scope Guardrails
+
+This remains a realistic **HTML/CSS/vanilla JavaScript GitHub Pages project**. The exploratory feeling will come from illustrated/full-screen scenes, hotspots, overlays, simple transitions, scan effects, click-to-place/select-and-assemble interactions, controlled animation, and state changes. We are **not** building 3D gameplay, free-roaming movement, complex physics, sophisticated medical simulation, or advanced animation.
+
+Final polished artwork is not required while interaction architecture is being prototyped. Placeholder/simple graphics are acceptable until gameplay is proven.
+
+The experience should remain roughly **4–5 minutes** for a first-time player, preserve all scientific claim guardrails and citations, and continue satisfying the PRTT rubric and accessibility requirements.
+
+---
+
+## Interaction Architecture Implementation Checklist
+
+Do not replace the existing project wholesale. Upgrade one sequence at a time, test it, and reuse successful interaction patterns in later scenes.
+
+### Prototype A — Field → Hidden Boa → Tablet Scan → Tooth Investigation
+- [ ] Define field-scene hotspot map and required vs optional discoveries
+- [ ] Make the boa visually hidden/camouflaged but discoverable
+- [ ] Add several optional field hotspots with brief WartsWorth reactions/facts
+- [ ] Add accessible hotspot labels/focus states and non-pointer equivalents
+- [ ] Make finding the boa trigger WartsWorth's discovery reaction
+- [ ] Unlock/activate the tablet only after the boa is found
+- [ ] Add tablet camera/scanner interaction
+- [ ] Add non-harmful observation/photograph framing in dialogue
+- [ ] Add simple scan/photograph feedback animation with reduced-motion fallback
+- [ ] Transition from whole-animal field view into tooth close-up
+- [ ] Add clickable tooth-structure hotspots
+- [ ] Connect each required tooth feature to sourced structure/function teaching
+- [ ] Track required tooth discoveries before progression
+- [ ] Add one short comprehension/abstraction check only if needed
+- [ ] Test complete prototype with mouse
+- [ ] Test complete prototype with keyboard
+- [ ] Test reduced-motion/text-equivalent behavior
+- [ ] Time the sequence and confirm it fits the 4–5 minute total budget
+- [ ] Approve this interaction pattern before adapting other scenes
+
+### Prototype B — Hospital Discovery Upgrade
+- [ ] Preserve current outside-hospital mission briefing
+- [ ] Preserve current clot/blockage/aspiration scientific content
+- [ ] Reframe hospital computer interactions as investigation rather than quiz progression
+- [ ] Add optional environmental hotspots/reactions where they improve exploration
+- [ ] Keep a short design-need check only if useful for learning/rubric evidence
+- [ ] Test accessibility, clarity, and timing
+
+### Prototype C — Laboratory Translation / Design Activity
+- [ ] Preserve locked boa → directional retention → TRAP scientific chain
+- [ ] Create side-by-side biological and engineered comparison
+- [ ] Add clickable corresponding-feature highlighting
+- [ ] Add simple select/place/assemble interaction for the bioinspired concept
+- [ ] Show why the selected feature transfers functionally rather than merely resembling the tooth
+- [ ] Use corrective consequences/WartsWorth guidance instead of generic wrong-answer feedback
+- [ ] Preserve supported development/history content and source cues
+- [ ] Test accessibility, scientific clarity, and timing
+
+### Prototype D — Testing Station / Clot Experiment
+- [ ] Turn current clot/device content into an activate-and-observe experiment
+- [ ] Let the player initiate the simplified test
+- [ ] Animate/visualize device–clot interaction within evidence-supported limits
+- [ ] Show consequences of at least one ineffective choice when practical
+- [ ] Have WartsWorth guide reconsideration without blocking progress
+- [ ] Reinforce aspiration + mechanical engagement accurately
+- [ ] Preserve limitations/claim guardrails
+- [ ] Test accessibility, clarity, and timing
+
+### Prototype E — Return to Hospital / Final Integration
+- [ ] Reconnect the tested design to the original medical problem
+- [ ] Show why the technology could matter without overstating evidence
+- [ ] Preserve explicit IB 411 analogical-reasoning/course connection
+- [ ] Keep final questions concise and purposeful
+- [ ] Preserve references/credits/transcript/accessibility materials
+- [ ] Test full story continuity
+
+### Final Interaction Pass
+- [ ] Confirm exploration/interactions—not multiple choice—form the primary gameplay
+- [ ] Confirm WartsWorth behaves consistently as an active research partner
+- [ ] Confirm optional hotspots reward curiosity without bloating play time
+- [ ] Confirm every required interaction has keyboard/text-equivalent access
+- [ ] Confirm every scientific claim remains traceable to approved sources
+- [ ] Re-run complete rubric audit
+- [ ] Re-time first-time playthrough to approximately 4–5 minutes
+- [ ] Run desktop/tablet/mobile QA
 
 ---
 
