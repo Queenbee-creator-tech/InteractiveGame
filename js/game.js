@@ -114,7 +114,8 @@
   function render(){
     const s=data.sections[state.section];
     els.label.textContent=s.label;els.title.textContent=s.title;els.dialogue.textContent=s.intro+" "+s.prompt;els.image.src="assets/images/"+s.id+".svg"; els.image.alt=({hospital:"Illustrated cerebral vessel scan showing a blood clot obstructing flow and an aspiration catheter nearby.",explore:"Illustrated field scene with a camouflaged boa constrictor observed from a safe distance.",design:"Illustrated lab comparison translating recurved tooth geometry into recurved microscale structures inside a catheter tip.",test:"Illustrated comparison of smooth aspiration and a bioinspired catheter concept with added internal mechanical structures.",apply:"Illustrated five-step development pathway from biological observation through continued validation.",final:"Illustrated synthesis connecting a recurved biological structure to an engineered catheter design."})[s.id];els.outfit.textContent=s.outfit;
-    if(els.sourceCue) els.sourceCue.textContent=s.sourceCue || "";\n    const hotspot=$("sceneHotspot"); hotspot.hidden=s.id!=="explore" || !!state.hotspots.explore;
+    if(els.sourceCue) els.sourceCue.textContent=s.sourceCue || "";
+    const hotspot=$("sceneHotspot"); hotspot.hidden=s.id!=="explore" || !!state.hotspots.explore;
     updateProgress();
     els.back.disabled=state.section===0;els.next.disabled=!state.completed.has(state.section);
     els.next.textContent=state.section===data.sections.length-1?"Mission Complete":"Continue";
@@ -141,7 +142,8 @@
     if(state.section<data.sections.length-1){state.section++;render()} else missionComplete();
   });
   els.back.addEventListener("click",()=>{if(state.section>0){state.section--;render()}});
-  $("restartBtn").addEventListener("click",restart);\n  $("sceneHotspot").addEventListener("click",()=>{if(data.sections[state.section].id!=="explore")return;state.hotspots.explore=true;$("sceneHotspot").hidden=true;renderInteraction(data.sections[state.section]);feedback("Scan complete: the boa’s recurved tooth geometry is now ready to analyze.",true)});
+  $("restartBtn").addEventListener("click",restart);
+  $("sceneHotspot").addEventListener("click",()=>{if(data.sections[state.section].id!=="explore")return;state.hotspots.explore=true;$("sceneHotspot").hidden=true;renderInteraction(data.sections[state.section]);feedback("Scan complete: the boa’s recurved tooth geometry is now ready to analyze.",true)});
   $("captionsBtn").addEventListener("click",e=>{const on=e.currentTarget.getAttribute("aria-pressed")==="true";e.currentTarget.setAttribute("aria-pressed",String(!on));e.currentTarget.textContent="Narration text: "+(!on?"On":"Off");els.dialogue.hidden=on});
   $("sourcesBtn").addEventListener("click",()=>openInfo("Sources",sourceHtml()));
   $("transcriptBtn").addEventListener("click",()=>openInfo("Transcript",transcriptHtml()));
