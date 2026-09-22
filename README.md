@@ -80,7 +80,7 @@ We will keep the stack intentionally lightweight so it works reliably on GitHub 
 - it is compatible with GitHub Pages;
 - the code remains understandable enough to explain as part of the project.
 
-We will **not** add React, a database, login system, server, or AI API unless the project later proves that one is genuinely necessary.
+The first playable version will remain static and GitHub Pages-compatible. **MySQL is planned for a later phase once server access is available.** The browser will not connect directly to MySQL; a backend/API will be added between the JavaScript frontend and database if persistent player data is needed. Until then, progress can live in browser-side JavaScript state.
 
 ---
 
@@ -122,10 +122,10 @@ We will check these boxes off as each step is completed.
 - [x] Define project as an interactive browser-based teaching game
 - [x] Define lightweight GitHub Pages tech stack
 - [x] Create initial README roadmap
-- [ ] Confirm final scientific claim/mechanism we are teaching
-- [ ] Lock the exact bioinspired technology/device and its development history
-- [ ] Build the final source list
-- [ ] Map each rubric category to at least one scene/interactivity element
+- [x] Confirm final scientific claim/mechanism we are teaching
+- [x] Lock the exact bioinspired technology/device and its development history
+- [x] Build the final source list
+- [x] Map each rubric category to at least one scene/interactivity element
 
 **Phase 0 exit condition:** We know exactly what scientific story we are teaching and have enough reputable evidence to support every important claim.
 
@@ -133,19 +133,19 @@ We will check these boxes off as each step is completed.
 
 ## Phase 1 — Storyboard and Learning Design
 
-- [ ] Write the complete 4–5 minute player journey
-- [ ] Decide the number of screens/scenes
-- [ ] Define what the player does on each screen
-- [ ] Define what the player learns on each screen
-- [ ] Decide where Biology is taught
-- [ ] Decide where the medical Problem is taught
-- [ ] Decide where Technology is taught
-- [ ] Decide where Course Connections are taught
-- [ ] Add at least 2–3 meaningful interactions
-- [ ] Add a beginning, middle, and clear ending
-- [ ] Create a fallback path so a wrong answer teaches rather than blocks progress
-- [ ] Draft the full script/text
-- [ ] Estimate play time
+- [x] Write the complete 4–5 minute player journey
+- [x] Decide the number of screens/scenes
+- [x] Define what the player does on each screen
+- [x] Define what the player learns on each screen
+- [x] Decide where Biology is taught
+- [x] Decide where the medical Problem is taught
+- [x] Decide where Technology is taught
+- [x] Decide where Course Connections are taught
+- [x] Add at least 2–3 meaningful interactions
+- [x] Add a beginning, middle, and clear ending
+- [x] Create a fallback path so a wrong answer teaches rather than blocks progress
+- [x] Draft the full script/text
+- [x] Estimate play time
 
 **Phase 1 exit condition:** The entire game exists on paper before we spend time styling or programming it.
 
@@ -342,19 +342,15 @@ We will check these boxes off as each step is completed.
 
 # Current Focus
 
-**Next milestone: Phase 0 — scientific story lock.**
+**Phases 0 and 1 complete. Next milestone: Phase 2 — Visual Direction.**
 
-Before coding the game itself, we need to settle:
+Scientific story locked:
 
-1. What exact feature(s) of the snake tooth are central to the bioinspiration?
-2. What biological function does that feature perform?
-3. What exact clot-removal technology copied or abstracted that feature?
-4. What engineered feature corresponds to the biological feature?
-5. What evidence do our sources provide for the transfer?
-6. What limitations should we communicate?
-7. Which IB 411 concepts will we explicitly connect to this example?
+**recurved/inward-curving boa teeth → prey retention/ensnaring → directional mechanical retention → backward-curved microscale structures inside the TRAP catheter tip → added mechanical clot engagement during aspiration.**
 
-Once those are locked, we can storyboard the game scene-by-scene.
+Detailed evidence and claim guardrails are in `references/sources.md`. The complete eight-scene player journey is in `docs/storyboard.md`, and the narration/on-screen text draft is in `docs/script.md`.
+
+Before Phase 2 is checked off, we will choose the visual theme, narrator appearance, interface layout, progress indicator, screen wireframes, and the exact visual assets required.
 
 ---
 
