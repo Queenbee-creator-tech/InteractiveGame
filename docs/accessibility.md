@@ -15,3 +15,16 @@ The final game must remain operable and understandable without relying on one se
 
 ## Testing
 Keyboard-test every required path, test at browser zoom, verify caption/transcript completeness, and confirm that a player can finish without hover-only controls.
+
+
+## Implemented in current build
+- Semantic buttons are used for required choices, ordering cards, navigation, and the boa scan hotspot.
+- Informative scene images have text alternatives; WartsWorth is decorative beside equivalent named dialogue.
+- Visible focus styling is present, including a high-contrast hotspot focus ring.
+- Selected/completed states include words or checkmarks rather than relying on color alone.
+- Scene-reveal motion is disabled when the user prefers reduced motion.
+- Mobile/tablet responsive rules preserve readable controls and move the guide card into normal flow on narrow screens.
+- Full narration transcript and essential written explanations remain available.
+
+## Human verification still required
+Do not mark keyboard operation, browser zoom, contrast, or device-layout testing complete until the deployed build has been manually tested in a browser.
