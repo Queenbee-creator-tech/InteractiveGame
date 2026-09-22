@@ -8,19 +8,56 @@ Every section below has a **rubric purpose**. Do not remove or simplify an inter
 ---
 
 ## Section 1 — Hospital: The Challenge
-**Visual setting:** animated hospital room + vessel display. WartsWorth wears a stethoscope/medical gear.
+**Planning-only note:** rubric labels and source guardrails in this document are hidden from the player.
 
-**Player does:** investigates the vessel/clot and attempts conventional aspiration.
+**Visual setting:** the approved animated hospital UI is the master visual template for the game. WartsWorth appears in a clean medical look with a correctly fitted stethoscope. A simplified medical display lets the player move from the hospital context into a close vessel/clot view without turning the scene into a graphic medical simulation.
 
-**Learns:** what the clot is doing, why restoring blood flow matters, what aspiration thrombectomy is, and why clot engagement/retention creates an engineering challenge.
+### Beat A — Mission Arrival
+**Player does:** enters the hospital scene and receives a short mission from WartsWorth.
 
-**Rubric purpose:**
-- **Problem:** establishes the medical problem and why it matters.
-- **Technology:** introduces the conventional approach that motivates the innovation.
-- **Clarity:** gives the mission a concrete starting point.
-- **Creativity/Usefulness:** player discovers the problem instead of reading a lecture.
+**WartsWorth role:** establishes the human-health problem in clear, non-specialist language and directs the player toward the vessel display.
 
-**Do not design away:** the reason a better clot-retention strategy is needed.
+**Learns:** an ischemic stroke can occur when a clot blocks blood flow; the mission is to understand the retrieval challenge and search for a better design strategy.
+
+### Beat B — Investigate the Blockage
+**Player does:** clicks/focuses on the vessel, clot, and relevant medical display hotspots.
+
+**Interaction rule:** essential information must be available by click/focus/touch, not hover alone.
+
+**Learns:** the clot obstructs blood flow and clot removal is the engineering/medical problem being addressed.
+
+### Beat C — Meet Aspiration
+**Player does:** activates a simplified aspiration-catheter demonstration.
+
+**WartsWorth teaches:** aspiration uses suction to draw/engage the clot for retrieval. Define “aspiration” in plain language the first time it appears.
+
+### Beat D — Try the Current Strategy
+**Player does:** runs a short conventional/smooth-catheter attempt and observes the retention/engagement challenge represented in the game.
+
+**Design rule:** this is a simplified teaching interaction, not a claim that every conventional procedure fails. Do not frame existing technology as useless or unsafe.
+
+### Beat E — Define the Design Need
+**Player does:** chooses/identifies the useful design goal: a way to improve engagement/retention of soft clot material without simply treating “more suction” as the whole solution.
+
+**WartsWorth role:** turns the observation into a question that motivates the nature search.
+
+### Beat F — Launch the Bioinspiration Mission
+**Transition:** the hospital display reduces the problem to a functional challenge—**how might we grip/retain soft material?** WartsWorth proposes looking to nature for strategies and changes into field gear during the transition into Explore.
+
+**Rubric purpose (planning only; hidden from player):**
+- **Problem:** establishes the medical problem, context, and design need.
+- **Technology:** introduces aspiration as the starting engineering approach.
+- **Clarity:** defines the mission and necessary terminology.
+- **Creativity/Usefulness:** the player investigates and attempts the problem instead of reading exposition.
+- **Course Connections:** sets up the function-first question that makes the later biological search purposeful.
+
+**Source guardrails:**
+- Medical and aspiration claims must be supported by the project’s medical/technology sources.
+- Do not overstate treatment outcomes, device failure, or the limitations of conventional thrombectomy.
+- Any claim about catheter diameter, aspiration force, distal vessels, procedure outcomes, or performance must be checked against the exact source before entering final player-facing dialogue.
+- Keep medical visuals educational and non-graphic.
+
+**Do not design away:** the blocked-vessel problem, aspiration explanation, player attempt/observation, functional design need, or explicit handoff to the nature search.
 
 ---
 
