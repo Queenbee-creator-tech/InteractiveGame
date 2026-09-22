@@ -176,8 +176,8 @@ We will check these boxes off as each step is completed.
 - [x] Create documentation/reference files
 - [x] Connect CSS and JavaScript
 - [ ] Confirm the page runs locally
-- [ ] Enable/configure GitHub Pages
-- [ ] Confirm public GitHub Pages URL loads
+- [x] Enable/configure GitHub Pages
+- [x] Confirm public GitHub Pages URL loads
 
 **Phase 3 exit condition:** A blank but functional game shell is online.
 
@@ -191,7 +191,7 @@ We will check these boxes off as each step is completed.
 - [x] Build progress indicator
 - [x] Build choice/quiz interaction component
 - [x] Build feedback component
-- [x] Build hotspot or diagram interaction
+- [ ] Build true hotspot or diagram interaction
 - [x] Add restart button
 - [x] Prevent broken navigation states
 - [ ] Test keyboard navigation
@@ -212,7 +212,7 @@ We will check these boxes off as each step is completed.
 - [x] Add limitations/constraints
 - [x] Add explicit IB 411 course connection
 - [x] Add final learning summary
-- [ ] Add in-game source cues where appropriate
+- [x] Add in-game source cues where appropriate
 - [x] Add complete references panel
 
 **Phase 5 exit condition:** A player can learn the complete scientific story from the game without outside explanation.
@@ -342,7 +342,7 @@ We will check these boxes off as each step is completed.
 
 # Current Focus
 
-**Phases 0, 1, and 2 complete. Phase 3 is built except for GitHub Pages deployment verification. Phase 4 core engine and most Phase 5 scientific-content wiring are now implemented with placeholder artwork.**
+**Phases 0, 1, and 2 complete. Phase 3 is publicly deployed on GitHub Pages (local-run verification remains separate). Phase 4 core engine and Phase 5 scientific content are substantially implemented with placeholder artwork.**
 
 Scientific story locked:
 
@@ -350,7 +350,7 @@ Scientific story locked:
 
 Detailed evidence and claim guardrails are in `references/sources.md`. The complete six-section player journey is in `docs/storyboard.md`, and the matching six-section production script is in `docs/script.md`.
 
-Phase 2 visual direction is locked. The six-section browser shell, gated progression, choices, feedback, sequence interactions, final ordering challenge, restart control, responsive styling, and scientific teaching flow are implemented. The next deployment task is enabling/verifying GitHub Pages; after that, production artwork and scene-specific animations can replace placeholders.
+Phase 2 visual direction is locked. The six-section browser shell, gated progression, choices, feedback, persistent sequence progress, randomized final ordering challenge, final bioinspiration check, restart/replay controls, full in-game transcript, source cues, linked references, responsive styling, and scientific teaching flow are implemented. GitHub Pages deployment has been verified in the browser. Next priorities are a true visual hotspot/diagram interaction, keyboard/accessibility testing, and replacement of placeholder artwork with the production visual system.
 
 ---
 
