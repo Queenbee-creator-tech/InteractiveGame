@@ -22,3 +22,8 @@ footer{justify-content:center;padding:1rem}.text-button{text-decoration:underlin
 .wartsworth{width:74px;height:86px;object-fit:contain;filter:drop-shadow(0 5px 5px rgba(0,0,0,.16))}
 .guide-card{max-width:260px}.guide-card::after{content:"";position:absolute;left:74px;bottom:-9px;border:10px solid transparent;border-top-color:rgba(255,255,255,.93);border-bottom:0}
 @media(max-width:720px){.scene-image{height:330px}.guide-card{left:.75rem;bottom:.75rem}.wartsworth{width:58px;height:68px}}
+
+.scene-hotspot{position:absolute;right:17%;top:43%;z-index:4;border:3px solid #fff;background:#f2b84b;color:#173238;font-weight:850;border-radius:999px;padding:.65rem 1rem;box-shadow:0 0 0 8px rgba(242,184,75,.25),0 8px 20px rgba(0,0,0,.25);animation:hotspotPulse 1.8s ease-in-out infinite}
+.scene-hotspot:hover{transform:scale(1.05)}.scene-hotspot:focus-visible{outline:4px solid #173238;outline-offset:4px}
+@keyframes hotspotPulse{50%{box-shadow:0 0 0 16px rgba(242,184,75,.08),0 8px 20px rgba(0,0,0,.25)}}
+@media(prefers-reduced-motion:reduce){.scene-hotspot{animation:none}}
