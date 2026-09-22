@@ -2,13 +2,13 @@ window.GAME_DATA = {
   sections: [
     {
       id:"hospital", label:"1 of 6", short:"Hospital", title:"Hospital — The Challenge", icon:"🏥", outfit:"Hospital gear",
-      intro:"Welcome, researcher! We have a problem to solve. An ischemic stroke can happen when a blood clot blocks blood flow in the brain. Our challenge is to understand how that clot can be captured and removed.",
-      prompt:"Investigate the vessel, then try aspiration.",
-      sourceCue:"Medical context: Purdue University News (2025).",
+      intro:"Emergency mission! A blood clot is blocking an artery that carries blood to part of the brain. When brain tissue loses blood and oxygen because of a blockage like this, it is called an ischemic stroke. The medical challenge is to remove the clot and restore blood flow without damaging the delicate blood vessel.",
+      prompt:"First inspect the blockage. Then test aspiration—using suction through a catheter—to see what the engineering challenge is.",
+      sourceCue:"Plain-language medical context based on Purdue University News (2025).",
       interaction:{type:"sequence",steps:[
-        {label:"Inspect the clot",feedback:"That clot is blocking the pathway. The medical problem is restoring blood flow by removing the obstruction."},
-        {label:"Try aspiration",feedback:"Aspiration means using suction through a catheter to engage and remove a clot."},
-        {label:"Define the design need",feedback:"Aspiration can retrieve clots, but keeping soft clot material securely engaged can be an engineering challenge. Instead of assuming the answer is simply “more suction,” ask: How might nature grip and retain soft material?"}
+        {label:"Inspect the clot",feedback:"WartsWorth: There it is—the clot is blocking blood flow through the artery. Our first goal is to remove that obstruction so blood can move through the vessel again."},
+        {label:"Try aspiration",feedback:"WartsWorth: Aspiration uses suction through a thin tube called a catheter to pull on the clot. Now watch the contact point: grabbing and holding soft clot material can still be an engineering challenge."},
+        {label:"Define the design need",feedback:"WartsWorth: That gives us our design question. Instead of only asking for more suction, can nature show us a way to grip and retain soft material?"}
       ]},
       takeaway:"Problem defined: find a strategy for engaging and retaining soft clot material."
     },
@@ -51,15 +51,15 @@ window.GAME_DATA = {
     {
       id:"apply", label:"5 of 6", short:"Apply", title:"Apply — A Healthier Future", icon:"🌎", outfit:"Science-guide gear",
       intro:"An invention does not jump straight from an idea into a hospital. Development happens in steps.",
-      prompt:"Walk through the development pathway.",
+      prompt:"The development cards are scrambled. Put them in the order that takes the idea from biological observation toward continued validation.",
       sourceCue:"Development history: Purdue University News (2025).",
-      interaction:{type:"sequence",steps:[
-        {label:"1. Observe a biological strategy",feedback:"Identify a useful biological structure–function relationship: recurved geometry and retention."},
-        {label:"2. Develop the TRAP concept at Purdue",feedback:"Translate the biological retention strategy into an engineered catheter concept."},
-        {label:"3. Translate to Emboa Medical",feedback:"Purdue licensed the technology to Emboa Medical for further development."},
-        {label:"4. Test in models/preclinical settings",feedback:"Testing asks whether the engineered concept behaves as intended before clinical claims can be made."},
-        {label:"5. Continue safety/effectiveness validation",feedback:"A promising concept still requires further validation. Bioinspiration starts an engineering pathway; it does not replace testing."}
-      ]},
+      interaction:{type:"order",items:[
+        "Observe a useful biological strategy",
+        "Develop the TRAP concept at Purdue",
+        "Translate/license the technology to Emboa Medical",
+        "Test the design in models/preclinical settings",
+        "Continue safety and effectiveness validation"
+      ],displayOrder:[3,0,4,2,1],feedbackWrong:"WartsWorth: Not quite! Think like an inventor: observe nature first, turn the idea into a design, move it toward development, test it, and keep validating safety and effectiveness.",feedbackCorrect:"WartsWorth: Ribbit-ing work! You rebuilt the development pathway. Bioinspiration starts the idea, but engineering, translation, testing, and continued validation are what move it forward."},
       takeaway:"Bioinspiration is part of a larger engineering process involving translation, constraints, testing, and iteration."
     },
     {
@@ -93,7 +93,7 @@ window.GAME_DATA = {
     {label:"Interventional News (2025). Emboa Medical launches novel thrombectomy catheter for clot retrieval.",url:"https://interventionalnews.com/emboa-medical-launches-novel-thrombectomy-catheter-for-clot-retrieval/"}
   ],
   transcript:[
-    ["Hospital — The Challenge","Welcome, researcher! We have a problem to solve. An ischemic stroke can happen when a blood clot blocks blood flow in the brain. Our challenge is to understand how that clot can be captured and removed. That clot is blocking the pathway. One way doctors can remove a clot is aspiration thrombectomy. Aspiration means using suction through a catheter to engage and remove the clot. Aspiration can retrieve clots, but keeping soft clot material securely engaged can be an engineering challenge. Instead of assuming the answer is simply ‘more suction,’ let’s ask a bioinspiration question: How might nature grip and retain soft material? Field trip! Nature has had a very long time to experiment."],
+    ["Hospital — The Challenge","Emergency mission! A blood clot is blocking an artery that carries blood to part of the brain. When brain tissue loses blood and oxygen because of a blockage like this, it is called an ischemic stroke. The medical challenge is to remove the clot and restore blood flow without damaging the delicate blood vessel. That clot is blocking the pathway. One way doctors can remove a clot is aspiration thrombectomy. Aspiration means using suction through a catheter to engage and remove the clot. Aspiration can retrieve clots, but keeping soft clot material securely engaged can be an engineering challenge. Instead of assuming the answer is simply ‘more suction,’ let’s ask a bioinspiration question: How might nature grip and retain soft material? Field trip! Nature has had a very long time to experiment."],
     ["Explore — Nature + Biology","Somewhere in this habitat is an organism with a structure that may give us a clue. Look carefully! Whoa! A boa constrictor. Fascinating—and I am suspiciously snack-sized. Let’s observe from here. Boa teeth are recurved—they curve backward—and their shape varies across the jaws. Research on boa feeding has shown that curved teeth can help ensnare and retain prey. Hold still, buddy! We’re borrowing your idea, not your teeth. That’s an important part of bioinspiration. We study how a biological structure works, then abstract the useful principle instead of copying or taking the organism itself."],
     ["Design — The Innovation","Lab goggles on! We brought the biological observation with us. Now we have to translate it into engineering. Researchers at Purdue developed a technology called TRAP—the Thrombus Retrieval Aspiration Platform. Instead of copying an entire snake, the design uses backward-curved microscale structures inside the distal catheter tip. Aspiration draws the clot toward the opening. The recurved structures can then add mechanical engagement and retention. Boa tooth: recurved structure for retention. TRAP: recurved microstructures for clot engagement during aspiration. Same functional logic, very different context. The technology was developed through Purdue research and licensed to Emboa Medical for further development. But a clever design still has to be tested."],
     ["Test — Does It Work?","Time to put the idea to the test. The key difference in the bioinspired concept is the added mechanical interaction. The recurved structures can engage the clot as aspiration draws it into the catheter. Our sources describe bench and model/preclinical testing. That can tell researchers whether a design is promising, but it is not the same as proving how it will perform in patients. Good science means matching the conclusion to the evidence."],
