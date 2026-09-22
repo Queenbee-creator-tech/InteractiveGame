@@ -187,19 +187,56 @@ Incorrect choices teach and allow retry; they never block progression.
 ---
 
 ## Section 5 — Apply: A Healthier Future
-**Visual setting:** transition from lab/model testing to development/application pathway.
+**Planning-only note:** rubric labels and source guardrails stay in planning documents only; the player sees the story, interactions, and sourced facts—not grading notes.
 
-**Player does:** follows a short development path rather than simply watching an ending.
+**Visual setting:** transition from the testing lab into an interactive development pathway. The approved UI shell remains consistent. WartsWorth guides the player through how a bioinspired idea moves from observation and engineering toward possible real-world medical application.
 
-**Learns:** Purdue development → TRAP → licensing to Emboa Medical → preclinical/model testing → further safety/effectiveness validation required.
+### Beat A — From Test to Development
+**Player does:** carries the tested concept forward and sees that testing is one step in a longer development process.
 
-**Rubric purpose:**
-- **Technology:** satisfies the rubric's requirement to understand some history/development of an existing product/idea.
-- **Usefulness:** shows that biological inspiration is the beginning of engineering development, not the end.
-- **Course Connections:** introduces constraints, trade-offs, testing, and iteration.
-- **Clarity:** prevents preclinical evidence from being confused with established clinical outcomes.
+**WartsWorth role:** reinforces that promising model results do not automatically equal a finished clinical treatment.
 
-**Do not design away:** development history and current-evidence limitations.
+### Beat B — Follow the Innovation Path
+**Player does:** activates a short interactive timeline/pathway using sourced milestones:
+- biological inspiration / boa tooth strategy
+- Purdue research and TRAP development
+- licensing/translation to Emboa Medical
+- model/preclinical testing supported by the project sources
+- additional validation/testing needed before stronger clinical claims can be made
+
+**Design rule:** keep this active and visual—tap/activate milestones rather than presenting a paragraph-heavy history screen.
+
+### Beat C — Development Decisions
+**Player does:** identifies what engineers/researchers still need to consider before a medical technology can move toward real-world use.
+
+**Concepts:** safety, effectiveness, different clot/vessel conditions, manufacturability/device constraints, and continued validation **only where supported by our sources/course framing**.
+
+**Course connection:** constraints, trade-offs, testing, iteration, and responsible translation.
+
+### Beat D — What Could the Technology Help Address?
+**Player does:** reconnects the innovation to the original ischemic-stroke/clot-retrieval problem.
+
+**Learns:** the intended application is clot retrieval; the game describes potential/intended use without presenting preclinical evidence as established patient benefit.
+
+### Beat E — Future-Facing Handoff
+**Player does:** completes the development pathway and receives the pieces needed for the Final Challenge.
+
+**Transition:** WartsWorth summarizes that the journey began with observing biology, but useful bioinspiration requires understanding, abstraction, engineering, testing, and continued development.
+
+**Rubric purpose (planning only; hidden from player):**
+- **Technology:** covers development/history and real-world application context.
+- **Usefulness:** shows that bioinspiration is part of a larger engineering-development process.
+- **Course Connections:** reinforces constraints, trade-offs, testing, iteration, and translation.
+- **Clarity:** separates intended application and potential from demonstrated clinical outcomes.
+- **References:** creates natural places to attach source cues to development milestones.
+
+**Source guardrails:**
+- Development names, institutions, licensing, dates, and testing stages must match the project sources.
+- Do not imply FDA/regulatory approval unless a source explicitly establishes it.
+- Do not claim established patient benefit, routine hospital use, or clinical superiority from model/preclinical evidence.
+- Avoid vague future promises; distinguish intended application from demonstrated evidence.
+
+**Do not design away:** development history, player interaction with the pathway, current-evidence limitations, or the connection back to the original medical problem.
 
 ---
 
