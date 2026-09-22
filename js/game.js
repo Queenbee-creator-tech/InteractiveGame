@@ -40,6 +40,7 @@
       b.addEventListener("click",()=>{
         if(i!== (state.sequenceProgress[s.id] || 0)) return;
         state.sequenceProgress[s.id]=i+1;
+        if(step.scene && s.id==="hospital"){els.image.src="assets/images/"+step.scene+".svg";els.image.alt="Illustrated cerebral vessel scan showing a blood clot obstructing flow and an aspiration catheter nearby.";els.dialogue.textContent="Now we’re inside. A blood clot is a clump of blood that has thickened and stuck together. Clotting is normally useful when it stops bleeding, but a clot can become dangerous if it blocks blood flow where it should not. Here, a clot is blocking an artery carrying blood to part of the brain. That blockage can cause an ischemic stroke.";els.direction.textContent="Inspect the clot, then test aspiration to discover the engineering challenge."}
         if(state.sequenceProgress[s.id]>=steps.length){
           renderInteraction(s);
           completeCurrent(step.feedback+" "+s.takeaway);
@@ -118,7 +119,7 @@
   }
   function render(){
     const s=data.sections[state.section];
-    els.label.textContent=s.label;els.title.textContent=s.title;els.dialogue.textContent=s.intro; if(els.direction) els.direction.textContent=s.prompt;els.image.src="assets/images/"+s.id+".svg"; els.image.alt=({hospital:"Illustrated cerebral vessel scan showing a blood clot obstructing flow and an aspiration catheter nearby.",explore:"Illustrated field scene with a camouflaged boa constrictor observed from a safe distance.",design:"Illustrated lab comparison translating recurved tooth geometry into recurved microscale structures inside a catheter tip.",test:"Illustrated comparison of smooth aspiration and a bioinspired catheter concept with added internal mechanical structures.",apply:"Illustrated five-step development pathway from biological observation through continued validation.",final:"Illustrated synthesis connecting a recurved biological structure to an engineered catheter design."})[s.id];els.outfit.textContent=s.outfit;
+    els.label.textContent=s.label;els.title.textContent=s.title;els.dialogue.textContent=s.intro; if(els.direction) els.direction.textContent=s.prompt;els.image.src="assets/images/"+(s.id==="hospital" && (state.sequenceProgress.hospital||0)===0?"hospital-exterior":s.id)+".svg"; els.image.alt=({hospital:(state.sequenceProgress.hospital||0)===0?"Illustrated hospital exterior where WartsWorth introduces the bioinspiration mission.":"Illustrated cerebral vessel scan showing a blood clot obstructing flow and an aspiration catheter nearby.",explore:"Illustrated field scene with a camouflaged boa constrictor observed from a safe distance.",design:"Illustrated lab comparison translating recurved tooth geometry into recurved microscale structures inside a catheter tip.",test:"Illustrated comparison of smooth aspiration and a bioinspired catheter concept with added internal mechanical structures.",apply:"Illustrated five-step development pathway from biological observation through continued validation.",final:"Illustrated synthesis connecting a recurved biological structure to an engineered catheter design."})[s.id];els.outfit.textContent=s.outfit;
     if(els.sourceCue) els.sourceCue.textContent=s.sourceCue || "";
     const hotspot=$("sceneHotspot"); hotspot.hidden=s.id!=="explore" || !!state.hotspots.explore;
     updateProgress();
