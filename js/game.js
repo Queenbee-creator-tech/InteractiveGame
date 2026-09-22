@@ -2,7 +2,7 @@
   const data=window.GAME_DATA;
   const $=id=>document.getElementById(id);
   const state={section:0,completed:new Set(),sequenceProgress:{},finalOrder:[],finalChainDone:false};
-  const els={progress:$("progress"),title:$("sceneTitle"),label:$("sectionLabel"),dialogue:$("dialogue"),icon:$("sceneIcon"),outfit:$("guideOutfit"),interaction:$("interaction"),back:$("backBtn"),next:$("nextBtn"),sourceCue:$("sourceCue")};
+  const els={progress:$("progress"),title:$("sceneTitle"),label:$("sectionLabel"),dialogue:$("dialogue"),image:$("sceneImage"),outfit:$("guideOutfit"),interaction:$("interaction"),back:$("backBtn"),next:$("nextBtn"),sourceCue:$("sourceCue")};
 
   function buildProgress(){
     els.progress.innerHTML="";
@@ -112,7 +112,7 @@
   }
   function render(){
     const s=data.sections[state.section];
-    els.label.textContent=s.label;els.title.textContent=s.title;els.dialogue.textContent=s.intro+" "+s.prompt;els.icon.textContent=s.icon;els.outfit.textContent=s.outfit;
+    els.label.textContent=s.label;els.title.textContent=s.title;els.dialogue.textContent=s.intro+" "+s.prompt;els.image.src="assets/images/"+s.id+".svg"; els.image.alt=({hospital:"Illustrated cerebral vessel scan showing a blood clot obstructing flow and an aspiration catheter nearby.",explore:"Illustrated field scene with a camouflaged boa constrictor observed from a safe distance.",design:"Illustrated lab comparison translating recurved tooth geometry into recurved microscale structures inside a catheter tip.",test:"Illustrated comparison of smooth aspiration and a bioinspired catheter concept with added internal mechanical structures.",apply:"Illustrated five-step development pathway from biological observation through continued validation.",final:"Illustrated synthesis connecting a recurved biological structure to an engineered catheter design."})[s.id];els.outfit.textContent=s.outfit;
     if(els.sourceCue) els.sourceCue.textContent=s.sourceCue || "";
     updateProgress();
     els.back.disabled=state.section===0;els.next.disabled=!state.completed.has(state.section);
