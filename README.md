@@ -348,7 +348,7 @@ Scientific story locked:
 
 **recurved/inward-curving boa teeth → prey retention/ensnaring → directional mechanical retention → backward-curved microscale structures inside the TRAP catheter tip → added mechanical clot engagement during aspiration.**
 
-Detailed evidence and claim guardrails are in `references/sources.md`. The complete eight-scene player journey is in `docs/storyboard.md`, and the narration/on-screen text draft is in `docs/script.md`.
+Detailed evidence and claim guardrails are in `references/sources.md`. The complete six-section player journey is in `docs/storyboard.md`, and the matching six-section production script is in `docs/script.md`.
 
 Before Phase 2 is checked off, we will choose the visual theme, narrator appearance, interface layout, progress indicator, screen wireframes, and the exact visual assets required.
 
