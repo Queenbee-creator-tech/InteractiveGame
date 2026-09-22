@@ -2,15 +2,25 @@ window.GAME_DATA = {
   sections: [
     {
       id:"hospital", label:"1 of 6", short:"Hospital", title:"Hospital — The Challenge", icon:"🏥", outfit:"Hospital gear",
-      intro:"Hey, researcher! I’m WartsWorth, your bioinspiration field guide. We’ve been called to the hospital for a design mission: doctors need better ways to capture and remove certain blood clots. We’re going to investigate the medical problem, search nature for a useful strategy, and bring that idea back to the lab.",
-      prompt:"Meet WartsWorth outside the hospital, then enter with him to investigate the medical problem.",
+      intro:"Hey, researcher! I’m WartsWorth, your bioinspiration field guide. We’ve been called to the hospital for a design mission. First, let’s head inside and investigate the medical problem.",
+      prompt:"Enter the hospital with WartsWorth to begin the investigation.",
       sourceCue:"Plain-language medical context based on Purdue University News (2025).",
-      interaction:{type:"sequence",steps:[
-        {label:"Enter the hospital",feedback:"WartsWorth: Mission accepted! Inside, I’ll show you what a blood clot is, what happens when one blocks blood flow in the brain, and why removing it can be difficult.",scene:"hospital"},
-        {label:"Inspect the clot",feedback:"WartsWorth: There it is—the clot is blocking blood flow through the artery. Our first goal is to remove that obstruction so blood can move through the vessel again."},
-        {label:"Try aspiration",feedback:"WartsWorth: Aspiration uses suction through a thin tube called a catheter to pull on the clot. Now watch the contact point: grabbing and holding soft clot material can still be an engineering challenge."},
-        {label:"Define the design need",feedback:"WartsWorth: That gives us our design question. Instead of only asking for more suction, can nature show us a way to grip and retain soft material?"}
-      ]},
+      interaction:{
+        type:"hospital",
+        hotspots:[
+          {id:"clot",label:"What is the clot?",x:51,y:39,text:"This dark red mass is a blood clot—a clump of blood that has thickened and stuck together. Clotting normally helps stop bleeding, but a clot can become dangerous when it blocks blood flow where it should not."},
+          {id:"blockage",label:"Inspect blockage",x:49,y:51,text:"Here the clot is blocking an artery that carries blood to part of the brain. When that blockage cuts off blood and oxygen to brain tissue, it can cause an ischemic stroke."},
+          {id:"aspiration",label:"Try aspiration",x:70,y:46,text:"Aspiration thrombectomy uses suction through a thin tube called a catheter to pull on and remove the clot. But securely engaging soft clot material can still be an engineering challenge."}
+        ],
+        quiz:{
+          setup:"You investigated the clot and tested aspiration. What design need should we take to nature?",
+          choices:[
+            {text:"Make the catheter look like an animal.",correct:false,feedback:"Appearance is not the problem we uncovered. Think about what happened where the catheter met the soft clot."},
+            {text:"Find a strategy that can help grip and retain soft clot material during removal.",correct:true,feedback:"Exactly! Now we have a functional design question to take into nature: how might we grip and retain soft material?"},
+            {text:"Use the largest possible catheter in every vessel.",correct:false,feedback:"That is not the design need we identified. Focus on securely engaging and retaining the clot."}
+          ]
+        }
+      },
       takeaway:"Problem defined: find a strategy for engaging and retaining soft clot material."
     },
     {
@@ -94,11 +104,6 @@ window.GAME_DATA = {
     {label:"Interventional News (2025). Emboa Medical launches novel thrombectomy catheter for clot retrieval.",url:"https://interventionalnews.com/emboa-medical-launches-novel-thrombectomy-catheter-for-clot-retrieval/"}
   ],
   transcript:[
-    ["Hospital — The Challenge","Hey, researcher! I’m WartsWorth, your bioinspiration field guide. We’ve been called to the hospital for a design mission: doctors need better ways to capture and remove certain blood clots. We’re going to investigate the medical problem, search nature for a useful strategy, and bring that idea back to the lab. Inside the hospital, a blood clot is blocking an artery that carries blood to part of the brain. When brain tissue loses blood and oxygen because of a blockage like this, it is called an ischemic stroke. The medical challenge is to remove the clot and restore blood flow without damaging the delicate blood vessel. That clot is blocking the pathway. One way doctors can remove a clot is aspiration thrombectomy. Aspiration means using suction through a catheter to engage and remove the clot. Aspiration can retrieve clots, but keeping soft clot material securely engaged can be an engineering challenge. Instead of assuming the answer is simply ‘more suction,’ let’s ask a bioinspiration question: How might nature grip and retain soft material? Field trip! Nature has had a very long time to experiment."],
-    ["Explore — Nature + Biology","Somewhere in this habitat is an organism with a structure that may give us a clue. Look carefully! Whoa! A boa constrictor. Fascinating—and I am suspiciously snack-sized. Let’s observe from here. Boa teeth are recurved—they curve backward—and their shape varies across the jaws. Research on boa feeding has shown that curved teeth can help ensnare and retain prey. Hold still, buddy! We’re borrowing your idea, not your teeth. That’s an important part of bioinspiration. We study how a biological structure works, then abstract the useful principle instead of copying or taking the organism itself."],
-    ["Design — The Innovation","Lab goggles on! We brought the biological observation with us. Now we have to translate it into engineering. Researchers at Purdue developed a technology called TRAP—the Thrombus Retrieval Aspiration Platform. Instead of copying an entire snake, the design uses backward-curved microscale structures inside the distal catheter tip. Aspiration draws the clot toward the opening. The recurved structures can then add mechanical engagement and retention. Boa tooth: recurved structure for retention. TRAP: recurved microstructures for clot engagement during aspiration. Same functional logic, very different context. The technology was developed through Purdue research and licensed to Emboa Medical for further development. But a clever design still has to be tested."],
-    ["Test — Does It Work?","Time to put the idea to the test. The key difference in the bioinspired concept is the added mechanical interaction. The recurved structures can engage the clot as aspiration draws it into the catheter. Our sources describe bench and model/preclinical testing. That can tell researchers whether a design is promising, but it is not the same as proving how it will perform in patients. Good science means matching the conclusion to the evidence."],
-    ["Apply — A Healthier Future","An invention doesn’t jump straight from an idea into a hospital. Development happens in steps: observe the biological strategy, develop the TRAP concept at Purdue, translate the technology to Emboa Medical, test the design in models and preclinical settings, and continue safety and effectiveness validation. A medical device has to do more than copy a useful shape—it has to be engineered, tested, and evaluated for the conditions where it may eventually be used."],
-    ["Final Challenge — Make a Difference","Final mission! Rebuild the bioinspiration pathway. Recurved boa teeth help retain or ensnare prey. That structure–function relationship suggests directional mechanical retention. TRAP translates that principle into backward-curved microscale structures inside a catheter tip, adding mechanical clot engagement during aspiration. That is the heart of this example: structure, function, abstracted principle, engineered structure, engineered function. Nature gave us a strategy—not a finished medical device. Small creatures. Big solutions. Keep exploring!"]
+    ["Hospital — The Challenge","WartsWorth meets the player outside the hospital and introduces the design mission. Inside, the player examines a hospital computer scan. A blood clot is a clump of blood that has thickened and stuck together. Clotting normally helps stop bleeding, but a clot can become dangerous when it blocks blood flow where it should not. In the scan, a clot blocks an artery carrying blood to part of the brain; this loss of blood and oxygen can cause an ischemic stroke. Aspiration thrombectomy uses suction through a catheter to pull on and remove the clot, but securely engaging soft clot material can still be an engineering challenge. The resulting design question is: how might we grip and retain soft material during removal?"]
   ]
 };
