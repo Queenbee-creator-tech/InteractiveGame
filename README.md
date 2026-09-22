@@ -153,14 +153,14 @@ We will check these boxes off as each step is completed.
 
 ## Phase 2 — Visual Direction
 
-- [ ] Choose visual theme and mood
-- [ ] Choose typography
-- [ ] Choose interface layout
-- [ ] Decide how the narrator/research guide appears
-- [ ] Design progress indicator
-- [ ] Create wireframe for every major screen
-- [ ] Identify all required images, diagrams, icons, and animations
-- [ ] Confirm every visual has a source/license or is original
+- [x] Choose visual theme and mood
+- [x] Choose typography direction
+- [x] Choose interface layout
+- [x] Decide how the narrator/research guide appears
+- [x] Design progress indicator
+- [x] Create wireframe for every major screen
+- [x] Identify all required images, diagrams, icons, and animations
+- [x] Confirm visual plan uses original/generated assets or appropriately licensed scientific visuals
 
 **Phase 2 exit condition:** We know what every screen should roughly look like.
 
@@ -342,7 +342,7 @@ We will check these boxes off as each step is completed.
 
 # Current Focus
 
-**Phases 0 and 1 complete. Next milestone: Phase 2 — Visual Direction.**
+**Phases 0, 1, and 2 complete. Current milestone: Phase 3 — Project Skeleton.**
 
 Scientific story locked:
 
@@ -350,7 +350,7 @@ Scientific story locked:
 
 Detailed evidence and claim guardrails are in `references/sources.md`. The complete six-section player journey is in `docs/storyboard.md`, and the matching six-section production script is in `docs/script.md`.
 
-Before Phase 2 is checked off, we will choose the visual theme, narrator appearance, interface layout, progress indicator, screen wireframes, and the exact visual assets required.
+Phase 2 visual direction is locked. The approved hospital UI is the master template; all six sections use the same interface language, WartsWorth character-continuity rules, and scene-specific environments/outfits. Next we build the functional browser shell.
 
 ---
 
