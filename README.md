@@ -191,7 +191,7 @@ We will check these boxes off as each step is completed.
 - [x] Build progress indicator
 - [x] Build choice/quiz interaction component
 - [x] Build feedback component
-- [ ] Build true hotspot or diagram interaction
+- [x] Build true hotspot or diagram interaction
 - [x] Add restart button
 - [x] Prevent broken navigation states
 - [ ] Test keyboard navigation
@@ -221,14 +221,14 @@ We will check these boxes off as each step is completed.
 
 ## Phase 6 — Art, Animation, and Polish
 
-- [ ] Replace placeholder graphics
+- [x] Replace placeholder graphics
 - [ ] Add snake-tooth diagram
-- [ ] Add blood-clot/device visuals
+- [x] Add blood-clot/device visuals
 - [ ] Add visual transition from organism → lab/design
 - [ ] Add subtle animations that improve understanding
-- [ ] Add hover/focus/selected states
-- [ ] Add success/error feedback
-- [ ] Optimize image sizes
+- [x] Add hover/focus/selected states
+- [x] Add success/error feedback
+- [x] Optimize image sizes
 - [ ] Check desktop layout
 - [ ] Check tablet layout
 - [ ] Check mobile layout
@@ -239,16 +239,16 @@ We will check these boxes off as each step is completed.
 
 ## Phase 7 — Accessibility
 
-- [ ] Use semantic HTML
-- [ ] Add alt text to informative images
-- [ ] Ensure decorative images are handled correctly
+- [x] Use semantic HTML
+- [x] Add alt text to informative images
+- [x] Ensure decorative images are handled correctly
 - [ ] Ensure sufficient text/background contrast
 - [ ] Ensure all controls work with keyboard
 - [ ] Add visible focus states
 - [ ] Avoid interactions that depend only on color
-- [ ] Make essential information available as text
-- [ ] Provide transcript/text equivalent for any audio
-- [ ] Add reduced-motion consideration if animations are substantial
+- [x] Make essential information available as text
+- [x] Provide transcript/text equivalent for any audio
+- [x] Add reduced-motion consideration if animations are substantial
 - [ ] Test at browser zoom
 
 **Phase 7 exit condition:** A classmate can understand and operate the tool without relying on one specific sensory modality or input method.
@@ -350,7 +350,7 @@ Scientific story locked:
 
 Detailed evidence and claim guardrails are in `references/sources.md`. The complete six-section player journey is in `docs/storyboard.md`, and the matching six-section production script is in `docs/script.md`.
 
-Phase 2 visual direction is locked. The six-section browser shell, gated progression, choices, feedback, persistent sequence progress, randomized final ordering challenge, final bioinspiration check, restart/replay controls, full in-game transcript, source cues, linked references, responsive styling, and scientific teaching flow are implemented. GitHub Pages deployment has been verified in the browser. Next priorities are a true visual hotspot/diagram interaction, keyboard/accessibility testing, and replacement of placeholder artwork with the production visual system.
+Phase 2 visual direction is locked. The six-section browser shell, gated progression, choices, feedback, persistent sequence progress, randomized final ordering challenge, final bioinspiration check, restart/replay controls, full in-game transcript, source cues, linked references, responsive styling, and scientific teaching flow are implemented. GitHub Pages deployment has been verified in the browser. The first original SVG production-art pass is now wired into all six scenes, including an original WartsWorth character, clot/device diagrams, and a keyboard-accessible boa scan hotspot. Next priorities are live-browser QA of this new build, keyboard/zoom/responsive testing, visual refinement/animation, and the final rubric audit.
 
 ---
 
