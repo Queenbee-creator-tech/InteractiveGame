@@ -8,9 +8,9 @@ window.GAME_DATA = {
       interaction:{
         type:"hospital",
         hotspots:[
-          {id:"clot",label:"What is the clot?",x:51,y:39,text:"This dark red mass is a blood clot—a clump of blood that has thickened and stuck together. Clotting normally helps stop bleeding, but a clot can become dangerous when it blocks blood flow where it should not."},
-          {id:"blockage",label:"Inspect blockage",x:49,y:51,text:"Here the clot is blocking an artery that carries blood to part of the brain. When that blockage cuts off blood and oxygen to brain tissue, it can cause an ischemic stroke."},
-          {id:"aspiration",label:"Try aspiration",x:70,y:46,text:"Aspiration thrombectomy uses suction through a thin tube called a catheter to pull on and remove the clot. But securely engaging soft clot material can still be an engineering challenge."}
+          {id:"clot",label:"What is the clot?",x:66,y:41,text:"This dark red mass is a blood clot—a clump of blood that has thickened and stuck together. Clotting normally helps stop bleeding, but a clot can become dangerous when it blocks blood flow where it should not."},
+          {id:"blockage",label:"Inspect blockage",x:60,y:48,text:"Here the clot is blocking an artery that carries blood to part of the brain. When that blockage cuts off blood and oxygen to brain tissue, it can cause an ischemic stroke."},
+          {id:"aspiration",label:"Try aspiration",x:83,y:41,text:"Aspiration thrombectomy uses suction through a thin tube called a catheter to pull on and remove the clot. But securely engaging soft clot material can still be an engineering challenge."}
         ],
         quiz:{
           setup:"You investigated the clot and tested aspiration. What design need should we take to nature?",
