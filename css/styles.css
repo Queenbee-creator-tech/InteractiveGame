@@ -49,3 +49,49 @@ button:disabled{cursor:not-allowed}
 @media(max-width:900px){.game-shell{padding:.75rem}.scene-image{height:auto;max-height:390px}.guide-card{max-width:220px}.dialogue-panel{padding:1rem}}
 @media(max-width:560px){.progress{grid-template-columns:repeat(2,1fr)}.controls{width:100%}.controls button{flex:1}.scene{min-height:260px}.scene-art{min-height:260px}.scene-image{height:auto;min-height:260px;object-fit:contain}.guide-card{position:relative;left:auto;bottom:auto;margin:.6rem;width:calc(100% - 1.2rem);max-width:none}.scene{overflow:visible}.navigation{flex-wrap:wrap}.navigation button{min-height:44px}.choice,.order-item{min-height:48px}.scene-hotspot{right:10%;top:42%}}
 @media(prefers-reduced-motion:reduce){.scene-image{transition:none}.scene-image.scene-swap{animation:none}}
+
+
+/* Scene-first layout: visuals carry the game, directions stay compact below. */
+.scene,.scene-art{min-height:500px}
+.scene-image{height:500px}
+.dialogue-panel{padding:1rem 1.25rem}
+.dialogue-panel h2{margin-bottom:.55rem}
+.mission-direction{margin:.45rem 0;padding:.65rem .9rem}
+.source-cue{margin:.45rem 0 0;padding-top:.45rem}
+.interaction{margin:.7rem 0}
+.compact-instruction{margin:.35rem 0;color:var(--muted)}
+.enter-hospital{display:block;margin:.35rem auto 0;border:0;border-radius:999px;padding:.85rem 1.4rem;font-size:1.05rem}
+
+/* WartsWorth now speaks inside the illustrated scene. */
+.scene-speech{position:absolute;left:250px;bottom:28px;z-index:6;width:min(520px,55%);background:rgba(255,255,255,.96);border:3px solid #2f7975;border-radius:18px;padding:.85rem 1rem;box-shadow:0 12px 28px rgba(0,0,0,.2)}
+.scene-speech::before{content:"";position:absolute;left:-18px;bottom:28px;border-width:12px 18px 12px 0;border-style:solid;border-color:transparent #2f7975 transparent transparent}
+.scene-speech p{margin:0;line-height:1.35}
+.scene-speech .speaker-name{margin-bottom:.25rem}
+.guide-card{z-index:7}
+
+/* Interactive hospital computer scan */
+.hospital-hotspots{position:absolute;inset:0;z-index:5;pointer-events:none}
+.hospital-hotspot{position:absolute;transform:translate(-50%,-50%);pointer-events:auto;width:48px;height:48px;border-radius:50%;border:3px solid white;background:#f2b84b;color:#173238;font-weight:900;box-shadow:0 0 0 8px rgba(242,184,75,.24),0 6px 18px rgba(0,0,0,.28);animation:hotspotPulse 1.8s ease-in-out infinite}
+.hospital-hotspot.visited{background:#e8f5ef;border-color:#2f7975;box-shadow:0 0 0 5px rgba(47,121,117,.18);animation:none}
+.hospital-hotspot:focus-visible{outline:4px solid #173238;outline-offset:5px}
+.scan-info{position:absolute;right:4%;top:10%;width:min(330px,35%);pointer-events:none;background:rgba(9,45,50,.94);color:white;border:1px solid rgba(255,255,255,.35);border-radius:14px;padding:.75rem .9rem;box-shadow:0 10px 24px rgba(0,0,0,.24)}
+.scan-info strong{display:block;color:#f2c45e;margin-bottom:.25rem}.scan-info span{font-size:.84rem;line-height:1.3;display:block}
+
+/* Keep choices secondary to the scene instead of visually competing with it. */
+.choice,.order-item{padding:.68rem .9rem}
+.interaction-setup{margin:.4rem 0 .65rem}
+
+@media(max-width:900px){
+  .scene,.scene-art{min-height:430px}.scene-image{height:430px;max-height:none}
+  .scene-speech{left:210px;width:calc(100% - 240px);bottom:18px}
+  .scan-info{width:40%;right:2%;top:5%}
+}
+@media(max-width:560px){
+  .scene,.scene-art{min-height:360px}.scene-image{height:360px;min-height:360px}
+  .guide-card{position:absolute;left:.6rem;bottom:.6rem;width:auto;max-width:170px;margin:0;padding:.5rem}.guide-card .outfit{display:none}
+  .scene-speech{left:.6rem;right:.6rem;bottom:92px;width:auto;font-size:.9rem}
+  .scene-speech::before{display:none}
+  .scan-info{left:.6rem;right:.6rem;top:.6rem;width:auto;font-size:.82rem}
+  .hospital-hotspot{width:44px;height:44px}
+}
+@media(prefers-reduced-motion:reduce){.hospital-hotspot{animation:none}}
