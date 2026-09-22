@@ -139,7 +139,7 @@
     const src=hospitalExterior?"hospital-exterior":s.id;
     els.image.src="assets/images/"+src+".svg";
     els.image.alt=({hospital:hospitalExterior?"Illustrated hospital exterior where WartsWorth introduces the mission.":"Child-friendly hospital room with a computer displaying a cerebral vessel scan.",explore:"Illustrated field scene with a camouflaged boa constrictor observed from a safe distance.",design:"Illustrated lab comparison translating recurved tooth geometry into recurved microscale structures inside a catheter tip.",test:"Illustrated comparison of smooth aspiration and a bioinspired catheter concept.",apply:"Illustrated development pathway from biological observation through continued validation.",final:"Illustrated synthesis connecting a recurved biological structure to an engineered catheter design."})[s.id];
-    const hotspot=$("sceneHotspot");hotspot.hidden=s.id!=="explore"||!!state.hotspots.explore;
+    const hotspot=$("sceneHotspot");hotspot.hidden=s.id!=="explore"||!!state.hotspots.explore;if(s.id==="explore"&&!state.hotspots.explore){hotspot.style.right="21%";hotspot.style.top="35%";hotspot.textContent="Scan boa"}
     updateProgress();els.back.disabled=state.section===0;els.next.disabled=!state.completed.has(state.section);els.next.textContent=state.section===data.sections.length-1?"Mission Complete":"Continue";renderInteraction(s);
   }
   function openInfo(title,html){$("dialogContent").innerHTML="<h2>"+title+"</h2>"+html;$("infoDialog").showModal()}
