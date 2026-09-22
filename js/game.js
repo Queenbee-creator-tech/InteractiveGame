@@ -1,8 +1,8 @@
 (() => {
   const data=window.GAME_DATA;
   const $=id=>document.getElementById(id);
-  const state={section:0,completed:new Set(),sequenceProgress:{},hotspots:{},finalOrder:[],finalChainDone:false};
-  const els={progress:$("progress"),title:$("sceneTitle"),label:$("sectionLabel"),dialogue:$("dialogue"),image:$("sceneImage"),outfit:$("guideOutfit"),interaction:$("interaction"),back:$("backBtn"),next:$("nextBtn"),sourceCue:$("sourceCue")};
+  const state={section:0,completed:new Set(),sequenceProgress:{},hotspots:{},orders:{},finalChainDone:false};
+  const els={progress:$("progress"),title:$("sceneTitle"),label:$("sectionLabel"),dialogue:$("dialogue"),image:$("sceneImage"),outfit:$("guideOutfit"),interaction:$("interaction"),back:$("backBtn"),next:$("nextBtn"),sourceCue:$("sourceCue"),direction:$("directionText")};
 
   function buildProgress(){
     els.progress.innerHTML="";
@@ -73,33 +73,38 @@
     renderChoice(s,s.interaction.followup,()=>completeCurrent("Mission logic complete. "+s.takeaway));
   }
   function renderOrder(s){
+    const key=s.id; if(!state.orders[key]) state.orders[key]=[]; const selected=state.orders[key];
     const bank=document.createElement("div");bank.className="order-bank";
     const order=s.interaction.displayOrder || s.interaction.items.map((_,i)=>i);
     order.forEach(i=>{
       const item=s.interaction.items[i];
       const b=document.createElement("button");b.type="button";b.className="order-item";b.textContent=item;b.dataset.index=i;
-      if(state.finalOrder.includes(i)){b.disabled=true;b.classList.add("done")}
+      if(selected.includes(i)){b.disabled=true;b.classList.add("done")}
       b.addEventListener("click",()=>{
-        if(state.finalOrder.includes(i))return;
-        state.finalOrder.push(i); renderInteraction(s);
+        if(selected.includes(i))return;
+        selected.push(i); renderInteraction(s);
       });
       bank.appendChild(b);
     });
     els.interaction.appendChild(bank);
     const chosen=document.createElement("ol");chosen.id="chosenOrder";chosen.className="chosen-order";
-    chosen.innerHTML=state.finalOrder.map(i=>"<li>"+s.interaction.items[i]+"</li>").join("");
+    chosen.innerHTML=selected.map(i=>"<li>"+s.interaction.items[i]+"</li>").join("");
     els.interaction.appendChild(chosen);
-    if(state.finalOrder.length===s.interaction.items.length){
-      const correct=state.finalOrder.every((v,i)=>v===i);
+    if(selected.length===s.interaction.items.length){
+      const correct=selected.every((v,i)=>v===i);
       if(correct){
-        state.finalChainDone=true;
-        const next=document.createElement("button");next.type="button";next.className="choice primary inline-action";next.textContent="One last question →";
-        next.addEventListener("click",()=>renderFollowup(s));els.interaction.appendChild(next);
-        feedback("You got it! "+s.takeaway,true);
+        if(s.id==="final"){
+          state.finalChainDone=true;
+          const next=document.createElement("button");next.type="button";next.className="choice primary inline-action";next.textContent="One last question →";
+          next.addEventListener("click",()=>renderFollowup(s));els.interaction.appendChild(next);
+          feedback("You got it! "+s.takeaway,true);
+        } else {
+          completeCurrent(s.interaction.feedbackCorrect || s.takeaway);
+        }
       } else {
-        feedback("Close! Start with what exists in the organism, then follow structure → function → principle → engineered structure → engineered function.");
-        const retry=document.createElement("button");retry.type="button";retry.className="choice retry";retry.textContent="Try the final chain again";
-        retry.addEventListener("click",()=>{state.finalOrder=[];renderInteraction(s)});els.interaction.appendChild(retry);
+        feedback(s.interaction.feedbackWrong || "Close! Start with what exists in the organism, then follow the idea into engineering.");
+        const retry=document.createElement("button");retry.type="button";retry.className="choice retry";retry.textContent="Try again";
+        retry.addEventListener("click",()=>{state.orders[key]=[];renderInteraction(s)});els.interaction.appendChild(retry);
       }
     }
   }
@@ -113,7 +118,7 @@
   }
   function render(){
     const s=data.sections[state.section];
-    els.label.textContent=s.label;els.title.textContent=s.title;els.dialogue.textContent=s.intro+" "+s.prompt;els.image.src="assets/images/"+s.id+".svg"; els.image.alt=({hospital:"Illustrated cerebral vessel scan showing a blood clot obstructing flow and an aspiration catheter nearby.",explore:"Illustrated field scene with a camouflaged boa constrictor observed from a safe distance.",design:"Illustrated lab comparison translating recurved tooth geometry into recurved microscale structures inside a catheter tip.",test:"Illustrated comparison of smooth aspiration and a bioinspired catheter concept with added internal mechanical structures.",apply:"Illustrated five-step development pathway from biological observation through continued validation.",final:"Illustrated synthesis connecting a recurved biological structure to an engineered catheter design."})[s.id];els.outfit.textContent=s.outfit;
+    els.label.textContent=s.label;els.title.textContent=s.title;els.dialogue.textContent=s.intro; if(els.direction) els.direction.textContent=s.prompt;els.image.src="assets/images/"+s.id+".svg"; els.image.alt=({hospital:"Illustrated cerebral vessel scan showing a blood clot obstructing flow and an aspiration catheter nearby.",explore:"Illustrated field scene with a camouflaged boa constrictor observed from a safe distance.",design:"Illustrated lab comparison translating recurved tooth geometry into recurved microscale structures inside a catheter tip.",test:"Illustrated comparison of smooth aspiration and a bioinspired catheter concept with added internal mechanical structures.",apply:"Illustrated five-step development pathway from biological observation through continued validation.",final:"Illustrated synthesis connecting a recurved biological structure to an engineered catheter design."})[s.id];els.outfit.textContent=s.outfit;
     if(els.sourceCue) els.sourceCue.textContent=s.sourceCue || "";
     const hotspot=$("sceneHotspot"); hotspot.hidden=s.id!=="explore" || !!state.hotspots.explore;
     updateProgress();
@@ -136,7 +141,7 @@
       if(replay)replay.addEventListener("click",()=>{$("infoDialog").close();restart()});
     },0);
   }
-  function restart(){state.section=0;state.completed.clear();state.sequenceProgress={};state.hotspots={};state.finalOrder=[];state.finalChainDone=false;render()}
+  function restart(){state.section=0;state.completed.clear();state.sequenceProgress={};state.hotspots={};state.orders={};state.finalChainDone=false;render()}
   els.next.addEventListener("click",()=>{
     if(!state.completed.has(state.section))return;
     if(state.section<data.sections.length-1){state.section++;render()} else missionComplete();
