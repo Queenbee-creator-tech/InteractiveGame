@@ -168,13 +168,13 @@ We will check these boxes off as each step is completed.
 
 ## Phase 3 — Project Skeleton
 
-- [ ] Create `index.html`
-- [ ] Create `css/styles.css`
-- [ ] Create `js/game.js`
-- [ ] Create `js/data.js`
-- [ ] Create asset folders
-- [ ] Create documentation/reference files
-- [ ] Connect CSS and JavaScript
+- [x] Create `index.html`
+- [x] Create `css/styles.css`
+- [x] Create `js/game.js`
+- [x] Create `js/data.js`
+- [x] Create asset folders
+- [x] Create documentation/reference files
+- [x] Connect CSS and JavaScript
 - [ ] Confirm the page runs locally
 - [ ] Enable/configure GitHub Pages
 - [ ] Confirm public GitHub Pages URL loads
@@ -185,15 +185,15 @@ We will check these boxes off as each step is completed.
 
 ## Phase 4 — Core Game Engine
 
-- [ ] Build scene/screen navigation
-- [ ] Build game-state object
-- [ ] Build Next/Back or controlled progression
-- [ ] Build progress indicator
-- [ ] Build choice/quiz interaction component
-- [ ] Build feedback component
-- [ ] Build hotspot or diagram interaction
-- [ ] Add restart button
-- [ ] Prevent broken navigation states
+- [x] Build scene/screen navigation
+- [x] Build game-state object
+- [x] Build Next/Back or controlled progression
+- [x] Build progress indicator
+- [x] Build choice/quiz interaction component
+- [x] Build feedback component
+- [x] Build hotspot or diagram interaction
+- [x] Add restart button
+- [x] Prevent broken navigation states
 - [ ] Test keyboard navigation
 
 **Phase 4 exit condition:** We can click through the whole experience using placeholder content.
@@ -202,18 +202,18 @@ We will check these boxes off as each step is completed.
 
 ## Phase 5 — Scientific Content Integration
 
-- [ ] Add medical-problem introduction
-- [ ] Add snake-tooth biology
-- [ ] Add structure → function explanation
-- [ ] Add biological mechanism interaction
-- [ ] Add technology-transfer explanation
-- [ ] Add device/mechanism explanation
-- [ ] Add design-test/clot interaction
-- [ ] Add limitations/constraints
-- [ ] Add explicit IB 411 course connection
-- [ ] Add final learning summary
+- [x] Add medical-problem introduction
+- [x] Add snake-tooth biology
+- [x] Add structure → function explanation
+- [x] Add biological mechanism interaction
+- [x] Add technology-transfer explanation
+- [x] Add device/mechanism explanation
+- [x] Add design-test/clot interaction
+- [x] Add limitations/constraints
+- [x] Add explicit IB 411 course connection
+- [x] Add final learning summary
 - [ ] Add in-game source cues where appropriate
-- [ ] Add complete references page
+- [x] Add complete references panel
 
 **Phase 5 exit condition:** A player can learn the complete scientific story from the game without outside explanation.
 
@@ -342,7 +342,7 @@ We will check these boxes off as each step is completed.
 
 # Current Focus
 
-**Phases 0, 1, and 2 complete. Current milestone: Phase 3 — Project Skeleton.**
+**Phases 0, 1, and 2 complete. Phase 3 is built except for GitHub Pages deployment verification. Phase 4 core engine and most Phase 5 scientific-content wiring are now implemented with placeholder artwork.**
 
 Scientific story locked:
 
@@ -350,7 +350,7 @@ Scientific story locked:
 
 Detailed evidence and claim guardrails are in `references/sources.md`. The complete six-section player journey is in `docs/storyboard.md`, and the matching six-section production script is in `docs/script.md`.
 
-Phase 2 visual direction is locked. The approved hospital UI is the master template; all six sections use the same interface language, WartsWorth character-continuity rules, and scene-specific environments/outfits. Next we build the functional browser shell.
+Phase 2 visual direction is locked. The six-section browser shell, gated progression, choices, feedback, sequence interactions, final ordering challenge, restart control, responsive styling, and scientific teaching flow are implemented. The next deployment task is enabling/verifying GitHub Pages; after that, production artwork and scene-specific animations can replace placeholders.
 
 ---
 
