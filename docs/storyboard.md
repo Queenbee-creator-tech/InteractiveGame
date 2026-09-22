@@ -70,21 +70,65 @@ Incorrect choices teach and allow retry; they never block progression.
 ---
 
 ## Section 3 — Design: The Innovation
-**Visual setting:** the tooth scan visually transitions into a futuristic engineering lab. WartsWorth wears lab/safety gear.
+**Visual setting:** the glowing digital tooth model from Explore travels with WartsWorth into a futuristic engineering lab. WartsWorth changes into goggles/lab-safety gear. The approved UI shell stays the same; only the environment, tools, and interaction area change.
 
-**Player does:** translates the biological principle into the TRAP catheter design, e.g. matching/placing the recurved feature inside the catheter tip.
+### Beat A — Bring the Strategy Into the Lab
+**Player does:** arrives with the digital tooth scan and sees the original clot-retrieval challenge represented on the lab display.
 
-**Learns:** TRAP = Thrombus Retrieval Aspiration Platform; backward-curved microscale structures are located inside the distal catheter tip; aspiration brings the clot into contact with them; the structures add mechanical engagement.
+**WartsWorth role:** briefly reconnects the biological discovery to the engineering problem. He does **not** reveal TRAP immediately.
 
-**Development history:** introduce Ángel Enríquez and Hyowon Lee/Purdue and the licensing of the technology to Emboa Medical where appropriate.
+**Learns:** bioinspiration requires translating a useful biological principle into an engineering context rather than copying the entire organism.
+
+### Beat B — Abstraction Check
+**Player does:** isolates the useful part of the scan. The snake image fades while the recurved geometry/function remains highlighted.
+
+**Target concept:** **directional mechanical retention**.
+
+**Interaction idea:** player selects/drags the useful principle from a small set of biological observations. Incorrect choices give a short WartsWorth response and allow retry.
+
+**Course connection:** makes abstraction and structure–function reasoning visible rather than leaving them implied.
+
+### Beat C — Engineering Challenge
+**Player does:** sees a simplified catheter tip and clot and is asked where/how the borrowed principle could help. The player experiments with placing/orienting the recurved geometry **inside the distal catheter tip**, where a clot drawn in by aspiration can contact it.
+
+**Important:** the game should guide the player toward the sourced TRAP configuration; it should not imply that the student literally invented the medical device.
+
+**Learns:** the biological geometry can be translated into backward-curved microscale structures that add mechanical engagement to aspiration.
+
+### Beat D — Reveal the Real Innovation
+**Player does:** after making the biology-to-engineering connection, unlocks the real technology explanation.
+
+**WartsWorth teaches:** TRAP = **Thrombus Retrieval Aspiration Platform**. The design uses backward-curved microscale structures inside the distal catheter tip. Aspiration draws the clot toward/into the catheter opening, bringing it into contact with the structures, which provide additional mechanical engagement/retention.
+
+**Development history:** introduce the Purdue development work by Ángel Enríquez and Hyowon Lee and the licensing to Emboa Medical using the appropriate project sources.
+
+### Beat E — Side-by-Side Structure–Function Comparison
+**Player does:** toggles between or aligns:
+- recurved boa tooth → prey retention/ensnaring
+- recurved catheter microstructure → clot engagement/retention during aspiration
+
+**Learns:** similar functional logic can be transferred across very different biological and engineering contexts.
+
+### Beat F — Send It to Testing
+**Player does:** activates the completed concept. The catheter model and clot move into the Test section.
+
+**Transition:** WartsWorth makes clear that a promising design still has to be tested; the game does not treat the design step as proof of clinical effectiveness.
 
 **Rubric purpose:**
-- **Technology:** explains what was engineered and how it works.
-- **Course Connections:** makes biology → abstraction → engineering transfer explicit.
-- **Creativity:** player helps build/translate the design.
-- **Clarity:** visual transformation from tooth geometry to catheter geometry makes the analogy visible.
+- **Technology:** explains the engineered structure, location, mechanism, and development context.
+- **Course Connections:** explicitly demonstrates abstraction, analogical reasoning, structure–function, and biology → engineering transfer.
+- **Creativity:** player participates in translating the principle before the real technology is revealed.
+- **Clarity:** the tooth-to-microstructure transformation makes the analogy visible.
+- **Usefulness:** the player must understand *why* the geometry is relevant, not memorize that TRAP was “inspired by a snake.”
 
-**Do not design away:** exact biological feature ↔ exact engineered feature correspondence.
+**Source guardrails:**
+- Biology claims remain tied to the boa morphology/strike-mechanics evidence.
+- The explicit boa → TRAP transfer and catheter geometry/mechanism must be tied to the bioinspiration/technology sources.
+- Development claims must be tied to Purdue/technology-development sources.
+- Do not imply regulatory approval, established patient benefit, clinical superiority, or guaranteed clot capture unless later evidence specifically supports those claims.
+- Do not describe the inspiration as venom, serrations, or generic “sharp teeth.”
+
+**Do not design away:** the abstraction step, player translation decision, exact biological feature ↔ engineered feature correspondence, TRAP mechanism, or the reminder that design must still be tested.
 
 ---
 
