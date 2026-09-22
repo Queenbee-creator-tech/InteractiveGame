@@ -224,10 +224,10 @@ We will check these boxes off as each step is completed.
 ## Phase 6 — Art, Animation, and Polish
 
 - [x] Replace placeholder graphics
-- [ ] Add snake-tooth diagram
+- [x] Add snake-tooth diagram
 - [x] Add blood-clot/device visuals
-- [ ] Add visual transition from organism → lab/design
-- [ ] Add subtle animations that improve understanding
+- [x] Add visual transition from organism → tooth scan → lab/design
+- [x] Add subtle scene-reveal animation with reduced-motion fallback
 - [x] Add hover/focus/selected states
 - [x] Add success/error feedback
 - [x] Optimize image sizes
@@ -246,8 +246,8 @@ We will check these boxes off as each step is completed.
 - [x] Ensure decorative images are handled correctly
 - [ ] Ensure sufficient text/background contrast
 - [ ] Ensure all controls work with keyboard
-- [ ] Add visible focus states
-- [ ] Avoid interactions that depend only on color
+- [x] Add visible focus states
+- [x] Avoid interactions that depend only on color
 - [x] Make essential information available as text
 - [x] Provide transcript/text equivalent for any audio
 - [x] Add reduced-motion consideration if animations are substantial
@@ -352,7 +352,7 @@ Scientific story locked:
 
 Detailed evidence and claim guardrails are in `references/sources.md`. The complete six-section player journey is in `docs/storyboard.md`, and the matching six-section production script is in `docs/script.md`.
 
-Phase 2 visual direction is locked. The six-section browser shell, gated progression, choices, feedback, persistent sequence progress, randomized final ordering challenge, final bioinspiration check, restart/replay controls, full in-game transcript, source cues, linked references, responsive styling, and scientific teaching flow are implemented. GitHub Pages deployment has been verified in the browser. The first original SVG production-art pass is wired into all six scenes, including WartsWorth, clot/device diagrams, and a keyboard-accessible boa scan hotspot. Live-browser QA caught and resolved the initial JavaScript/cache/display issues. The opening now begins outside the hospital: the player meets WartsWorth, receives the mission, then enters the hospital before learning what a blood clot and ischemic stroke are. Narrator dialogue is visually separated from player directions, the medical problem is explained in plain language with source cues, and Apply is a scrambled development-pathway challenge with WartsWorth feedback. Cache-busting asset versions were also added so GitHub Pages reliably serves new CSS/JavaScript builds. Next priorities are keyboard/zoom/responsive testing, visual refinement/animation, and the final rubric audit.
+Phase 2 visual direction is locked. The six-section browser shell, gated progression, choices, feedback, persistent sequence progress, randomized final ordering challenge, final bioinspiration check, restart/replay controls, full in-game transcript, source cues, linked references, responsive styling, and scientific teaching flow are implemented. GitHub Pages deployment has been verified in the browser. The first original SVG production-art pass is wired into all six scenes, including WartsWorth, clot/device diagrams, and a keyboard-accessible boa scan hotspot. Live-browser QA caught and resolved the initial JavaScript/cache/display issues. The opening now begins outside the hospital: the player meets WartsWorth, receives the mission, then enters the hospital before learning what a blood clot and ischemic stroke are. Narrator dialogue is visually separated from player directions, the medical problem is explained in plain language with source cues, and Apply is a scrambled development-pathway challenge with WartsWorth feedback. Cache-busting asset versions were also added so GitHub Pages reliably serves new CSS/JavaScript builds. The Explore scan now reveals a dedicated boa-tooth structure/function diagram before the abstraction question, scene changes have a subtle reduced-motion-safe reveal, interaction states use text/symbol cues in addition to color, and responsive rules were strengthened for tablet/mobile widths. Next priorities are live-browser keyboard/zoom/responsive testing and the final rubric audit.
 
 ---
 
