@@ -202,6 +202,7 @@ We will check these boxes off as each step is completed.
 
 ## Phase 5 — Scientific Content Integration
 
+- [x] Add mission briefing outside hospital before the medical-problem lesson
 - [x] Add medical-problem introduction
 - [x] Add snake-tooth biology
 - [x] Add structure → function explanation
@@ -211,6 +212,7 @@ We will check these boxes off as each step is completed.
 - [x] Add design-test/clot interaction
 - [x] Add limitations/constraints
 - [x] Add explicit IB 411 course connection
+- [x] Add scrambled development-pathway challenge with corrective narrator feedback
 - [x] Add final learning summary
 - [x] Add in-game source cues where appropriate
 - [x] Add complete references panel
@@ -350,7 +352,7 @@ Scientific story locked:
 
 Detailed evidence and claim guardrails are in `references/sources.md`. The complete six-section player journey is in `docs/storyboard.md`, and the matching six-section production script is in `docs/script.md`.
 
-Phase 2 visual direction is locked. The six-section browser shell, gated progression, choices, feedback, persistent sequence progress, randomized final ordering challenge, final bioinspiration check, restart/replay controls, full in-game transcript, source cues, linked references, responsive styling, and scientific teaching flow are implemented. GitHub Pages deployment has been verified in the browser. The first original SVG production-art pass is wired into all six scenes, including WartsWorth, clot/device diagrams, and a keyboard-accessible boa scan hotspot. Live-browser QA caught and resolved the initial JavaScript/cache/display issues. Narrator dialogue is now visually separated from player directions, the Hospital problem is explained in plain language, and Apply is a scrambled development-pathway challenge with WartsWorth feedback. Next priorities are keyboard/zoom/responsive testing, visual refinement/animation, and the final rubric audit.
+Phase 2 visual direction is locked. The six-section browser shell, gated progression, choices, feedback, persistent sequence progress, randomized final ordering challenge, final bioinspiration check, restart/replay controls, full in-game transcript, source cues, linked references, responsive styling, and scientific teaching flow are implemented. GitHub Pages deployment has been verified in the browser. The first original SVG production-art pass is wired into all six scenes, including WartsWorth, clot/device diagrams, and a keyboard-accessible boa scan hotspot. Live-browser QA caught and resolved the initial JavaScript/cache/display issues. The opening now begins outside the hospital: the player meets WartsWorth, receives the mission, then enters the hospital before learning what a blood clot and ischemic stroke are. Narrator dialogue is visually separated from player directions, the medical problem is explained in plain language with source cues, and Apply is a scrambled development-pathway challenge with WartsWorth feedback. Cache-busting asset versions were also added so GitHub Pages reliably serves new CSS/JavaScript builds. Next priorities are keyboard/zoom/responsive testing, visual refinement/animation, and the final rubric audit.
 
 ---
 
