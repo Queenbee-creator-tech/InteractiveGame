@@ -12,3 +12,8 @@ footer{justify-content:center;padding:1rem}.text-button{text-decoration:underlin
 :focus-visible{outline:3px solid #fff;outline-offset:3px}.dialogue-panel :focus-visible,dialog :focus-visible{outline-color:#173238}
 @media(max-width:720px){.progress{grid-template-columns:repeat(3,1fr)}.scene{min-height:330px}.scene-art{min-height:330px}.topbar{align-items:flex-start;flex-direction:column}.controls{flex-wrap:wrap}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+.source-cue{font-size:.78rem;color:var(--muted);border-top:1px solid #ded7c3;padding-top:.65rem;margin:.75rem 0 0}
+.success-badge{display:inline-block;background:#e8f5ef;color:var(--good);font-weight:800;padding:.45rem .7rem;border-radius:999px}
+.inline-action{margin-top:.75rem;text-align:center}
+.source-list li{margin-bottom:1rem}.source-list a{font-weight:700;color:#155c68}.transcript-section{border-top:1px solid #ddd;padding-top:.75rem;margin-top:.75rem}.transcript-section h3{margin-bottom:.35rem}
+.mission-actions{display:flex;gap:.65rem;flex-wrap:wrap;margin:1rem 0}.mission-actions button{border:0;border-radius:999px;padding:.7rem 1rem;font-weight:750}
