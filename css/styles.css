@@ -31,3 +31,9 @@ footer{justify-content:center;padding:1rem}.text-button{text-decoration:underlin
 /* Keep SVG scene artwork fully visible instead of cropping its edges. */
 .scene-art{background:#dceee8}
 .scene-image{object-fit:contain;background:#dceee8}
+
+.narrator-dialogue{position:relative;margin:.8rem 0;background:#edf8f4;border-left:5px solid #2f7975;border-radius:0 14px 14px 0;padding:1rem 1.1rem}
+.narrator-dialogue::before{content:"";position:absolute;left:-13px;top:18px;border-width:9px 9px 9px 0;border-style:solid;border-color:transparent #2f7975 transparent transparent}
+.speaker-name,.direction-label{display:block;font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;font-weight:850;margin-bottom:.3rem;color:#2f7975}
+.narrator-dialogue p,.mission-direction p{margin:0}
+.mission-direction{margin:.75rem 0;padding:.8rem 1rem;border:2px dashed #d0b26e;border-radius:12px;background:#fffaf0}
