@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Clot Quest | Bioinspiration Game</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#game">Skip to game</a>
+  <main id="game" class="game-shell" aria-live="polite">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">IB 411 Bioinspiration</p>
+        <h1>Clot Quest</h1>
+      </div>
+      <div class="controls" aria-label="Game controls">
+        <button id="captionsBtn" type="button" aria-pressed="true">Captions: On</button>
+        <button id="restartBtn" type="button">Restart</button>
+      </div>
+    </header>
+
+    <nav id="progress" class="progress" aria-label="Mission progress"></nav>
+
+    <section class="scene">
+      <div id="sceneArt" class="scene-art" aria-label="Current game scene">
+        <div class="placeholder-art" aria-hidden="true">
+          <span id="sceneIcon">🏥</span>
+          <p>Production artwork will replace this placeholder.</p>
+        </div>
+      </div>
+
+      <aside class="guide-card">
+        <div class="wartsworth-placeholder" aria-hidden="true">🐸</div>
+        <div>
+          <p class="guide-name">WartsWorth</p>
+          <p id="guideOutfit" class="outfit">Hospital gear</p>
+        </div>
+      </aside>
+    </section>
+
+    <section class="dialogue-panel" aria-labelledby="sceneTitle">
+      <p id="sectionLabel" class="eyebrow"></p>
+      <h2 id="sceneTitle"></h2>
+      <p id="dialogue"></p>
+      <div id="interaction" class="interaction"></div>
+      <div class="navigation">
+        <button id="backBtn" type="button">Back</button>
+        <button id="nextBtn" class="primary" type="button">Continue</button>
+      </div>
+    </section>
+
+    <footer>
+      <button id="sourcesBtn" class="text-button" type="button">Sources</button>
+      <button id="transcriptBtn" class="text-button" type="button">Transcript</button>
+    </footer>
+  </main>
+
+  <dialog id="infoDialog">
+    <button id="closeDialog" type="button" aria-label="Close">Close</button>
+    <div id="dialogContent"></div>
+  </dialog>
+
+  <script src="js/data.js"></script>
+  <script src="js/game.js"></script>
+</body>
+</html>
