@@ -36,11 +36,13 @@ Optional plants/animals/environmental objects may respond to hover/focus, but th
 
 **WartsWorth role:** prompts observation and reacts to discoveries. When the boa is found, he can make a brief snack-sized-toad joke before returning immediately to the science.
 
+**Observation rule:** the player does not remove or collect a tooth. WartsWorth uses his scanner to capture a digital observation/snapshot of the tooth geometry. This reinforces that the design process studies a biological strategy and translates it rather than physically taking the biological structure.
+
 ### Beat B — Discover the Boa
 **Player does:** clicks the hidden boa to reveal it. WartsWorth reacts, then reframes the mission: we are not copying the whole animal; we are looking for a useful biological structure/function.
 
 ### Beat C — Scan and Investigate Teeth
-**Player does:** uses WartsWorth's futuristic scanner to zoom from the boa to a tooth/jaw investigation **without leaving the nature section**. Player explores tooth hotspots and compares geometry.
+**Player does:** uses WartsWorth's futuristic scanner to take a non-invasive digital snapshot and zoom from the boa to a tooth/jaw investigation **without leaving the nature section**. Player explores tooth hotspots and compares geometry. The boa remains in the habitat; after the scan it can calmly move away while the digital tooth model remains on screen.
 
 **Learns:** boa teeth vary in curvature; the relevant feature is recurved/inward-curving geometry; curved teeth can contribute to ensnaring/retaining prey and swallowing. The inspiration is not venom, color, or “sharpness” alone.
 
@@ -61,7 +63,9 @@ Incorrect choices teach and allow retry; they never block progression.
 - **Usefulness:** player actively identifies the feature/function that will solve the original problem.
 - **Clarity:** WartsWorth keeps the player focused on the relevant biological mechanism.
 
-**Do not design away:** hidden-boa discovery, tooth morphology investigation, biological function, or the abstraction step. These are academic content, not decorative minigames.
+**Do not design away:** hidden-boa discovery, scanner/snapshot observation, tooth morphology investigation, biological function, or the abstraction step. These are academic content, not decorative minigames.
+
+**Working WartsWorth beat (script wording still subject to source/script review):** “Hold still, buddy! We’re borrowing your idea, not your teeth.” The scanner captures the geometry, followed by a short explanation that bioinspiration studies how a biological feature works and translates the useful principle into design.
 
 ---
 
