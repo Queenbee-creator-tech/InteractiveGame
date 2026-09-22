@@ -37,3 +37,15 @@ footer{justify-content:center;padding:1rem}.text-button{text-decoration:underlin
 .speaker-name,.direction-label{display:block;font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;font-weight:850;margin-bottom:.3rem;color:#2f7975}
 .narrator-dialogue p,.mission-direction p{margin:0}
 .mission-direction{margin:.75rem 0;padding:.8rem 1rem;border:2px dashed #d0b26e;border-radius:12px;background:#fffaf0}
+
+/* Learning-focused transitions and stronger non-color interaction states */
+.scene-image{transition:opacity .28s ease,transform .28s ease}
+.scene-image.scene-swap{animation:sceneReveal .42s ease}
+@keyframes sceneReveal{0%{opacity:.25;transform:scale(.985)}100%{opacity:1;transform:scale(1)}}
+.choice.done,.order-item.done{opacity:1;background:#edf5f1;border-color:#55766b;text-decoration:none}
+.choice.done::before,.order-item.done::before{content:"✓ ";font-weight:900}
+.choice.selected{border-width:3px}.choice.selected::before{content:"Selected: ";font-weight:800}
+button:disabled{cursor:not-allowed}
+@media(max-width:900px){.game-shell{padding:.75rem}.scene-image{height:auto;max-height:390px}.guide-card{max-width:220px}.dialogue-panel{padding:1rem}}
+@media(max-width:560px){.progress{grid-template-columns:repeat(2,1fr)}.controls{width:100%}.controls button{flex:1}.scene{min-height:260px}.scene-art{min-height:260px}.scene-image{height:auto;min-height:260px;object-fit:contain}.guide-card{position:relative;left:auto;bottom:auto;margin:.6rem;width:calc(100% - 1.2rem);max-width:none}.scene{overflow:visible}.navigation{flex-wrap:wrap}.navigation button{min-height:44px}.choice,.order-item{min-height:48px}.scene-hotspot{right:10%;top:42%}}
+@media(prefers-reduced-motion:reduce){.scene-image{transition:none}.scene-image.scene-swap{animation:none}}
