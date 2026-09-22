@@ -109,6 +109,7 @@
       }
     }
   }
+  function setScene(src,alt){els.image.classList.remove("scene-swap");void els.image.offsetWidth;els.image.src=src;els.image.alt=alt;els.image.classList.add("scene-swap")}
   function renderInteraction(s){
     els.interaction.innerHTML="";
     if(s.id==="explore" && !state.hotspots.explore){const p=document.createElement("p");p.className="interaction-setup";p.textContent="Find the boa in the scene above and use the Scan boa hotspot to collect the tooth-geometry observation.";els.interaction.appendChild(p);return}
@@ -149,7 +150,7 @@
   });
   els.back.addEventListener("click",()=>{if(state.section>0){state.section--;render()}});
   $("restartBtn").addEventListener("click",restart);
-  $("sceneHotspot").addEventListener("click",()=>{if(data.sections[state.section].id!=="explore")return;state.hotspots.explore=true;$("sceneHotspot").hidden=true;renderInteraction(data.sections[state.section]);feedback("Scan complete: the boa’s recurved tooth geometry is now ready to analyze.",true)});
+  $("sceneHotspot").addEventListener("click",()=>{if(data.sections[state.section].id!=="explore")return;state.hotspots.explore=true;$("sceneHotspot").hidden=true;setScene("assets/images/tooth-scan.svg","Simplified close-up of backward-curving boa teeth with arrows showing how recurved orientation can resist prey pulling away.");renderInteraction(data.sections[state.section]);feedback("WartsWorth: Scan complete! See how the teeth curve backward? That orientation helps the teeth ensnare and retain prey that pulls away. Now identify the useful strategy we could abstract.",true)});
   $("captionsBtn").addEventListener("click",e=>{const on=e.currentTarget.getAttribute("aria-pressed")==="true";e.currentTarget.setAttribute("aria-pressed",String(!on));e.currentTarget.textContent="Narration text: "+(!on?"On":"Off");els.dialogue.hidden=on});
   $("sourcesBtn").addEventListener("click",()=>openInfo("Sources",sourceHtml()));
   $("transcriptBtn").addEventListener("click",()=>openInfo("Transcript",transcriptHtml()));
