@@ -95,3 +95,39 @@ button:disabled{cursor:not-allowed}
   .hospital-hotspot{width:44px;height:44px}
 }
 @media(prefers-reduced-motion:reduce){.hospital-hotspot{animation:none}}
+
+
+/* Revision: make the visual workspace decisively larger than the text/control panel. */
+.game-shell{width:min(1380px,100%)}
+.scene,.scene-art{min-height:620px}
+.scene-image{height:620px}
+.dialogue-panel{padding:.8rem 1.15rem}
+.dialogue-panel h2{font-size:1.35rem;margin-bottom:.35rem}
+.mission-direction{padding:.5rem .75rem;margin:.3rem 0}
+.source-cue{padding-top:.35rem;margin:.3rem 0 0}
+.interaction{margin:.45rem 0}
+.scene-speech{bottom:22px;max-height:155px;overflow:auto}
+
+/* The visual itself teaches; hotspot clicks update WartsWorth. Extra callout appears only when it adds a distinct engineering lens. */
+.field-hotspots,.design-hotspots{position:absolute;inset:0;z-index:5;pointer-events:none}
+.field-hotspot,.design-hotspot{position:absolute;transform:translate(-50%,-50%);pointer-events:auto;width:42px;height:42px;border-radius:50%;border:2px solid rgba(255,255,255,.95);background:rgba(242,184,75,.92);color:#173238;font-weight:900;box-shadow:0 0 0 6px rgba(242,184,75,.18)}
+.field-hotspot.visited,.design-hotspot.visited{background:#e8f5ef;border-color:#2f7975}
+.field-hotspot:hover,.design-hotspot:hover{transform:translate(-50%,-50%) scale(1.08)}
+.field-hotspot:focus-visible,.design-hotspot:focus-visible{outline:4px solid #fff;outline-offset:4px}
+
+/* Design is a build activity, not a multiple-choice questionnaire. */
+.design-workspace{display:grid;grid-template-columns:minmax(0,1fr) minmax(260px,.7fr);gap:.7rem;align-items:start}
+.design-bank{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.45rem}
+.design-piece{border:2px solid #d8d1bc;border-radius:.75rem;background:white;color:var(--ink);padding:.65rem .75rem;text-align:left}
+.design-piece.done{background:#edf5f1;border-color:#55766b}
+.design-chain{margin:0;background:#eef4ef;border-radius:.75rem;padding:.7rem .8rem .7rem 2rem;min-height:70px}
+.design-chain li{margin:.18rem 0}
+
+@media(max-width:900px){
+  .scene,.scene-art{min-height:520px}.scene-image{height:520px}
+  .design-workspace{grid-template-columns:1fr}
+}
+@media(max-width:560px){
+  .scene,.scene-art{min-height:420px}.scene-image{height:420px;min-height:420px}
+  .design-bank{grid-template-columns:1fr}
+}
