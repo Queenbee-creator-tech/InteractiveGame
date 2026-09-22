@@ -245,6 +245,18 @@ Incorrect choices teach and allow retry; they never block progression.
 
 **Visual setting:** a celebratory mission-control interface that visually brings back elements from the hospital, habitat, tooth scan, engineering lab, testing simulation, and development pathway. WartsWorth leads the challenge.
 
+**Character continuity rule:** concept images are layout/storyboard references, not final character sheets. In the production build WartsWorth must use one consistent base character model. Outfit changes are intentional scene transitions using normal wearable accessories—never distorted anatomy or accessories that look like extra eyes/faces. His own eyes remain clearly visible and unchanged.
+
+**Outfit continuity:**
+- Hospital: clean medical/stethoscope look.
+- Explore: field hat + exploration gear/binoculars.
+- Design: lab coat + properly fitted safety goggles (transparent lenses over/above his real eyes; no illustrated “eyes” inside goggles).
+- Test: practical lab/testing safety gear derived naturally from the Design outfit.
+- Apply: simplified science-guide/professional look appropriate to the development/application setting.
+- Final Challenge: recognizable WartsWorth in his core explorer/science-guide look, optionally with one small callback accessory rather than a new costume.
+
+**Transition rule:** outfit changes happen during location transitions (e.g. quick hat/goggle swap, doorway/wipe/gear-up animation), not as unexplained costume jumps.
+
 ### Beat A — Mission Recap
 **Player does:** sees the six-stage journey briefly light up in sequence.
 
@@ -283,6 +295,8 @@ Incorrect choices teach and allow retry; they never block progression.
 - **Transcript** — written equivalent of narration/audio
 - **Replay** — restart the adventure
 - optional **Review Journey** — revisit sections without replaying everything
+
+**Ending rule:** Mission Complete is the final game screen. There is **no separate “What’s Next?” page** after completion. Any optional learning/resource links belong inside Sources or a small non-required area on the Mission Complete screen so the story ends cleanly.
 
 **Rubric purpose (planning only; hidden from player):**
 - **Biology:** verifies structure + biological function.
