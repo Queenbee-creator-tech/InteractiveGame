@@ -203,6 +203,8 @@ We will check these boxes off as each step is completed.
 ## Phase 5 — Scientific Content Integration
 
 - [x] Add mission briefing outside hospital before the medical-problem lesson
+- [x] Replace outside-hospital checklist with a single Enter Hospital action
+- [x] Add interactive hospital-computer scan bubbles for clot, blockage, and aspiration
 - [x] Add medical-problem introduction
 - [x] Add snake-tooth biology
 - [x] Add structure → function explanation
@@ -213,6 +215,7 @@ We will check these boxes off as each step is completed.
 - [x] Add limitations/constraints
 - [x] Add explicit IB 411 course connection
 - [x] Add scrambled development-pathway challenge with corrective narrator feedback
+- [x] Ensure Apply artwork does not reveal the correct card order
 - [x] Add final learning summary
 - [x] Add in-game source cues where appropriate
 - [x] Add complete references panel
@@ -352,7 +355,7 @@ Scientific story locked:
 
 Detailed evidence and claim guardrails are in `references/sources.md`. The complete six-section player journey is in `docs/storyboard.md`, and the matching six-section production script is in `docs/script.md`.
 
-Phase 2 visual direction is locked. The six-section browser shell, gated progression, choices, feedback, persistent sequence progress, randomized final ordering challenge, final bioinspiration check, restart/replay controls, full in-game transcript, source cues, linked references, responsive styling, and scientific teaching flow are implemented. GitHub Pages deployment has been verified in the browser. The first original SVG production-art pass is wired into all six scenes, including WartsWorth, clot/device diagrams, and a keyboard-accessible boa scan hotspot. Live-browser QA caught and resolved the initial JavaScript/cache/display issues. The opening now begins outside the hospital: the player meets WartsWorth, receives the mission, then enters the hospital before learning what a blood clot and ischemic stroke are. Narrator dialogue is visually separated from player directions, the medical problem is explained in plain language with source cues, and Apply is a scrambled development-pathway challenge with WartsWorth feedback. Cache-busting asset versions were also added so GitHub Pages reliably serves new CSS/JavaScript builds. The Explore scan now reveals a dedicated boa-tooth structure/function diagram before the abstraction question, scene changes have a subtle reduced-motion-safe reveal, interaction states use text/symbol cues in addition to color, and responsive rules were strengthened for tablet/mobile widths. Next priorities are live-browser keyboard/zoom/responsive testing and the final rubric audit.
+Phase 2 visual direction is locked. The six-section browser shell, gated progression, choices, feedback, persistent sequence progress, randomized final ordering challenge, final bioinspiration check, restart/replay controls, full in-game transcript, source cues, linked references, responsive styling, and scientific teaching flow are implemented. GitHub Pages deployment has been verified in the browser. The first original SVG production-art pass is wired into all six scenes, including WartsWorth, clot/device diagrams, and a keyboard-accessible boa scan hotspot. Live-browser QA caught and resolved the initial JavaScript/cache/display issues. The opening now begins outside the hospital: the player meets WartsWorth, receives the mission, then enters the hospital before learning what a blood clot and ischemic stroke are. Narrator dialogue is visually separated from player directions, the medical problem is explained in plain language with source cues, and Apply is a scrambled development-pathway challenge with WartsWorth feedback. Cache-busting asset versions were also added so GitHub Pages reliably serves new CSS/JavaScript builds. The Explore scan now reveals a dedicated boa-tooth structure/function diagram before the abstraction question. Following desktop play-test feedback, the Hospital was redesigned around the visual scene: WartsWorth now speaks in an in-scene speech bubble, the player enters the hospital with one action, then investigates a pediatric-room computer scan through three interactive bubbles for the clot, blockage, and aspiration. Only after all three findings are explored does a short design-need question appear. Visual scenes were enlarged relative to the text panels across the game. Apply artwork was also revised so it no longer gives away the sequencing answer. Next priority is browser verification of this redesigned Hospital interaction before the final rubric audit.
 
 ---
 
