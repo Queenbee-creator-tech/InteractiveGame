@@ -133,19 +133,56 @@ Incorrect choices teach and allow retry; they never block progression.
 ---
 
 ## Section 4 — Test: Does It Work?
-**Visual setting:** animated blood-vessel simulation.
+**Planning-only note:** rubric labels, source guardrails, timing notes, and “do not design away” notes in this document are **developer/instructor-planning annotations only**. They do not appear in the player-facing game UI.
 
-**Player does:** tests a smooth aspiration catheter and the TRAP concept. Animation emphasizes mechanism rather than implying guaranteed clinical success.
+**Visual setting:** animated blood-vessel testing simulation using the same approved UI shell. WartsWorth remains prominent in testing/safety gear. The visual focus is the catheter tip, clot, aspiration flow, and observable interaction.
 
-**Learns:** the bioinspired design combines aspiration with mechanical engagement. Reported performance is preclinical/model evidence.
+### Beat A — Enter the Test Bay
+**Player does:** brings the design from the lab into a simplified vessel/model-testing environment.
 
-**Rubric purpose:**
+**WartsWorth role:** frames the next scientific question: a design idea is not enough; it has to be tested.
+
+### Beat B — Establish a Comparison
+**Player does:** first observes/tests a smooth aspiration catheter, then tests the bioinspired TRAP concept under a comparable simplified scenario.
+
+**Learns:** aspiration draws the clot toward the catheter; the bioinspired concept adds backward-curved microscale structures intended to mechanically engage/retain the clot.
+
+**Design rule:** do not turn the comparison into “old device bad / TRAP perfect.” It exists to visualize the difference in mechanism.
+
+### Beat C — Run the Simulation
+**Player does:** activates aspiration and watches the clot approach/contact the catheter tip. A close-up can show contact with the recurved microstructures.
+
+**Interactive focus:** player observes **where the clot contacts the device and what the recurved structures contribute** rather than receiving a passive animation.
+
+### Beat D — Read the Evidence Carefully
+**Player does:** opens a short evidence/results card tied to the project sources.
+
+**Learns:** current project sources report bench/model/preclinical testing. The game must distinguish those results from established patient outcomes.
+
+**WartsWorth role:** reinforces that engineers test, compare, revise, and validate designs before conclusions about real-world medical performance can be made.
+
+### Beat E — Make an Evidence-Based Conclusion
+**Player does:** chooses the statement best supported by what was shown, e.g. that the design adds a mechanical clot-engagement strategy to aspiration and has shown promising model/preclinical results, rather than claiming it is guaranteed to work in patients.
+
+**Incorrect choices:** brief corrective feedback + retry; no dead end.
+
+### Beat F — Continue to Application
+**Transition:** testing results lead into the development/application story in Section 5.
+
+**Rubric purpose (planning only; hidden from player):**
 - **Technology:** demonstrates engineered function.
 - **Usefulness:** lets the player observe why the transferred principle matters.
 - **Quality:** scientifically careful animation and evidence framing.
 - **Problem:** reconnects the design to the original clot-retrieval challenge.
+- **Clarity:** separates mechanism, reported testing, and clinical claims.
 
-**Do not design away:** evidence limitations or the comparison to the original problem.
+**Source guardrails:**
+- Use only performance/testing claims actually supported by the project sources.
+- Label bench, model, animal/preclinical, and clinical evidence accurately.
+- Do not imply regulatory approval, guaranteed success, established patient benefit, or clinical superiority without explicit supporting evidence.
+- Any numeric performance result added later must be traced to its exact source and testing context before it enters player-facing copy.
+
+**Do not design away:** comparison to the original problem, observable mechanism, evidence limitations, or the evidence-based conclusion interaction.
 
 ---
 
