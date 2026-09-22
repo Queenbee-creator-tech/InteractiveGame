@@ -240,30 +240,66 @@ Incorrect choices teach and allow retry; they never block progression.
 
 ---
 
-## Section 6 — Final Challenge: Put It All Together
-**Visual setting:** celebratory mission interface with WartsWorth leading a final interactive reconstruction.
+## Section 6 — Final Challenge: Make a Difference
+**Planning-only note:** this is the final learning check, but it should feel like the climax of the adventure—not a conventional school quiz. Rubric notes remain hidden from the player.
 
-**Player does:** rebuilds the five-part chain:
-1. recurved/inward-curving boa teeth
-2. retain/ensnare prey
-3. directional mechanical retention
-4. backward-curved microscale structures inside catheter tip
-5. added mechanical clot engagement during aspiration
+**Visual setting:** a celebratory mission-control interface that visually brings back elements from the hospital, habitat, tooth scan, engineering lab, testing simulation, and development pathway. WartsWorth leads the challenge.
 
-**Learns:** complete structure → function → abstraction → engineered structure → engineered function pathway.
+### Beat A — Mission Recap
+**Player does:** sees the six-stage journey briefly light up in sequence.
 
-**Ending:** Mission Complete + Sources + Transcript + Replay.
+**WartsWorth role:** reminds the player that the solution was not copied directly from nature; it was observed, understood, abstracted, translated, and tested.
 
-**Rubric purpose:**
-- **Biology:** verifies understanding of structure and function.
-- **Technology:** verifies understanding of engineered structure/function.
-- **Course Connections:** explicitly reinforces analogical reasoning, structure–function, abstraction, biology-to-engineering transfer, and constraints/trade-offs.
-- **References:** gives access to complete sources.
-- **Accessibility:** gives access to complete transcript/text equivalent.
-- **Usefulness:** player should leave able to explain the bioinspiration example independently.
-- **Creativity:** assessment is integrated into the mission rather than presented as a generic quiz.
+### Beat B — Rebuild the Bioinspiration Chain
+**Player does:** arranges five visual cards in the correct sequence:
+1. **Biological structure:** recurved/inward-curving boa teeth
+2. **Biological function:** retain/ensnare prey
+3. **Abstracted principle:** directional mechanical retention
+4. **Engineered structure:** backward-curved microscale structures inside the catheter tip
+5. **Engineered function:** added mechanical clot engagement/retention during aspiration
 
-**Do not design away:** the complete five-link chain, Sources, or Transcript.
+**Interaction:** cards use recognizable imagery from earlier scenes. Incorrect placement triggers a short WartsWorth hint and retry rather than a penalty.
+
+### Beat C — Final “Why Is This Bioinspiration?” Challenge
+**Player does:** selects the explanation that best captures the project:
+- not because the catheter looks like a snake
+- not because it uses venom
+- **because engineers studied a biological structure/function, abstracted its useful principle, and translated that principle into an engineered design**
+
+**Learns:** explicitly distinguishes functional bioinspiration from superficial imitation.
+
+### Beat D — Evidence Check
+**Player does:** answers one short evidence-awareness prompt distinguishing what the current sources support from an exaggerated clinical claim.
+
+**Target:** recognize that model/preclinical evidence and intended application do not equal guaranteed patient outcomes or established clinical superiority.
+
+### Beat E — Mission Complete
+**Visual:** WartsWorth celebrates; the completed nature → engineering pathway appears behind him.
+
+**Player-facing takeaway:** a small biological feature can inspire an engineering strategy when researchers understand how it functions and responsibly translate/test that principle.
+
+**Completion controls:**
+- **Sources** — complete references
+- **Transcript** — written equivalent of narration/audio
+- **Replay** — restart the adventure
+- optional **Review Journey** — revisit sections without replaying everything
+
+**Rubric purpose (planning only; hidden from player):**
+- **Biology:** verifies structure + biological function.
+- **Technology:** verifies engineered structure + function.
+- **Course Connections:** explicitly reinforces structure–function, abstraction, analogical reasoning, biology → engineering transfer, testing, and constraints.
+- **References:** complete source access.
+- **Accessibility:** complete transcript/text equivalent.
+- **Usefulness:** player demonstrates the ability to explain the example independently.
+- **Creativity:** assessment is integrated into the adventure.
+- **Clarity:** final takeaway resolves the full story.
+
+**Source guardrails:**
+- Final-answer wording must match the scientific claims established earlier in the game.
+- Do not introduce new facts during the final assessment.
+- Evidence-check answers must reflect the actual stage of evidence supported by the project sources.
+
+**Do not design away:** the five-link chain, explicit bioinspiration explanation, evidence check, Sources, Transcript, or Replay.
 
 ---
 
