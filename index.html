@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Clot Quest | Bioinspiration Game</title>
-  <link rel="stylesheet" href="css/styles.css?v=20260922-3">
+  <link rel="stylesheet" href="css/styles.css?v=20260922-4">
 </head>
 <body>
   <a class="skip-link" href="#game">Skip to game</a>
@@ -26,6 +26,7 @@
       <div id="sceneArt" class="scene-art">
         <img id="sceneImage" class="scene-image" src="assets/images/hospital-exterior.svg" alt="Illustrated hospital exterior where WartsWorth introduces the bioinspiration mission.">
       <button id="sceneHotspot" class="scene-hotspot" type="button" hidden aria-label="Scan the camouflaged boa">Scan boa</button>
+        <div id="hospitalHotspots" class="hospital-hotspots" aria-label="Hospital scan investigation"></div>
       </div>
 
       <aside class="guide-card">
@@ -35,15 +36,15 @@
           <p id="guideOutfit" class="outfit">Hospital gear</p>
         </div>
       </aside>
+      <div id="sceneSpeech" class="scene-speech" aria-label="WartsWorth says">
+        <span class="speaker-name">WartsWorth</span>
+        <p id="dialogue"></p>
+      </div>
     </section>
 
     <section class="dialogue-panel" aria-labelledby="sceneTitle">
       <p id="sectionLabel" class="eyebrow"></p>
       <h2 id="sceneTitle"></h2>
-      <div class="narrator-dialogue" aria-label="WartsWorth says">
-        <span class="speaker-name">WartsWorth</span>
-        <p id="dialogue"></p>
-      </div>
       <div class="mission-direction" aria-label="Mission direction">
         <span class="direction-label">Your task</span>
         <p id="directionText"></p>
@@ -67,7 +68,7 @@
     <div id="dialogContent"></div>
   </dialog>
 
-  <script src="js/data.js?v=20260922-3"></script>
-  <script src="js/game.js?v=20260922-3"></script>
+  <script src="js/data.js?v=20260922-4"></script>
+  <script src="js/game.js?v=20260922-4"></script>
 </body>
 </html>
