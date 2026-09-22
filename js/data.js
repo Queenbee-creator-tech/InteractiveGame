@@ -8,16 +8,17 @@ window.GAME_DATA = {
       interaction:{
         type:"hospital",
         hotspots:[
-          {id:"clot",label:"What is the clot?",x:66,y:41,text:"This dark red mass is a blood clot—a clump of blood that has thickened and stuck together. Clotting normally helps stop bleeding, but a clot can become dangerous when it blocks blood flow where it should not."},
-          {id:"blockage",label:"Inspect blockage",x:60,y:48,text:"Here the clot is blocking an artery that carries blood to part of the brain. When that blockage cuts off blood and oxygen to brain tissue, it can cause an ischemic stroke."},
-          {id:"aspiration",label:"Try aspiration",x:83,y:41,text:"Aspiration thrombectomy uses suction through a thin tube called a catheter to pull on and remove the clot. But securely engaging soft clot material can still be an engineering challenge."}
+          {id:"clot",label:"What is the clot?",x:66,y:41,text:"This dark red mass is a blood clot—a clump of blood that has thickened and stuck together. Clotting normally helps stop bleeding, but a clot can become dangerous when it blocks blood flow where it should not.",extra:""},
+          {id:"blockage",label:"Inspect blockage",x:60,y:48,text:"Here the clot is blocking an artery that carries blood to part of the brain. When that blockage cuts off blood and oxygen to brain tissue, it can cause an ischemic stroke.",extra:""},
+          {id:"aspiration",label:"Try aspiration",x:83,y:41,text:"Aspiration thrombectomy uses suction through a thin tube called a catheter to pull on and remove the clot. The design challenge is not simply generating suction; it is maintaining effective clot engagement during retrieval.",extra:"Engineering lens: aspiration provides the retrieval force, while the clot–catheter interface determines how securely the clot remains engaged as it is withdrawn."}
         ],
         quiz:{
-          setup:"You investigated the clot and tested aspiration. What design need should we take to nature?",
+          setup:"Based on the scan, which engineering requirement best captures the unresolved problem without prescribing the solution?",
           choices:[
-            {text:"Make the catheter look like an animal.",correct:false,feedback:"Appearance is not the problem we uncovered. Think about what happened where the catheter met the soft clot."},
-            {text:"Find a strategy that can help grip and retain soft clot material during removal.",correct:true,feedback:"Exactly! Now we have a functional design question to take into nature: how might we grip and retain soft material?"},
-            {text:"Use the largest possible catheter in every vessel.",correct:false,feedback:"That is not the design need we identified. Focus on securely engaging and retaining the clot."}
+            {text:"Increase suction pressure as much as possible so force alone determines retrieval success.",correct:false,feedback:"That jumps to a specific solution. The investigation identified a functional need at the clot–catheter interface, not a requirement to maximize suction."},
+            {text:"Improve clot engagement and retention during aspiration while preserving the catheter’s ability to operate within the vessel.",correct:true,feedback:"Exactly. That states the functional requirement without assuming what geometry or biological model will solve it. Now we can search nature for retention strategies."},
+            {text:"Replicate the morphology of a biological gripping structure as closely as possible.",correct:false,feedback:"That assumes both the biological model and the final form before abstraction. Bioinspiration should begin with the function we need, then search for biological strategies that accomplish it."},
+            {text:"Eliminate aspiration and replace it with a purely mechanical retrieval mechanism.",correct:false,feedback:"The evidence here does not establish that aspiration should be eliminated. Our unresolved need is stronger clot engagement during the aspiration process."}
           ]
         }
       },
@@ -25,10 +26,14 @@ window.GAME_DATA = {
     },
     {
       id:"explore", label:"2 of 6", short:"Explore", title:"Explore — Nature + Biology", icon:"🌿", outfit:"Field hat + exploration gear",
-      intro:"Somewhere in this habitat is an organism with a structure that may give us a clue. Look carefully! WartsWorth is staying a very respectful, very toad-sized distance away.",
-      prompt:"Scan the boa’s teeth, then identify the useful principle.",
+      intro:"Somewhere in this jungle is a biological strategy that may help with our retention problem. Explore the habitat before you scan the organism—WartsWorth is keeping a very respectful, very toad-sized distance.",
+      prompt:"Explore the jungle, find the hidden boa, then scan its teeth and identify the useful principle.",
       sourceCue:"Biology: Ryerson & Van Valkenburgh (2021); bioinspiration bridge: AskNature.",
-      interaction:{type:"choice",setup:"Non-invasive scan complete. Boa teeth are recurved—they curve backward—and their shape varies across the jaws. Research on boa feeding links curved teeth with ensnaring and retaining prey. What should engineers borrow?",choices:[
+      interaction:{type:"choice",fieldHotspots:[
+        {id:"leaf",label:"Inspect leaf",x:24,y:35,text:"Great camouflage, but this leaf is not solving our retention problem. Keep searching for a structure–function clue."},
+        {id:"vine",label:"Inspect vine",x:45,y:25,text:"A useful reminder: not every interesting natural form is relevant to the design need. Our target function is retention."},
+        {id:"track",label:"Inspect tracks",x:71,y:68,text:"Something moved through here. We are getting warmer—look for the organism, not just its trail."}
+      ],setup:"Non-invasive scan complete. Boa teeth are recurved—they curve backward—and their shape varies across the jaws. Research on boa feeding links curved teeth with ensnaring and retaining prey. What should engineers borrow?",choices:[
         {text:"The snake’s appearance",correct:false,feedback:"Look past appearance. Bioinspiration focuses on a useful structure–function relationship."},
         {text:"Venom",correct:false,feedback:"Not this time. Our boa-tooth evidence points to tooth geometry and retention, not venom."},
         {text:"Directional mechanical retention",correct:true,feedback:"Exactly. The useful idea is the relationship between the recurved structure and its retention function."}
@@ -40,11 +45,13 @@ window.GAME_DATA = {
       intro:"Lab goggles on! We brought the biological observation with us. Now we translate the useful principle into engineering.",
       prompt:"Choose where the recurved geometry belongs in the clot-retrieval design.",
       sourceCue:"Technology: AskNature; Purdue University News (2025); Interventional News (2025).",
-      interaction:{type:"choice",setup:"Researchers at Purdue developed TRAP—the Thrombus Retrieval Aspiration Platform. Where should backward-curved microscale structures be placed so aspirated clot material can contact them?",choices:[
-        {text:"On the outside of the catheter shaft",correct:false,feedback:"Think about where the clot travels during aspiration."},
-        {text:"Inside the distal catheter tip",correct:true,feedback:"Correct. TRAP uses backward-curved microscale structures inside the distal catheter tip. Aspiration draws the clot toward the opening, where the structures can add mechanical engagement and retention."},
-        {text:"On a separate snake-shaped attachment",correct:false,feedback:"Bioinspiration transfers the useful principle, not the snake’s appearance."}
-      ]},
+      interaction:{type:"design",pieces:[
+        {id:"teeth",label:"Recurved boa teeth",detail:"Biological structure: teeth curve backward rather than functioning as a simple straight spike."},
+        {id:"function",label:"Prey retention",detail:"Biological function: the recurved geometry helps ensnare and retain prey."},
+        {id:"principle",label:"Directional mechanical retention",detail:"Abstracted principle: geometry can resist movement more strongly in one direction than another."},
+        {id:"device",label:"Recurved catheter microstructures",detail:"Engineered structure: backward-curved microscale features are positioned inside the distal catheter tip."},
+        {id:"engFunction",label:"Clot engagement during aspiration",detail:"Engineered function: aspiration draws clot into contact with the structures, adding mechanical engagement and retention."}
+      ],setup:"Build the translation chain. Select the five pieces in order from biological structure to engineered function.",feedbackWrong:"Trace the logic rather than the appearance: biological structure → biological function → abstracted principle → engineered structure → engineered function.",feedbackCorrect:"Exactly. You transferred the structure–function logic instead of copying the snake’s appearance."},
       takeaway:"Boa tooth: recurved structure for retention. TRAP: recurved microstructures for clot engagement during aspiration."
     },
     {
