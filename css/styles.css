@@ -131,3 +131,12 @@ button:disabled{cursor:not-allowed}
   .scene,.scene-art{min-height:420px}.scene-image{height:420px;min-height:420px}
   .design-bank{grid-template-columns:1fr}
 }
+
+
+/* 2026-09-22 gameplay pass: keep WartsWorth readable without covering the investigation. */
+@media(min-width:901px){
+  .guide-card{left:1rem;bottom:1rem;max-width:210px;padding:.55rem .7rem;gap:.55rem}
+  .wartsworth{width:58px;height:68px}
+  .scene-speech{left:225px;bottom:16px;width:min(430px,34%);max-height:122px;padding:.65rem .8rem;font-size:.92rem;overflow:auto}
+  .scene-speech::before{bottom:22px}
+}
