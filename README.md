@@ -73,6 +73,34 @@ The experience should remain roughly **4–5 minutes** for a first-time player, 
 
 ---
 
+## Locked Scene Teaching Roles — 2026-09-22 UX Revision
+
+Each scene now has **one primary teaching job** so the player is not asked to learn the medical problem, engineering solution, evidence limits, and bioinspiration concept all at once.
+
+| Scene | Primary teaching job | Gameplay rule |
+| --- | --- | --- |
+| **Hospital** | Understand the medical problem: a clot blocks blood flow and must be removed. | Investigate the scan. Do not introduce advanced engineering requirements before the problem is understood. |
+| **Explore** | Discover the biological model and learn how recurved boa teeth function in retention. | The task says only to explore; it does not reveal that the player is looking for a boa. |
+| **Design** | Understand how the biological structure–function idea was translated into an engineered catheter feature. | Prefer visual comparison/assembly over a terminology-heavy quiz. |
+| **Test** | Test the engineered idea and distinguish promising preclinical/model evidence from proven patient benefit. | Player should activate/observe the comparison before being asked what the evidence supports. |
+| **Apply** | Tie the experience back to **bioinspiration**: nature → function → useful principle → engineered design → medical application. | Do not duplicate the Test scene or make development chronology the main lesson. |
+| **Final** | Briefly check the central bioinspiration idea, limitations, and mission takeaway. | Keep this short; do not repeat an entire earlier activity. |
+
+### Player-Facing Writing Rules
+
+- **Teach the simple idea first; introduce the scientific term second.**
+- WartsWorth should sound like a research partner teaching a classmate, not an assignment prompt.
+- Keep dialogue short enough to read while still looking at the scene.
+- Avoid unnecessary jargon; define necessary scientific terms in plain language.
+- Do not reveal future discoveries in task text.
+- Questions verify or reinforce learning; they do not carry most of the teaching.
+- Incorrect choices should explain the misconception and allow another choice.
+- Single-select quiz choices must be changeable/deselectable before the player continues.
+- Scientific wording may be simplified, but the underlying claim must remain within the approved source guardrails.
+- Development/history remains required rubric content, but it can appear as concise contextual teaching rather than a chronology game.
+
+---
+
 ## Interaction Architecture Implementation Checklist
 
 Do not replace the existing project wholesale. Upgrade one sequence at a time, test it, and reuse successful interaction patterns in later scenes.
@@ -85,7 +113,6 @@ Do not replace the existing project wholesale. Upgrade one sequence at a time, t
 - [ ] Make finding the boa trigger WartsWorth's discovery reaction
 - [ ] Unlock/activate the tablet only after the boa is found
 - [ ] Add tablet camera/scanner interaction
-- [ ] Add non-harmful observation/photograph framing in dialogue
 - [ ] Add simple scan/photograph feedback animation with reduced-motion fallback
 - [ ] Transition from whole-animal field view into tooth close-up
 - [ ] Add clickable tooth-structure hotspots
