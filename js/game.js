@@ -1,7 +1,7 @@
 (() => {
   const data=window.GAME_DATA;
   const $=id=>document.getElementById(id);
-  const state={section:0,completed:new Set(),hotspots:{},orders:{},finalChainDone:false,hospitalInside:false,hospitalSeen:new Set(),fieldSeen:new Set(),designSeen:new Set(),designOrder:[]};
+  const state={section:0,completed:new Set(),hotspots:{},orders:{},finalChainDone:false,hospitalInside:false,hospitalSeen:new Set(),fieldSeen:new Set(),boaFound:false,designSeen:new Set(),designOrder:[]};
   const els={progress:$("progress"),title:$("sceneTitle"),label:$("sectionLabel"),dialogue:$("dialogue"),image:$("sceneImage"),outfit:$("guideOutfit"),interaction:$("interaction"),back:$("backBtn"),next:$("nextBtn"),sourceCue:$("sourceCue"),direction:$("directionText"),hospitalHotspots:$("hospitalHotspots"),fieldHotspots:$("fieldHotspots"),designHotspots:$("designHotspots")};
 
   function buildProgress(){
@@ -75,6 +75,16 @@
       b.addEventListener("click",()=>{state.fieldSeen.add(spot.id);els.dialogue.textContent=spot.text;renderFieldHotspots(s)});
       els.fieldHotspots.appendChild(b);
     });
+    const boa=document.createElement("button");boa.type="button";boa.className="field-hotspot boa-discovery";boa.style.left="79%";boa.style.top="34%";boa.setAttribute("aria-label","Investigate camouflaged boa");boa.textContent=state.boaFound?"✓":"?";
+    if(state.boaFound)boa.classList.add("visited");
+    boa.addEventListener("click",()=>{
+      state.boaFound=true;
+      els.dialogue.textContent="There! Boa located. Nice fieldwork—and no, we are not borrowing a tooth. We can document the teeth without disturbing the animal. My tablet scanner is ready.";
+      els.direction.textContent="Boa found. Use WartsWorth's tablet scanner to document the teeth from a safe distance.";
+      renderFieldHotspots(s);
+      const scan=$("sceneHotspot");scan.hidden=false;scan.textContent="Open tablet scanner";
+    });
+    els.fieldHotspots.appendChild(boa);
   }
   function renderDesign(s){
     els.interaction.innerHTML="";els.designHotspots.innerHTML="";
@@ -139,7 +149,7 @@
     const src=hospitalExterior?"hospital-exterior":s.id;
     els.image.src="assets/images/"+src+".svg";
     els.image.alt=({hospital:hospitalExterior?"Illustrated hospital exterior where WartsWorth introduces the mission.":"Child-friendly hospital room with a computer displaying a cerebral vessel scan.",explore:"Illustrated field scene with a camouflaged boa constrictor observed from a safe distance.",design:"Illustrated lab comparison translating recurved tooth geometry into recurved microscale structures inside a catheter tip.",test:"Illustrated comparison of smooth aspiration and a bioinspired catheter concept.",apply:"Illustrated development pathway from biological observation through continued validation.",final:"Illustrated synthesis connecting a recurved biological structure to an engineered catheter design."})[s.id];
-    const hotspot=$("sceneHotspot");hotspot.hidden=s.id!=="explore"||!!state.hotspots.explore;if(s.id==="explore"&&!state.hotspots.explore){hotspot.style.right="21%";hotspot.style.top="35%";hotspot.textContent="Scan boa"}
+    const hotspot=$("sceneHotspot");hotspot.hidden=s.id!=="explore"||!!state.hotspots.explore||!state.boaFound;if(s.id==="explore"&&!state.hotspots.explore&&state.boaFound){hotspot.style.right="12%";hotspot.style.top="72%";hotspot.textContent="Open tablet scanner"}
     updateProgress();els.back.disabled=state.section===0;els.next.disabled=!state.completed.has(state.section);els.next.textContent=state.section===data.sections.length-1?"Mission Complete":"Continue";renderInteraction(s);
   }
   function openInfo(title,html){$("dialogContent").innerHTML="<h2>"+title+"</h2>"+html;$("infoDialog").showModal()}
@@ -149,7 +159,7 @@
     openInfo("Mission Complete","<p><strong>Structure → function → abstraction → engineering → testing.</strong></p><p>You traced how a biological retention strategy can inform an engineered clot-engagement strategy without treating preclinical evidence as a clinical guarantee.</p><div class='mission-actions'><button id='reviewMission' type='button'>Review journey</button><button id='replayMission' type='button'>Replay mission</button></div><p>Small creatures. Big solutions. Keep exploring!</p>");
     setTimeout(()=>{const review=$("reviewMission"),replay=$("replayMission");if(review)review.addEventListener("click",()=>{$("infoDialog").close();state.section=0;render()});if(replay)replay.addEventListener("click",()=>{$("infoDialog").close();restart()})},0);
   }
-  function restart(){state.section=0;state.completed.clear();state.hotspots={};state.orders={};state.finalChainDone=false;state.hospitalInside=false;state.hospitalSeen=new Set();state.fieldSeen=new Set();state.designSeen=new Set();state.designOrder=[];render()}
+  function restart(){state.section=0;state.completed.clear();state.hotspots={};state.orders={};state.finalChainDone=false;state.hospitalInside=false;state.hospitalSeen=new Set();state.fieldSeen=new Set();state.boaFound=false;state.designSeen=new Set();state.designOrder=[];render()}
   els.next.addEventListener("click",()=>{if(!state.completed.has(state.section))return;if(state.section<data.sections.length-1){state.section++;render()}else missionComplete()});
   els.back.addEventListener("click",()=>{if(state.section>0){state.section--;render()}});
   $("restartBtn").addEventListener("click",restart);
