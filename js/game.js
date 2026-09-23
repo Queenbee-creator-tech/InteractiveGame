@@ -29,11 +29,19 @@
     interaction.choices.forEach(choice=>{
       const b=document.createElement("button");b.type="button";b.className="choice";b.textContent=choice.text;
       b.addEventListener("click",()=>{
-        [...wrap.children].forEach(x=>x.classList.remove("selected"));b.classList.add("selected");
+        const wasSelected=b.classList.contains("selected");
+        [...wrap.children].forEach(x=>{x.classList.remove("selected");x.setAttribute("aria-pressed","false")});
+        if(wasSelected){
+          const old=document.getElementById("feedback");if(old)old.remove();
+          els.dialogue.textContent=s.intro;
+          return;
+        }
+        b.classList.add("selected");b.setAttribute("aria-pressed","true");
         feedback(choice.feedback,choice.correct);
         els.dialogue.textContent=choice.feedback;
         if(choice.correct)onCorrect(choice);
-      });wrap.appendChild(b);
+      });
+      b.setAttribute("aria-pressed","false");wrap.appendChild(b);
     });els.interaction.appendChild(wrap);
   }
   function renderHospital(s){
