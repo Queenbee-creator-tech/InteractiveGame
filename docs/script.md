@@ -1,5 +1,7 @@
 # Final Six-Section Player Script — Working Production Draft
 
+> **2026-09-22 UX revision:** The live prototype now follows a clearer scene split: Hospital = medical problem; Explore = biology/discovery; Design = biology-to-engineering translation; Test = experiment/evidence; Apply = explicit bioinspiration connection; Final = short synthesis. Player-facing language follows **plain idea first → scientific term second**. The older production wording below remains useful as a scientific-content record, but any conflicting quiz-heavy or chronology-heavy interaction should be treated as superseded by the README and live data.js plan.
+>
 > **Purpose:** Player-facing narration, prompts, feedback, and timing for the six-section game.
 >
 > **Important:** Rubric notes and source guardrails stay in planning files; they are not shown to the player. Captions must match all spoken narration. Final wording can be tightened during implementation, but scientific meaning must remain unchanged.
