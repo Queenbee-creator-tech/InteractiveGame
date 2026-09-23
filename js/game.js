@@ -87,8 +87,8 @@
     if(state.boaFound)boa.classList.add("visited");
     boa.addEventListener("click",()=>{
       state.boaFound=true;
-      els.dialogue.textContent="There! Boa located. Nice fieldwork—and no, we are not borrowing a tooth. We can document the teeth without disturbing the animal. My tablet scanner is ready.";
-      els.direction.textContent="Boa found. Use WartsWorth's tablet scanner to document the teeth from a safe distance.";
+      els.dialogue.textContent="There! A boa constrictor. Look at those teeth—we should get a closer view. My tablet can scan them.";
+      els.direction.textContent="Use WartsWorth's tablet to examine the teeth.";
       renderFieldHotspots(s);
       const scan=$("sceneHotspot");scan.hidden=false;scan.textContent="Open tablet scanner";
     });
@@ -171,7 +171,7 @@
   els.next.addEventListener("click",()=>{if(!state.completed.has(state.section))return;if(state.section<data.sections.length-1){state.section++;render()}else missionComplete()});
   els.back.addEventListener("click",()=>{if(state.section>0){state.section--;render()}});
   $("restartBtn").addEventListener("click",restart);
-  $("sceneHotspot").addEventListener("click",()=>{if(data.sections[state.section].id!=="explore")return;state.hotspots.explore=true;els.fieldHotspots.innerHTML="";$("sceneHotspot").hidden=true;setScene("assets/images/tooth-scan.svg","Simplified close-up of backward-curving boa teeth with arrows showing how recurved orientation can resist prey pulling away.");els.dialogue.textContent="Scan complete! See how the teeth curve backward? That orientation helps the teeth ensnare and retain prey that pulls away. Now identify the useful strategy we could abstract.";renderInteraction(data.sections[state.section])});
+  $("sceneHotspot").addEventListener("click",()=>{if(data.sections[state.section].id!=="explore")return;state.hotspots.explore=true;els.fieldHotspots.innerHTML="";$("sceneHotspot").hidden=true;setScene("assets/images/tooth-scan.svg","Simplified close-up of backward-curving boa teeth with arrows showing how recurved orientation can resist prey pulling away.");els.dialogue.textContent="Scan complete! See how the teeth curve backward? Research on boa feeding links curved teeth with ensnaring and retaining prey. Look closely at what that shape helps the snake do.";renderInteraction(data.sections[state.section])});
   $("captionsBtn").addEventListener("click",e=>{const on=e.currentTarget.getAttribute("aria-pressed")==="true";e.currentTarget.setAttribute("aria-pressed",String(!on));e.currentTarget.textContent="Narration text: "+(!on?"On":"Off");$("sceneSpeech").hidden=on});
   $("sourcesBtn").addEventListener("click",()=>openInfo("Sources",sourceHtml()));
   $("transcriptBtn").addEventListener("click",()=>openInfo("Transcript",transcriptHtml()));
