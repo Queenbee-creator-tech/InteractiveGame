@@ -10,7 +10,7 @@ window.GAME_DATA = {
         hotspots:[
           {id:"clot",label:"Inspect the clot",x:66,y:41,text:"This dark red mass is a blood clot. Clotting normally helps stop bleeding, but a clot becomes dangerous when it blocks blood flow where it should not.",extra:""},
           {id:"blockage",label:"Inspect the blockage",x:60,y:48,text:"Here the clot is blocking an artery that carries blood to part of the brain. If brain tissue loses blood and oxygen, an ischemic stroke can occur.",extra:""},
-          {id:"aspiration",label:"Try aspiration",x:83,y:41,text:"Doctors can use aspiration thrombectomy to remove a clot. A thin tube called a catheter uses suction to draw the clot toward the opening so it can be removed.",extra:"The problem is clear: a clot is blocking blood flow, and doctors need to remove it."}
+          {id:"aspiration",label:"Inspect the catheter",x:83,y:41,text:"This thin tube is a catheter. In aspiration thrombectomy, doctors use suction through the catheter to draw the clot toward the opening so it can be removed.",extra:"Now we know the medical challenge: the clot is blocking blood flow. Next, we can look for ideas that might help with clot removal."}
         ],
         quiz:{
           setup:"What problem are we trying to solve?",
@@ -29,9 +29,9 @@ window.GAME_DATA = {
       prompt:"Explore the environment.",
       sourceCue:"Biology: Ryerson & Van Valkenburgh (2021); bioinspiration connection: AskNature.",
       interaction:{type:"choice",fieldHotspots:[
-        {id:"leaf",label:"Inspect leaf",x:24,y:35,text:"A leaf! Interesting, but not the clue we need. Keep exploring."},
-        {id:"vine",label:"Inspect vine",x:45,y:25,text:"Good observation. There is more hiding in this habitat."},
-        {id:"track",label:"Inspect tracks",x:71,y:68,text:"Tracks! Something has been moving through here. Take another look around."}
+        {id:"leaf",label:"Inspect tree and leaves",x:24,y:35,text:"Trees are full of bioinspiration ideas. Their branching systems show how one main pathway can divide into many smaller pathways—a pattern engineers can study for distributing materials or fluids. Interesting, but let’s keep exploring this habitat."},
+        {id:"vine",label:"Inspect vine",x:45,y:25,text:"Vines solve a different problem: climbing and supporting themselves by using nearby structures. Climbing plants can inspire flexible systems that wrap, attach, or grow around supports. Useful idea—just not the clue for our medical problem."},
+        {id:"track",label:"Inspect tracks",x:71,y:68,text:"Tracks! These are evidence that an animal has been moving through here. Field scientists often use clues like tracks to learn what animals are present before they ever see the animal itself. Something may be nearby."}
       ],setup:"The teeth curve backward, and research on boa feeding links curved teeth with ensnaring and retaining prey. Which idea is useful to engineers?",choices:[
         {text:"Copy what the snake looks like.",correct:false,feedback:"The useful clue is not the snake’s appearance. Think about what the curved teeth help the snake do."},
         {text:"Use backward-curving structures to help hold onto soft material.",correct:true,feedback:"Yes. The useful idea comes from how the curved structure helps with retention. Engineers call this directional mechanical retention."},
@@ -41,16 +41,16 @@ window.GAME_DATA = {
     },
     {
       id:"design", label:"3 of 6", short:"Design", title:"Design — From Biology to Engineering", icon:"🔬", outfit:"Lab coat + transparent safety goggles",
-      intro:"We found our biological clue. Now let’s see how researchers translated that idea into a clot-removal design.",
-      prompt:"Compare the boa tooth with the engineered catheter feature.",
+      intro:"We found our biological clue. In the lab, we’re going to build the connection step by step—from what the tooth looks like, to what it does, to how that same idea appears in the catheter.",
+      prompt:"Build the biology-to-engineering connection in five steps.",
       sourceCue:"Technology: AskNature; Purdue University News (2025); Interventional News (2025).",
       interaction:{type:"design",pieces:[
-        {id:"teeth",label:"Backward-curving boa teeth",detail:"In the boa, the teeth curve backward. This shape can help ensnare and retain prey."},
-        {id:"function",label:"Hold onto prey",detail:"The important part is what the shape does: it helps the snake retain soft biological material."},
-        {id:"principle",label:"Retention idea",detail:"Engineers can take that structure–function idea without copying the whole snake. The scientific term we use here is directional mechanical retention."},
-        {id:"device",label:"Curved features inside the catheter tip",detail:"In TRAP, backward-curved microscale structures are placed inside the end of the catheter."},
-        {id:"engFunction",label:"Help engage the clot",detail:"Suction draws the clot toward the catheter opening, while the curved structures add mechanical engagement with the clot."}
-      ],setup:"Follow the idea from the boa tooth to the catheter. Select each step in the order the idea was translated.",feedbackWrong:"Start with what you observed in the boa: its tooth shape and what that shape does. Then follow that idea into the catheter.",feedbackCorrect:"You found the connection: engineers translated the tooth’s retention strategy into curved structures inside the catheter."},
+        {id:"teeth",label:"Step 1 — Observe: backward-curving boa teeth",detail:"Step 1 — Observe the structure. The boa’s teeth curve backward. We start with the biological feature we actually observed."},
+        {id:"function",label:"Step 2 — Ask what it does: helps retain prey",detail:"Step 2 — Ask about function. The curved teeth can help ensnare and retain prey. This matters because bioinspiration uses what a feature does, not just what it looks like."},
+        {id:"principle",label:"Step 3 — Take the useful idea: directional retention",detail:"Step 3 — Pull out the useful idea. A backward-curving structure can help resist material pulling away. We call this directional mechanical retention."},
+        {id:"device",label:"Step 4 — Translate it: curved structures inside the catheter tip",detail:"Step 4 — Translate the idea into engineering. TRAP places backward-curved microscale structures inside the distal catheter tip."},
+        {id:"engFunction",label:"Step 5 — Check the job: help engage the clot",detail:"Step 5 — Check the engineered function. Aspiration draws the clot toward the opening, and the curved structures add mechanical engagement and retention."}
+      ],setup:"Build the design story one step at a time. Start with what you observed in the boa, then choose what that feature does, the useful idea it gives engineers, where that idea appears in the catheter, and finally what it helps the catheter do.",feedbackWrong:"Start with what you observed in the boa: its tooth shape and what that shape does. Then follow that idea into the catheter.",feedbackCorrect:"You found the connection: engineers translated the tooth’s retention strategy into curved structures inside the catheter."},
       takeaway:"Researchers translated a biological retention strategy into backward-curved microscale structures inside the TRAP catheter tip."
     },
     {
@@ -66,40 +66,30 @@ window.GAME_DATA = {
       takeaway:"Testing can show whether a design is promising, but preclinical/model results are not the same as proven patient benefit."
     },
     {
-      id:"apply", label:"5 of 6", short:"Apply", title:"Apply — Why This Is Bioinspiration", icon:"🌎", outfit:"Science-guide gear",
-      intro:"Now connect the whole adventure. Bioinspiration is not just copying a shape—it is learning how something works in nature and translating that useful idea into engineering.",
-      prompt:"Connect nature → useful idea → engineered design → medical application.",
+      id:"apply", label:"5 of 6", short:"Connect", title:"Connect — What Makes It Bioinspiration?", icon:"🌎", outfit:"Science-guide gear",
+      intro:"We started with a medical problem, explored nature, studied how a biological feature works, and translated that useful idea into engineering. That process is the connection I want you to take from this mission.",
+      prompt:"Use what you learned to identify the bioinspiration connection.",
       sourceCue:"Bioinspiration synthesis: biology and technology sources used throughout the mission.",
-      interaction:{type:"order",items:[
-        "Boa teeth curve backward",
-        "The curved teeth help retain prey",
-        "The useful idea is directional retention",
-        "TRAP uses backward-curved structures inside the catheter tip",
-        "The structures help engage a clot during aspiration"
-      ],displayOrder:[3,0,4,2,1],feedbackWrong:"Follow the idea, not just the shapes: start with the biological structure, ask what it does, identify the useful idea, then see how engineering uses it.",feedbackCorrect:"That is the bioinspiration connection: biology gave researchers a useful strategy that was translated into an engineered design."},
-      takeaway:"Bioinspiration connects biological structure and function to an abstracted idea that can be translated into engineering."
+      interaction:{type:"choice",setup:"Which statement best explains what we learned and how it applies to bioinspiration?",choices:[
+        {text:"Bioinspiration means copying the appearance of an organism as closely as possible.",correct:false,feedback:"Not quite. The important connection was not what the boa looks like—it was how a biological structure performs a useful function."},
+        {text:"Bioinspiration can start by studying how a biological structure works, identifying its useful function, and translating that idea to solve a different problem.",correct:true,feedback:"Exactly. We studied how recurved teeth help with retention, abstracted that useful idea, and followed how it was translated into a clot-retrieval design."},
+        {text:"Bioinspiration only works when the biological model and the technology perform the same exact job.",correct:false,feedback:"They can work in very different contexts. Here, prey retention and clot engagement are different jobs, but the useful retention strategy connects them."}
+      ]},
+      takeaway:"Bioinspiration transfers useful biological strategies into new engineering contexts."
     },
     {
-      id:"final", label:"6 of 6", short:"Final", title:"Final — Mission Wrap-Up", icon:"🏆", outfit:"Explorer/science-guide gear",
-      intro:"You followed the idea from a medical problem, into nature, and back into engineering. One quick check before we wrap up.",
-      prompt:"Show what makes this design bioinspired.",
+      id:"final", label:"6 of 6", short:"Wrap-Up", title:"Mission Wrap-Up", icon:"🏆", outfit:"Explorer/science-guide gear",
+      intro:"Mission complete, researcher. You followed one idea all the way from a medical problem to biology, engineering, and testing.",
+      prompt:"Review the journey, then finish the mission.",
       sourceCue:"Synthesis of the biology and technology sources used throughout the mission.",
-      interaction:{type:"order",items:[
-        "Recurved/inward-curving boa teeth",
-        "Retain/ensnare prey",
-        "Directional mechanical retention",
-        "Backward-curved microscale structures inside the catheter tip",
-        "Added mechanical clot engagement/retention during aspiration"
-      ],displayOrder:[2,4,0,3,1],
-      followup:{
-        setup:"Why is TRAP a bioinspired design?",
-        choices:[
-          {text:"It copies what a snake looks like.",correct:false,feedback:"The connection is about how the biological structure works, not the snake’s appearance."},
-          {text:"Researchers studied how a biological structure works, identified the useful retention idea, and translated that idea into an engineered design.",correct:true,feedback:"Exactly. Nature provided a useful strategy, and engineering translated that strategy into a different context."},
-          {text:"Any medical device with a curved part is automatically bioinspired.",correct:false,feedback:"A similar shape alone is not enough. The structure–function relationship and deliberate transfer of the useful idea are what matter."}
-        ]
-      }},
-      takeaway:"Structure → function → useful principle → engineered structure → engineered function."
+      interaction:{type:"wrap",points:[
+        "Problem — A clot can block blood flow in the brain, and doctors need ways to remove it.",
+        "Biology — Recurved boa teeth can help ensnare and retain prey.",
+        "Design — TRAP translates that retention idea into backward-curved microscale structures inside the catheter tip.",
+        "Testing — Reported preclinical/model testing can show promise, but it is not the same as proven patient benefit.",
+        "Bioinspiration — The key is transferring a useful structure–function strategy from biology into a new engineering context."
+      ]},
+      takeaway:"You traced the complete bioinspiration story without repeating the same quiz."
     }
   ],
   sources:[
