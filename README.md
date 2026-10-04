@@ -83,8 +83,8 @@ Each scene now has **one primary teaching job** so the player is not asked to le
 | **Explore** | Discover the biological model and learn how recurved boa teeth function in retention. | The task says only to explore; it does not reveal that the player is looking for a boa. |
 | **Design** | Understand how the biological structure–function idea was translated into an engineered catheter feature. | Prefer visual comparison/assembly over a terminology-heavy quiz. |
 | **Test** | Test the engineered idea and distinguish promising preclinical/model evidence from proven patient benefit. | Player should activate/observe the comparison before being asked what the evidence supports. |
-| **Connect / Apply** | Ask what the player learned and explicitly connect it to **bioinspiration**: biology → function → useful principle → engineered design → application. | One synthesis question is enough; do not repeat Test or make development chronology the main lesson. |
-| **Mission Wrap-Up** | Review the journey only after the bioinspiration connection is complete. | No duplicate ordering quiz or repeated bioinspiration question; summarize the problem, biology, design, testing, and connection, then end the mission. |
+| **Mission Wrap-Up** | Return outside the hospital and briefly review the case before the final course connection. | No duplicate quiz; summarize the medical problem, biological clue, design translation, and evidence. |
+| **Bioinspiration Connection** | End outside at sunset with a broader transfer question: how could the lesson from this case guide bioinspiration for a completely different problem? | This is the final conceptual connection, not another step-by-step snake-to-catheter question. |
 
 ### Player-Facing Writing Rules
 
@@ -482,3 +482,14 @@ Phase 2 visual direction is locked. The six-section browser shell, gated progres
 ## Development Rule
 
 **Do not mark a task complete because code exists. Mark it complete only when it has been tested and meets the purpose described in this README.**
+
+
+## 2026-10-04 Playtest decisions
+- WartsWorth should sound like a natural research partner, not a textbook. Avoid em dashes in his dialogue.
+- When WartsWorth speaks, preserve the illustrated environment but strengthen visual focus/readability around his speech.
+- Design instruction must teach the purpose of the five links without putting the ordered answer directly into the answer buttons.
+- After the Design briefing/exploration, WartsWorth should explicitly hand the problem to the player and stay quiet while the player reasons through it.
+- Test is a boa-biology observation check.
+- Mission Wrap-Up comes before the final bioinspiration connection and takes place outside the hospital.
+- The final bioinspiration connection takes place outside at sunset and asks the player to generalize what bioinspiration means beyond this one snake/catheter example.
+- Do not repeat the same bioinspiration question in Test, Wrap-Up, Connection, and Mission Complete.
