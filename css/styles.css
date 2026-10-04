@@ -140,3 +140,12 @@ button:disabled{cursor:not-allowed}
   .scene-speech{left:225px;bottom:16px;width:min(430px,34%);max-height:122px;padding:.65rem .8rem;font-size:.92rem;overflow:auto}
   .scene-speech::before{bottom:22px}
 }
+
+
+/* 2026-10-04 dialogue focus: keep the scene visible while making WartsWorth easier to follow. */
+.scene::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,transparent 42%,rgba(5,37,42,.16) 100%);z-index:4}
+.scene-speech,.guide-card,.hospital-hotspots,.field-hotspots,.design-hotspots,.scene-hotspot{z-index:7}
+.scene-speech{background:rgba(255,255,255,.9);backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px);box-shadow:0 14px 36px rgba(0,0,0,.28)}
+.scene-speech p{font-size:1rem;line-height:1.45}
+.wrap-summary{display:grid;gap:.45rem}
+.wrap-point{margin:0;padding:.65rem .8rem;background:#eef4ef;border-left:4px solid #2f7975;border-radius:.55rem}
