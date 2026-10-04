@@ -58,7 +58,7 @@
       els.interaction.appendChild(enter);return;
     }
     s.interaction.hotspots.forEach((spot,i)=>{
-      const b=document.createElement("button");b.type="button";b.className="hospital-hotspot";b.style.left=spot.x+"%";b.style.top=spot.y+"%";b.setAttribute("aria-label",spot.label);b.textContent=state.hospitalSeen.has(spot.id)?"✓":String(i+1);
+      const b=document.createElement("button");b.type="button";b.className="hospital-hotspot";b.style.left=spot.x+"%";b.style.top=spot.y+"%";b.setAttribute("aria-label",spot.label);b.title=spot.label;b.textContent=state.hospitalSeen.has(spot.id)?"✓":String(i+1);
       if(state.hospitalSeen.has(spot.id))b.classList.add("visited");
       b.addEventListener("click",()=>{
         state.hospitalSeen.add(spot.id);
@@ -78,12 +78,12 @@
     els.fieldHotspots.innerHTML="";
     if(s.id!=="explore"||state.hotspots.explore)return;
     (s.interaction.fieldHotspots||[]).forEach(spot=>{
-      const b=document.createElement("button");b.type="button";b.className="field-hotspot";b.style.left=spot.x+"%";b.style.top=spot.y+"%";b.setAttribute("aria-label",spot.label);b.textContent="?";
+      const b=document.createElement("button");b.type="button";b.className="field-hotspot";b.style.left=spot.x+"%";b.style.top=spot.y+"%";b.setAttribute("aria-label",spot.label);b.title=spot.label;b.textContent="?";
       if(state.fieldSeen.has(spot.id)){b.classList.add("visited");b.textContent="✓"}
       b.addEventListener("click",()=>{state.fieldSeen.add(spot.id);els.dialogue.textContent=spot.text;renderFieldHotspots(s)});
       els.fieldHotspots.appendChild(b);
     });
-    const boa=document.createElement("button");boa.type="button";boa.className="field-hotspot boa-discovery";boa.style.left="79%";boa.style.top="34%";boa.setAttribute("aria-label","Investigate camouflaged boa");boa.textContent=state.boaFound?"✓":"?";
+    const boa=document.createElement("button");boa.type="button";boa.className="field-hotspot boa-discovery";boa.style.left="79%";boa.style.top="34%";boa.setAttribute("aria-label","Investigate animal");boa.title="Investigate what you found";boa.textContent=state.boaFound?"✓":"?";
     if(state.boaFound)boa.classList.add("visited");
     boa.addEventListener("click",()=>{
       state.boaFound=true;
@@ -101,8 +101,17 @@
     const bank=document.createElement("div");bank.className="design-bank";
     s.interaction.pieces.forEach((piece,i)=>{
       const b=document.createElement("button");b.type="button";b.className="design-piece";b.textContent=piece.label;
-      if(state.designOrder.includes(i)){b.disabled=true;b.classList.add("done")}
-      b.addEventListener("click",()=>{if(!state.designOrder.includes(i)){state.designOrder.push(i);els.dialogue.textContent=piece.detail;renderDesign(s)}});
+      if(state.designOrder.includes(i)){b.classList.add("done");b.setAttribute("aria-pressed","true")}else b.setAttribute("aria-pressed","false");
+      b.addEventListener("click",()=>{
+        const selectedIndex=state.designOrder.indexOf(i);
+        if(selectedIndex>=0){
+          state.designOrder.splice(selectedIndex,1);
+          els.dialogue.textContent="Removed "+piece.label+". You can choose a different step.";
+        }else{
+          state.designOrder.push(i);els.dialogue.textContent=piece.detail;
+        }
+        renderDesign(s);
+      });
       bank.appendChild(b);
     });
     const chain=document.createElement("ol");chain.className="design-chain";chain.innerHTML=state.designOrder.map(i=>"<li>"+s.interaction.pieces[i].label+"</li>").join("");
@@ -110,7 +119,7 @@
     s.interaction.pieces.forEach((piece,i)=>{
       const h=document.createElement("button");h.type="button";h.className="design-hotspot";h.textContent=String(i+1);h.setAttribute("aria-label","Explain "+piece.label);
       const pos=[[31,31],[39,43],[50,50],[66,40],[76,31]][i];h.style.left=pos[0]+"%";h.style.top=pos[1]+"%";
-      h.addEventListener("click",()=>{els.dialogue.textContent=piece.detail;h.classList.add("visited")});els.designHotspots.appendChild(h);
+      h.addEventListener("click",()=>{els.dialogue.textContent=piece.detail;h.classList.add("visited")});h.title=piece.label;els.designHotspots.appendChild(h);
     });
     if(state.designOrder.length===s.interaction.pieces.length){
       const correct=state.designOrder.every((v,i)=>v===i);
@@ -140,11 +149,21 @@
       }
     }
   }
+  function renderWrap(s){
+    els.interaction.innerHTML="";
+    const list=document.createElement("div");list.className="wrap-summary";
+    (s.interaction.points||[]).forEach(point=>{const p=document.createElement("p");p.className="wrap-point";p.textContent=point;list.appendChild(p)});
+    els.interaction.appendChild(list);
+    const finish=document.createElement("button");finish.type="button";finish.className="choice primary inline-action";finish.textContent="Finish mission →";
+    finish.addEventListener("click",()=>completeCurrent("Mission review complete."));
+    els.interaction.appendChild(finish);
+  }
   function renderInteraction(s){
     els.interaction.innerHTML="";els.hospitalHotspots.innerHTML="";
     if(s.id==="hospital"){renderHospital(s);return}
-    if(s.id==="explore"&&!state.hotspots.explore){renderFieldHotspots(s);const p=document.createElement("p");p.className="interaction-setup compact-instruction";p.textContent="Explore the jungle. When you find the boa, use the Scan boa hotspot.";els.interaction.appendChild(p);return}
+    if(s.id==="explore"&&!state.hotspots.explore){renderFieldHotspots(s);const p=document.createElement("p");p.className="interaction-setup compact-instruction";p.textContent="Click around the habitat and investigate anything that catches your attention.";els.interaction.appendChild(p);return}
     if(s.id==="design"){renderDesign(s);return}
+    if(s.interaction.type==="wrap"){renderWrap(s);return}
     if(s.id==="final"&&state.finalChainDone&&!state.completed.has(state.section)){renderFollowup(s);return}
     if(s.interaction.type==="choice")renderChoice(s);
     if(s.interaction.type==="order")renderOrder(s);
