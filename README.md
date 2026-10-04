@@ -83,8 +83,8 @@ Each scene now has **one primary teaching job** so the player is not asked to le
 | **Explore** | Discover the biological model and learn how recurved boa teeth function in retention. | The task says only to explore; it does not reveal that the player is looking for a boa. |
 | **Design** | Understand how the biological structure–function idea was translated into an engineered catheter feature. | Prefer visual comparison/assembly over a terminology-heavy quiz. |
 | **Test** | Test the engineered idea and distinguish promising preclinical/model evidence from proven patient benefit. | Player should activate/observe the comparison before being asked what the evidence supports. |
-| **Apply** | Tie the experience back to **bioinspiration**: nature → function → useful principle → engineered design → medical application. | Do not duplicate the Test scene or make development chronology the main lesson. |
-| **Final** | Briefly check the central bioinspiration idea, limitations, and mission takeaway. | Keep this short; do not repeat an entire earlier activity. |
+| **Connect / Apply** | Ask what the player learned and explicitly connect it to **bioinspiration**: biology → function → useful principle → engineered design → application. | One synthesis question is enough; do not repeat Test or make development chronology the main lesson. |
+| **Mission Wrap-Up** | Review the journey only after the bioinspiration connection is complete. | No duplicate ordering quiz or repeated bioinspiration question; summarize the problem, biology, design, testing, and connection, then end the mission. |
 
 ### Player-Facing Writing Rules
 
@@ -108,7 +108,7 @@ Do not replace the existing project wholesale. Upgrade one sequence at a time, t
 ### Prototype A — Field → Hidden Boa → Tablet Scan → Tooth Investigation
 - [ ] Define field-scene hotspot map and required vs optional discoveries
 - [ ] Make the boa visually hidden/camouflaged but discoverable
-- [ ] Add several optional field hotspots with brief WartsWorth reactions/facts
+- [ ] Add several optional field hotspots with useful WartsWorth mini-lessons (e.g., other bioinspiration possibilities or field-research clues), not empty praise
 - [ ] Add accessible hotspot labels/focus states and non-pointer equivalents
 - [ ] Make finding the boa trigger WartsWorth's discovery reaction
 - [ ] Unlock/activate the tablet only after the boa is found
@@ -135,9 +135,9 @@ Do not replace the existing project wholesale. Upgrade one sequence at a time, t
 
 ### Prototype C — Laboratory Translation / Design Activity
 - [ ] Preserve locked boa → directional retention → TRAP scientific chain
-- [ ] Create side-by-side biological and engineered comparison
+- [ ] Create side-by-side biological and engineered comparison with numbered steps that visibly match WartsWorth's explanation
 - [ ] Add clickable corresponding-feature highlighting
-- [ ] Add simple select/place/assemble interaction for the bioinspired concept
+- [ ] Add simple select/place/assemble interaction for the bioinspired concept; selected steps must be reversible before submission
 - [ ] Show why the selected feature transfers functionally rather than merely resembling the tooth
 - [ ] Use corrective consequences/WartsWorth guidance instead of generic wrong-answer feedback
 - [ ] Preserve supported development/history content and source cues
@@ -153,11 +153,13 @@ Do not replace the existing project wholesale. Upgrade one sequence at a time, t
 - [ ] Preserve limitations/claim guardrails
 - [ ] Test accessibility, clarity, and timing
 
-### Prototype E — Return to Hospital / Final Integration
-- [ ] Reconnect the tested design to the original medical problem
-- [ ] Show why the technology could matter without overstating evidence
+### Prototype E — Bioinspiration Connection → Mission Wrap-Up
+- [ ] Ask one clear synthesis question: what did the player learn, and how does it demonstrate bioinspiration?
+- [ ] Reconnect biology → function → useful principle → engineering → medical application
 - [ ] Preserve explicit IB 411 analogical-reasoning/course connection
-- [ ] Keep final questions concise and purposeful
+- [ ] Place Mission Wrap-Up after this connection, not before it
+- [ ] Make Mission Wrap-Up a concise review rather than another version of the same question
+- [ ] Preserve development/history elsewhere as concise supported context
 - [ ] Preserve references/credits/transcript/accessibility materials
 - [ ] Test full story continuity
 
