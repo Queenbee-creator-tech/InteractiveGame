@@ -33,35 +33,12 @@ WartsWorth is an active research partner rather than a static narrator box. He m
 
 ### Target Story / Environment Progression
 
-1. **Hospital / Medical Problem**
-   - Receive the mission and investigate the medical context.
-   - Explore the hospital/computer scan to understand the clot, blockage, aspiration, and design need.
-
-2. **Field Exploration**
-   - Enter a large visual habitat and explore multiple hotspots.
-   - Find the camouflaged/hidden boa rather than having it immediately presented.
-   - Activate WartsWorth's tablet only after the boa is discovered.
-
-3. **Tablet Scan → Tooth Investigation**
-   - Use the tablet/camera to photograph or scan the boa without harming it.
-   - Transition/zoom into the teeth.
-   - Investigate clickable tooth structures and connect structure to biological function.
-
-4. **Laboratory / Biological-to-Engineering Translation**
-   - Compare the biological structure with the engineered design.
-   - Interact with corresponding features through highlighting, selecting, placing, matching, or simple assembly.
-   - Make the biology → mechanism → engineered feature relationship visually explicit.
-
-5. **Computer / Testing Station**
-   - Run a simplified clot/device experiment or simulation.
-   - Observe consequences of design choices.
-   - When practical, ineffective choices should produce informative consequences and WartsWorth guidance rather than a generic WRONG message.
-
-6. **Return to Medical Context / Debrief**
-   - Reconnect the design to the original medical problem.
-   - Reinforce what the evidence supports, the bioinspiration/course connection, usefulness, and limitations.
-   - Use a short final comprehension check only where it strengthens learning/rubric coverage.
-   - Provide references, credits, and accessibility materials.
+1. **Hospital / Medical Problem** — investigate the clot, blockage, and aspiration catheter without revealing the later biological solution.
+2. **Field Exploration + Tablet Scan** — freely explore; the task does not name the boa before discovery. Finding it unlocks the tablet/tooth investigation.
+3. **Design / Biology-to-Engineering Translation** — investigate the five conceptual links, then solve the translation independently while WartsWorth stays quiet.
+4. **Boa Biology Test** — reason from recurved tooth geometry and prey-retention evidence. This tests biology rather than repeating the catheter lesson.
+5. **Mission Wrap-Up** — return outside the hospital and review the case, including the evidence boundary, without another quiz.
+6. **Bioinspiration Connection** — end outdoors at sunset with one broader transfer question about how bioinspiration can guide a completely different engineering problem.
 
 ### Scope Guardrails
 
@@ -82,7 +59,7 @@ Each scene now has **one primary teaching job** so the player is not asked to le
 | **Hospital** | Understand the medical problem: a clot blocks blood flow and must be removed. | Investigate the scan. Do not introduce advanced engineering requirements before the problem is understood. |
 | **Explore** | Discover the biological model and learn how recurved boa teeth function in retention. | The task says only to explore; it does not reveal that the player is looking for a boa. |
 | **Design** | Understand how the biological structure–function idea was translated into an engineered catheter feature. | Prefer visual comparison/assembly over a terminology-heavy quiz. |
-| **Test** | Test the engineered idea and distinguish promising preclinical/model evidence from proven patient benefit. | Player should activate/observe the comparison before being asked what the evidence supports. |
+| **Boa Biology Test** | Check whether the player understands how recurved tooth geometry relates to prey retention. | Test the snake biology, not the catheter or evidence lesson again. |
 | **Mission Wrap-Up** | Return outside the hospital and briefly review the case before the final course connection. | No duplicate quiz; summarize the medical problem, biological clue, design translation, and evidence. |
 | **Bioinspiration Connection** | End outside at sunset with a broader transfer question: how could the lesson from this case guide bioinspiration for a completely different problem? | This is the final conceptual connection, not another step-by-step snake-to-catheter question. |
 
@@ -143,23 +120,19 @@ Do not replace the existing project wholesale. Upgrade one sequence at a time, t
 - [ ] Preserve supported development/history content and source cues
 - [ ] Test accessibility, scientific clarity, and timing
 
-### Prototype D — Testing Station / Clot Experiment
-- [ ] Turn current clot/device content into an activate-and-observe experiment
-- [ ] Let the player initiate the simplified test
-- [ ] Animate/visualize device–clot interaction within evidence-supported limits
-- [ ] Show consequences of at least one ineffective choice when practical
-- [ ] Have WartsWorth guide reconsideration without blocking progress
-- [ ] Reinforce aspiration + mechanical engagement accurately
-- [ ] Preserve limitations/claim guardrails
+### Prototype D — Boa Biology Test
+- [ ] Keep the visual focused on boa tooth direction and prey pulling away
+- [ ] Ask one structure/function question that requires observation
+- [ ] Keep feedback tied to the approved boa biology source
+- [ ] Do not repeat the engineering translation or final bioinspiration question
 - [ ] Test accessibility, clarity, and timing
 
-### Prototype E — Bioinspiration Connection → Mission Wrap-Up
-- [ ] Ask one clear synthesis question: what did the player learn, and how does it demonstrate bioinspiration?
-- [ ] Reconnect biology → function → useful principle → engineering → medical application
-- [ ] Preserve explicit IB 411 analogical-reasoning/course connection
-- [ ] Place Mission Wrap-Up after this connection, not before it
-- [ ] Make Mission Wrap-Up a concise review rather than another version of the same question
-- [ ] Preserve development/history elsewhere as concise supported context
+### Prototype E — Mission Wrap-Up → Bioinspiration Connection
+- [ ] Return outside the hospital for a concise case review
+- [ ] Review problem, biological clue, design translation, and evidence limitation without another quiz
+- [ ] Preserve supported development/history context without restoring the old chronology game
+- [ ] End outside at sunset with one broader bioinspiration transfer question
+- [ ] Make the final question generalize beyond the snake/catheter example
 - [ ] Preserve references/credits/transcript/accessibility materials
 - [ ] Test full story continuity
 
