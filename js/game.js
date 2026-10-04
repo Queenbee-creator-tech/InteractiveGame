@@ -99,38 +99,66 @@
     const setup=document.createElement("p");setup.className="interaction-setup";setup.textContent=s.interaction.setup;els.interaction.appendChild(setup);
     const workspace=document.createElement("div");workspace.className="design-workspace";
     const bank=document.createElement("div");bank.className="design-bank";
-    s.interaction.pieces.forEach((piece,i)=>{
+    const displayOrder=s.interaction.displayOrder||s.interaction.pieces.map((_,i)=>i);
+    displayOrder.forEach(i=>{
+      const piece=s.interaction.pieces[i];
       const b=document.createElement("button");b.type="button";b.className="design-piece";b.textContent=piece.label;
       if(state.designOrder.includes(i)){b.classList.add("done");b.setAttribute("aria-pressed","true")}else b.setAttribute("aria-pressed","false");
       b.addEventListener("click",()=>{
         const selectedIndex=state.designOrder.indexOf(i);
         if(selectedIndex>=0){
           state.designOrder.splice(selectedIndex,1);
-          els.dialogue.textContent="Removed "+piece.label+". You can choose a different step.";
         }else{
           state.designOrder.push(i);
-          if(!state.designBriefingDone) els.dialogue.textContent=piece.detail;
         }
         renderDesign(s);
       });
       bank.appendChild(b);
     });
-    const chain=document.createElement("ol");chain.className="design-chain";chain.innerHTML=state.designOrder.map(i=>"<li>"+s.interaction.pieces[i].label+"</li>").join("");
+    const chain=document.createElement("ol");chain.className="design-chain";
+    chain.innerHTML=state.designOrder.map(i=>"<li>"+s.interaction.pieces[i].label+"</li>").join("");
     workspace.appendChild(bank);workspace.appendChild(chain);els.interaction.appendChild(workspace);
+
     s.interaction.pieces.forEach((piece,i)=>{
-      const h=document.createElement("button");h.type="button";h.className="design-hotspot";h.textContent=String(i+1);h.setAttribute("aria-label","Explain "+piece.label);
+      const h=document.createElement("button");h.type="button";h.className="design-hotspot";h.textContent=String(i+1);h.setAttribute("aria-label","Investigate design clue "+(i+1));
       const pos=[[31,31],[39,43],[50,50],[66,40],[76,31]][i];h.style.left=pos[0]+"%";h.style.top=pos[1]+"%";
-      h.addEventListener("click",()=>{if(!state.designBriefingDone)els.dialogue.textContent=piece.detail;h.classList.add("visited")});h.title=piece.label;els.designHotspots.appendChild(h);
+      if(state.designSeen.has(i))h.classList.add("visited");
+      h.addEventListener("click",()=>{
+        if(state.designBriefingDone)return;
+        state.designSeen.add(i);
+        els.dialogue.textContent=piece.detail;
+        renderDesign(s);
+      });
+      els.designHotspots.appendChild(h);
     });
-    if(!state.designBriefingDone && state.designSeen.size===0){
-      const think=document.createElement("button");think.type="button";think.className="choice primary inline-action";think.textContent="I’m ready to build it myself";
-      think.addEventListener("click",()=>{state.designBriefingDone=true;state.designOrder=[];els.dialogue.textContent="Your turn, researcher. I’ll stay quiet while you work it out.";renderDesign(s)});
-      els.interaction.appendChild(think);
+
+    if(!state.designBriefingDone){
+      const ready=document.createElement("button");ready.type="button";ready.className="choice primary inline-action";
+      ready.textContent=state.designSeen.size===s.interaction.pieces.length?"I’m ready to build it myself":"Investigate all 5 clues first";
+      ready.disabled=state.designSeen.size!==s.interaction.pieces.length;
+      ready.addEventListener("click",()=>{
+        state.designBriefingDone=true;state.designOrder=[];
+        els.dialogue.textContent="Your turn, researcher. I’ll stay quiet while you work it out.";
+        renderDesign(s);
+      });
+      els.interaction.appendChild(ready);
+      return;
     }
+
     if(state.designOrder.length===s.interaction.pieces.length){
-      const correct=state.designOrder.every((v,i)=>v===i);
-      if(correct)completeCurrent(s.interaction.feedbackCorrect+" "+s.takeaway);
-      else{feedback(s.interaction.feedbackWrong);const retry=document.createElement("button");retry.type="button";retry.className="choice retry";retry.textContent="Rebuild the chain";retry.addEventListener("click",()=>{state.designOrder=[];renderDesign(s)});els.interaction.appendChild(retry)}
+      const check=document.createElement("button");check.type="button";check.className="choice primary inline-action";check.textContent="Check my design";
+      check.addEventListener("click",()=>{
+        const correct=state.designOrder.every((v,i)=>v===i);
+        if(correct){
+          els.dialogue.textContent=s.interaction.history;
+          completeCurrent(s.interaction.feedbackCorrect+" "+s.interaction.history);
+        }else{
+          feedback(s.interaction.feedbackWrong);
+        }
+      });
+      els.interaction.appendChild(check);
+      const retry=document.createElement("button");retry.type="button";retry.className="choice retry";retry.textContent="Clear choices";
+      retry.addEventListener("click",()=>{state.designOrder=[];renderDesign(s)});els.interaction.appendChild(retry);
     }
   }
   function renderFollowup(s){
@@ -181,7 +209,7 @@
     const hospitalExterior=s.id==="hospital"&&!state.hospitalInside;
     const src=hospitalExterior?"hospital-exterior":(s.id==="wrap"?"hospital-exterior":s.id);
     els.image.src="assets/images/"+src+".svg";
-    els.image.alt=({hospital:hospitalExterior?"Illustrated hospital exterior where WartsWorth introduces the mission.":"Child-friendly hospital room with a computer displaying a cerebral vessel scan.",explore:"Illustrated field scene with a camouflaged boa constrictor observed from a safe distance.",design:"Illustrated lab comparison translating recurved tooth geometry into recurved microscale structures inside a catheter tip.",test:"Illustrated close-up of recurved boa teeth used to test the player’s biological observation.",wrap:"Illustrated hospital exterior where the research mission is reviewed.",apply:"Illustrated sunset field scene representing the broader bioinspiration connection."})[s.id];
+    els.image.alt=({hospital:hospitalExterior?"Illustrated hospital exterior where WartsWorth introduces the mission.":"Child-friendly hospital room with a computer displaying a cerebral vessel scan.",explore:"Illustrated tropical field habitat with trees, vines, tracks, and places to investigate.",design:"Illustrated lab comparison translating recurved tooth geometry into recurved microscale structures inside a catheter tip.",test:"Illustrated close-up of recurved boa teeth used to test the player’s biological observation.",wrap:"Illustrated hospital exterior where the research mission is reviewed.",apply:"Illustrated sunset field scene representing the broader bioinspiration connection."})[s.id];
     const hotspot=$("sceneHotspot");hotspot.hidden=s.id!=="explore"||!!state.hotspots.explore||!state.boaFound;if(s.id==="explore"&&!state.hotspots.explore&&state.boaFound){hotspot.style.right="12%";hotspot.style.top="72%";hotspot.textContent="Open tablet scanner"}
     updateProgress();els.back.disabled=state.section===0;els.next.disabled=!state.completed.has(state.section);els.next.textContent=state.section===data.sections.length-1?"Mission Complete":"Continue";renderInteraction(s);
   }
