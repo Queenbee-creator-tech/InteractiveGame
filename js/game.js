@@ -1,7 +1,7 @@
 (() => {
   const data=window.GAME_DATA;
   const $=id=>document.getElementById(id);
-  const state={section:0,completed:new Set(),hotspots:{},orders:{},finalChainDone:false,hospitalInside:false,hospitalSeen:new Set(),fieldSeen:new Set(),boaFound:false,designSeen:new Set(),designOrder:[]};
+  const state={section:0,completed:new Set(),hotspots:{},orders:{},finalChainDone:false,hospitalInside:false,hospitalSeen:new Set(),fieldSeen:new Set(),boaFound:false,designSeen:new Set(),designOrder:[],designBriefingDone:false};
   const els={progress:$("progress"),title:$("sceneTitle"),label:$("sectionLabel"),dialogue:$("dialogue"),image:$("sceneImage"),outfit:$("guideOutfit"),interaction:$("interaction"),back:$("backBtn"),next:$("nextBtn"),sourceCue:$("sourceCue"),direction:$("directionText"),hospitalHotspots:$("hospitalHotspots"),fieldHotspots:$("fieldHotspots"),designHotspots:$("designHotspots")};
 
   function buildProgress(){
@@ -108,7 +108,8 @@
           state.designOrder.splice(selectedIndex,1);
           els.dialogue.textContent="Removed "+piece.label+". You can choose a different step.";
         }else{
-          state.designOrder.push(i);els.dialogue.textContent=piece.detail;
+          state.designOrder.push(i);
+          if(!state.designBriefingDone) els.dialogue.textContent=piece.detail;
         }
         renderDesign(s);
       });
@@ -119,8 +120,13 @@
     s.interaction.pieces.forEach((piece,i)=>{
       const h=document.createElement("button");h.type="button";h.className="design-hotspot";h.textContent=String(i+1);h.setAttribute("aria-label","Explain "+piece.label);
       const pos=[[31,31],[39,43],[50,50],[66,40],[76,31]][i];h.style.left=pos[0]+"%";h.style.top=pos[1]+"%";
-      h.addEventListener("click",()=>{els.dialogue.textContent=piece.detail;h.classList.add("visited")});h.title=piece.label;els.designHotspots.appendChild(h);
+      h.addEventListener("click",()=>{if(!state.designBriefingDone)els.dialogue.textContent=piece.detail;h.classList.add("visited")});h.title=piece.label;els.designHotspots.appendChild(h);
     });
+    if(!state.designBriefingDone && state.designSeen.size===0){
+      const think=document.createElement("button");think.type="button";think.className="choice primary inline-action";think.textContent="I’m ready to build it myself";
+      think.addEventListener("click",()=>{state.designBriefingDone=true;state.designOrder=[];els.dialogue.textContent="Your turn, researcher. I’ll stay quiet while you work it out.";renderDesign(s)});
+      els.interaction.appendChild(think);
+    }
     if(state.designOrder.length===s.interaction.pieces.length){
       const correct=state.designOrder.every((v,i)=>v===i);
       if(correct)completeCurrent(s.interaction.feedbackCorrect+" "+s.takeaway);
@@ -171,11 +177,11 @@
   function render(){
     const s=data.sections[state.section];
     els.label.textContent=s.label;els.title.textContent=s.title;els.outfit.textContent=s.outfit;els.sourceCue.textContent=s.sourceCue||"";
-    els.dialogue.textContent=s.intro;els.direction.textContent=s.prompt;
+    els.dialogue.textContent=s.intro;els.direction.textContent=s.prompt;document.querySelector(".scene").classList.remove("speaking-focus");
     const hospitalExterior=s.id==="hospital"&&!state.hospitalInside;
-    const src=hospitalExterior?"hospital-exterior":s.id;
+    const src=hospitalExterior?"hospital-exterior":(s.id==="wrap"?"hospital-exterior":s.id);
     els.image.src="assets/images/"+src+".svg";
-    els.image.alt=({hospital:hospitalExterior?"Illustrated hospital exterior where WartsWorth introduces the mission.":"Child-friendly hospital room with a computer displaying a cerebral vessel scan.",explore:"Illustrated field scene with a camouflaged boa constrictor observed from a safe distance.",design:"Illustrated lab comparison translating recurved tooth geometry into recurved microscale structures inside a catheter tip.",test:"Illustrated comparison of smooth aspiration and a bioinspired catheter concept.",apply:"Illustrated development pathway from biological observation through continued validation.",final:"Illustrated synthesis connecting a recurved biological structure to an engineered catheter design."})[s.id];
+    els.image.alt=({hospital:hospitalExterior?"Illustrated hospital exterior where WartsWorth introduces the mission.":"Child-friendly hospital room with a computer displaying a cerebral vessel scan.",explore:"Illustrated field scene with a camouflaged boa constrictor observed from a safe distance.",design:"Illustrated lab comparison translating recurved tooth geometry into recurved microscale structures inside a catheter tip.",test:"Illustrated close-up of recurved boa teeth used to test the player’s biological observation.",wrap:"Illustrated hospital exterior where the research mission is reviewed.",apply:"Illustrated sunset field scene representing the broader bioinspiration connection."})[s.id];
     const hotspot=$("sceneHotspot");hotspot.hidden=s.id!=="explore"||!!state.hotspots.explore||!state.boaFound;if(s.id==="explore"&&!state.hotspots.explore&&state.boaFound){hotspot.style.right="12%";hotspot.style.top="72%";hotspot.textContent="Open tablet scanner"}
     updateProgress();els.back.disabled=state.section===0;els.next.disabled=!state.completed.has(state.section);els.next.textContent=state.section===data.sections.length-1?"Mission Complete":"Continue";renderInteraction(s);
   }
@@ -183,10 +189,10 @@
   function sourceHtml(){return "<ol class='source-list'>"+data.sources.map(x=>"<li>"+x.label+" <a href='"+x.url+"' target='_blank' rel='noopener'>Open source</a></li>").join("")+"</ol>"}
   function transcriptHtml(){return data.transcript.map(x=>"<section class='transcript-section'><h3>"+x[0]+"</h3><p>"+x[1]+"</p></section>").join("")}
   function missionComplete(){
-    openInfo("Mission Complete","<p><strong>Structure → function → abstraction → engineering → testing.</strong></p><p>You traced how a biological retention strategy can inform an engineered clot-engagement strategy without treating preclinical evidence as a clinical guarantee.</p><div class='mission-actions'><button id='reviewMission' type='button'>Review journey</button><button id='replayMission' type='button'>Replay mission</button></div><p>Small creatures. Big solutions. Keep exploring!</p>");
+    openInfo("Mission Complete","<p><strong>Nice work, researcher.</strong> You finished the Clot Quest investigation and connected it to the larger idea of bioinspiration.</p><div class='mission-actions'><button id='reviewMission' type='button'>Review journey</button><button id='replayMission' type='button'>Replay mission</button></div><p>Small creatures. Big solutions. Keep exploring!</p>");
     setTimeout(()=>{const review=$("reviewMission"),replay=$("replayMission");if(review)review.addEventListener("click",()=>{$("infoDialog").close();state.section=0;render()});if(replay)replay.addEventListener("click",()=>{$("infoDialog").close();restart()})},0);
   }
-  function restart(){state.section=0;state.completed.clear();state.hotspots={};state.orders={};state.finalChainDone=false;state.hospitalInside=false;state.hospitalSeen=new Set();state.fieldSeen=new Set();state.boaFound=false;state.designSeen=new Set();state.designOrder=[];render()}
+  function restart(){state.section=0;state.completed.clear();state.hotspots={};state.orders={};state.finalChainDone=false;state.hospitalInside=false;state.hospitalSeen=new Set();state.fieldSeen=new Set();state.boaFound=false;state.designSeen=new Set();state.designOrder=[];state.designBriefingDone=false;render()}
   els.next.addEventListener("click",()=>{if(!state.completed.has(state.section))return;if(state.section<data.sections.length-1){state.section++;render()}else missionComplete()});
   els.back.addEventListener("click",()=>{if(state.section>0){state.section--;render()}});
   $("restartBtn").addEventListener("click",restart);
