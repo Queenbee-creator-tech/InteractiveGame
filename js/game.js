@@ -189,7 +189,7 @@
   function sourceHtml(){return "<ol class='source-list'>"+data.sources.map(x=>"<li>"+x.label+" <a href='"+x.url+"' target='_blank' rel='noopener'>Open source</a></li>").join("")+"</ol>"}
   function transcriptHtml(){return data.transcript.map(x=>"<section class='transcript-section'><h3>"+x[0]+"</h3><p>"+x[1]+"</p></section>").join("")}
   function missionComplete(){
-    openInfo("Mission Complete","<p><strong>Nice work, researcher.</strong> You finished the Clot Quest investigation and connected it to the larger idea of bioinspiration.</p><div class='mission-actions'><button id='reviewMission' type='button'>Review journey</button><button id='replayMission' type='button'>Replay mission</button></div><p>Small creatures. Big solutions. Keep exploring!</p>");
+    openInfo("Mission Complete","<p><strong>Nice work, researcher.</strong> You finished the Clot Quest investigation and connected it to the larger idea of bioinspiration.</p><div class='mission-actions'><button id='reviewMission' type='button'>Review journey</button><button id='replayMission' type='button'>Replay mission</button></div>");
     setTimeout(()=>{const review=$("reviewMission"),replay=$("replayMission");if(review)review.addEventListener("click",()=>{$("infoDialog").close();state.section=0;render()});if(replay)replay.addEventListener("click",()=>{$("infoDialog").close();restart()})},0);
   }
   function restart(){state.section=0;state.completed.clear();state.hotspots={};state.orders={};state.finalChainDone=false;state.hospitalInside=false;state.hospitalSeen=new Set();state.fieldSeen=new Set();state.boaFound=false;state.designSeen=new Set();state.designOrder=[];state.designBriefingDone=false;render()}
