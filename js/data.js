@@ -15,7 +15,7 @@ window.GAME_DATA = {
         quiz:{
           setup:"What problem are we trying to solve?",
           choices:[
-            {text:"Help remove a clot that is blocking blood flow.",correct:true,feedback:"Exactly. That is the medical problem. Now let’s see whether nature can give us an idea for the design."},
+            {text:"Help remove a clot that is blocking blood flow.",correct:true,feedback:"Exactly. Now we know the challenge: we need to remove the clot. Instead of starting with a new design, let’s see how nature handles a similar problem: holding onto something that tries to pull away. Field trip!"},
             {text:"Make blood clot faster inside the blocked artery.",correct:false,feedback:"That would not solve the blockage. The goal here is to remove the clot that is blocking blood flow."},
             {text:"Replace the blocked artery with a larger one.",correct:false,feedback:"That is not the problem we investigated. We are focusing on removing the clot from the vessel."}
           ]
@@ -25,7 +25,7 @@ window.GAME_DATA = {
     },
     {
       id:"explore", label:"2 of 6", short:"Explore", title:"Explore: Nature + Biology", icon:"🌿", outfit:"Field hat + exploration gear",
-      intro:"Nature solves problems in surprising ways. Look around and see what you discover.",
+      intro:"Welcome to the field. Somewhere in this habitat, an organism may have a useful solution to our problem. Look around and see what you notice.",
       prompt:"Explore the environment.",
       sourceCue:"Biology: Ryerson & Van Valkenburgh (2021); bioinspiration connection: AskNature.",
       interaction:{type:"choice",fieldHotspots:[
