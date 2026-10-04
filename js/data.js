@@ -1,7 +1,7 @@
 window.GAME_DATA = {
   sections: [
     {
-      id:"hospital", label:"1 of 6", short:"Hospital", title:"Hospital ,  The Challenge", icon:"🏥", outfit:"Hospital gear",
+      id:"hospital", label:"1 of 6", short:"Hospital", title:"Hospital: The Challenge", icon:"🏥", outfit:"Hospital gear",
       intro:"Hey, researcher! I’m WartsWorth. We’ve been called in to investigate a medical problem. Let’s head inside and see what is happening.",
       prompt:"Enter the hospital and investigate the vessel scan.",
       sourceCue:"Medical context: Purdue University News (2025).",
@@ -24,7 +24,7 @@ window.GAME_DATA = {
       takeaway:"Medical problem: a clot can block blood flow in the brain, and removing it is the challenge."
     },
     {
-      id:"explore", label:"2 of 6", short:"Explore", title:"Explore ,  Nature + Biology", icon:"🌿", outfit:"Field hat + exploration gear",
+      id:"explore", label:"2 of 6", short:"Explore", title:"Explore: Nature + Biology", icon:"🌿", outfit:"Field hat + exploration gear",
       intro:"Nature solves problems in surprising ways. Look around and see what you discover.",
       prompt:"Explore the environment.",
       sourceCue:"Biology: Ryerson & Van Valkenburgh (2021); bioinspiration connection: AskNature.",
@@ -40,18 +40,18 @@ window.GAME_DATA = {
       takeaway:"Boa teeth curve backward and can help retain prey. That structure–function relationship gives engineers a retention strategy to investigate."
     },
     {
-      id:"design", label:"3 of 6", short:"Design", title:"Design ,  From Biology to Engineering", icon:"🔬", outfit:"Lab coat + transparent safety goggles",
+      id:"design", label:"3 of 6", short:"Design", title:"Design: From Biology to Engineering", icon:"🔬", outfit:"Lab coat + transparent safety goggles",
       intro:"We found our biological clue. In the lab, we’re going to build the connection step by step, from what the tooth looks like, to what it does, to how that same idea appears in the catheter.",
       prompt:"Build the biology-to-engineering connection in five steps.",
       sourceCue:"Technology: AskNature; Purdue University News (2025); Interventional News (2025).",
       interaction:{type:"design",pieces:[
-        {id:"teeth",label:"Step 1 ,  Observe: backward-curving boa teeth",detail:"Step 1 ,  Observe the structure. The boa’s teeth curve backward. We start with the biological feature we actually observed."},
-        {id:"function",label:"Step 2 ,  Ask what it does: helps retain prey",detail:"Step 2 ,  Ask about function. The curved teeth can help ensnare and retain prey. This matters because bioinspiration uses what a feature does, not just what it looks like."},
-        {id:"principle",label:"Step 3 ,  Take the useful idea: directional retention",detail:"Step 3 ,  Pull out the useful idea. A backward-curving structure can help resist material pulling away. We call this directional mechanical retention."},
-        {id:"device",label:"Step 4 ,  Translate it: curved structures inside the catheter tip",detail:"Step 4 ,  Translate the idea into engineering. TRAP places backward-curved microscale structures inside the distal catheter tip."},
-        {id:"engFunction",label:"Step 5 ,  Check the job: help engage the clot",detail:"Step 5 ,  Check the engineered function. Aspiration draws the clot toward the opening, and the curved structures add mechanical engagement and retention."}
-      ],setup:"Build the design story one step at a time. Start with what you observed in the boa, then choose what that feature does, the useful idea it gives engineers, where that idea appears in the catheter, and finally what it helps the catheter do.",feedbackWrong:"Start with what you observed in the boa: its tooth shape and what that shape does. Then follow that idea into the catheter.",feedbackCorrect:"You found the connection: engineers translated the tooth’s retention strategy into curved structures inside the catheter."},
-      takeaway:"Researchers translated a biological retention strategy into backward-curved microscale structures inside the TRAP catheter tip."
+        {id:"teeth",label:"Backward-curving boa teeth",detail:"Start with what we actually saw. The boa’s teeth curve backward."},
+        {id:"function",label:"Helps keep prey from pulling away",detail:"Now ask what that shape does. The backward curve can help ensnare and retain prey."},
+        {id:"principle",label:"A shape that resists material pulling away",detail:"Here’s the useful idea without the snake attached to it: a backward-curving shape can help resist material pulling away. Engineers call that directional mechanical retention."},
+        {id:"device",label:"Backward-curved structures inside a catheter tip",detail:"Now move the idea into engineering. TRAP uses tiny backward-curved structures inside the end of the catheter. Engineers call these microscale structures in the distal catheter tip."},
+        {id:"engFunction",label:"Adds grip on the clot during suction",detail:"Aspiration pulls the clot toward the catheter opening. The curved structures add another way to engage and retain the clot instead of relying on suction alone."}
+      ],displayOrder:[2,4,0,3,1],setup:"You have five pieces of the design story. Put them in the order that makes the most sense, starting with the biological observation and ending with what the engineered feature does.",history:"One more piece of the story: Ángel Enríquez and Hyowon Lee developed TRAP at Purdue University. Purdue later licensed the technology to Emboa Medical for further development.",feedbackWrong:"Not quite. Start with the biological feature you observed. Then ask what it does before carrying that useful idea into the catheter.",feedbackCorrect:"You built the connection yourself. The tooth shape led to a retention idea, and that idea was translated into a catheter feature that helps engage the clot."},
+      takeaway:"TRAP translates a biological retention strategy into backward-curved microscale structures inside the catheter tip."
     },
     {
       id:"test", label:"4 of 6", short:"Test", title:"Test Your Biology Observation", icon:"🧪", outfit:"Field researcher gear",
@@ -73,8 +73,8 @@ window.GAME_DATA = {
       interaction:{type:"wrap",points:[
         "The problem: a clot can block blood flow in the brain, and doctors need ways to remove it.",
         "The biological clue: recurved boa teeth can help ensnare and retain prey.",
-        "The design connection: TRAP uses backward-curved microscale structures inside the catheter tip to add clot engagement during aspiration.",
-        "The evidence: the technology has been studied in testing and preclinical/model settings, so claims should stay within what that evidence supports."
+        "The design connection: TRAP uses tiny backward-curved structures inside the catheter tip to help engage and retain the clot during aspiration.",
+        "The evidence: testing in models can show whether the idea is promising, but that is not the same as proving better outcomes for patients."
       ]},
       takeaway:"Case reviewed. One last question connects this mission to the bigger idea behind IB 411."
     },
@@ -101,7 +101,7 @@ window.GAME_DATA = {
   transcript:[
     ["Hospital: The Challenge","WartsWorth invites the researcher into the hospital to investigate a medical problem. The vessel scan shows a blood clot, an arterial blockage that can interrupt blood and oxygen delivery to brain tissue, and an aspiration catheter. Aspiration thrombectomy uses suction through a catheter to draw clot material toward the opening for removal. The player identifies clot removal as the medical problem before moving into nature for ideas."],
     ["Explore: Nature + Biology","The researcher explores the habitat without being told what organism to find. Optional observations encourage careful field investigation. After the animal is discovered, WartsWorth identifies it as a boa constrictor and unlocks the tablet scanner. The tooth scan shows recurved, backward-curving teeth. Research on boa feeding links curved teeth with ensnaring and retaining prey. The player identifies retention, rather than appearance or venom, as the useful idea."],
-    ["Design: From Biology to Engineering","In the lab, the researcher investigates the connection from biological structure to engineered function: recurved boa teeth; prey retention; directional mechanical retention; backward-curved microscale structures inside the distal catheter tip; and added clot engagement and retention during aspiration. After the briefing, WartsWorth stays quiet while the player builds the connection independently."],
+    ["Design: From Biology to Engineering","In the lab, the researcher connects recurved boa teeth to prey retention, abstracts the idea as directional mechanical retention, and translates it into backward-curved microscale structures inside the catheter tip for added clot engagement during aspiration. Ángel Enríquez and Hyowon Lee developed TRAP at Purdue University, and Purdue later licensed the technology to Emboa Medical. After the briefing, WartsWorth stays quiet while the player builds the connection independently."],
     ["Test Your Biology Observation","The researcher looks again at the direction of the boa teeth and reasons about what happens when prey pulls away. The correct conclusion is that backward-curving, recurved teeth are useful for ensnaring and retaining prey."],
     ["Mission Wrap-Up","Outside the hospital, the case is reviewed: a clot can block blood flow in the brain; recurved boa teeth provide the biological clue; TRAP translates the retention strategy into backward-curved microscale structures inside the catheter tip; and testing or preclinical/model evidence should not be overstated as guaranteed patient benefit."],
     ["The Bigger Connection","At sunset, the researcher generalizes the lesson beyond this one device. Bioinspiration can begin by finding organisms that face a useful challenge, studying how a biological feature works, identifying the underlying strategy or function, and translating that principle into a new engineering context rather than simply copying appearance."]
