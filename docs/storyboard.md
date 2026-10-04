@@ -1,414 +1,125 @@
-# Phase 2 — Six-Section Visual Storyboard + Rubric Guardrails
+# Current Six-Scene Storyboard and Rubric Guardrails
 
-## Target
-A first-time player should finish in about **4–5 minutes**. WartsWorth is a prominent on-screen teacher/guide, not a background mascot. Narration has matching captions. Hover information is supplemental; essential content must also be available by focus/click/touch/text.
+## Status
+This document reflects the current playtest structure. Older plans for a catheter testing station, development-pathway minigame, and repeated final chain are superseded.
 
-Every section below has a **rubric purpose**. Do not remove or simplify an interaction without checking what rubric evidence it carries.
+**Current progression:** Hospital → Explore → Design → Boa Biology Test → Mission Wrap-Up → Bioinspiration Connection.
 
----
+**Target:** approximately 4–5 minutes for a first-time required playthrough.
 
-## Section 1 — Hospital: The Challenge
-**Planning-only note:** rubric labels and source guardrails in this document are hidden from the player.
-
-**Visual setting:** the approved animated hospital UI is the master visual template for the game. WartsWorth appears in a clean medical look with a correctly fitted stethoscope. A simplified medical display lets the player move from the hospital context into a close vessel/clot view without turning the scene into a graphic medical simulation.
-
-### Beat A — Mission Arrival
-**Player does:** enters the hospital scene and receives a short mission from WartsWorth.
-
-**WartsWorth role:** establishes the human-health problem in clear, non-specialist language and directs the player toward the vessel display.
-
-**Learns:** an ischemic stroke can occur when a clot blocks blood flow; the mission is to understand the retrieval challenge and search for a better design strategy.
-
-### Beat B — Investigate the Blockage
-**Player does:** clicks/focuses on the vessel, clot, and relevant medical display hotspots.
-
-**Interaction rule:** essential information must be available by click/focus/touch, not hover alone.
-
-**Learns:** the clot obstructs blood flow and clot removal is the engineering/medical problem being addressed.
-
-### Beat C — Meet Aspiration
-**Player does:** activates a simplified aspiration-catheter demonstration.
-
-**WartsWorth teaches:** aspiration uses suction to draw/engage the clot for retrieval. Define “aspiration” in plain language the first time it appears.
-
-### Beat D — Try the Current Strategy
-**Player does:** runs a short conventional/smooth-catheter attempt and observes the retention/engagement challenge represented in the game.
-
-**Design rule:** this is a simplified teaching interaction, not a claim that every conventional procedure fails. Do not frame existing technology as useless or unsafe.
-
-### Beat E — Define the Design Need
-**Player does:** chooses/identifies the useful design goal: a way to improve engagement/retention of soft clot material without simply treating “more suction” as the whole solution.
-
-**WartsWorth role:** turns the observation into a question that motivates the nature search.
-
-### Beat F — Launch the Bioinspiration Mission
-**Transition:** the hospital display reduces the problem to a functional challenge—**how might we grip/retain soft material?** WartsWorth proposes looking to nature for strategies and changes into field gear during the transition into Explore.
-
-**Rubric purpose (planning only; hidden from player):**
-- **Problem:** establishes the medical problem, context, and design need.
-- **Technology:** introduces aspiration as the starting engineering approach.
-- **Clarity:** defines the mission and necessary terminology.
-- **Creativity/Usefulness:** the player investigates and attempts the problem instead of reading exposition.
-- **Course Connections:** sets up the function-first question that makes the later biological search purposeful.
-
-**Source guardrails:**
-- Medical and aspiration claims must be supported by the project’s medical/technology sources.
-- Do not overstate treatment outcomes, device failure, or the limitations of conventional thrombectomy.
-- Any claim about catheter diameter, aspiration force, distal vessels, procedure outcomes, or performance must be checked against the exact source before entering final player-facing dialogue.
-- Keep medical visuals educational and non-graphic.
-
-**Do not design away:** the blocked-vessel problem, aspiration explanation, player attempt/observation, functional design need, or explicit handoff to the nature search.
+## Global experience rules
+- The player is a researcher working with WartsWorth.
+- WartsWorth speaks naturally and briefly. He teaches the simple idea before introducing technical terminology.
+- Exploration and visual interaction carry the experience; multiple choice is a supporting check.
+- Do not reveal discoveries before the player makes them.
+- Wrong answers teach and allow retry.
+- Scientific claims stay within `references/sources.md`.
+- Required interactions must remain operable by pointer, keyboard, and touch.
 
 ---
 
-## Section 2 — Explore: Nature + Biology
-**Visual setting:** lush animated natural habitat. WartsWorth changes into field gear and remains clearly visible as the guide.
+## 1 — Hospital: The Challenge
+**Setting:** hospital exterior → pediatric care room with vessel scan.
 
-### Beat A — Search Nature
-**Player does:** explores the habitat for a biological strategy that could help grip/retain soft material.
+**Player:** enters the hospital and investigates clot, blockage, and catheter hotspots.
 
-**Key game mechanic:** the boa is **hidden/camouflaged in the environment**. The player must find it rather than having the biological answer immediately presented.
+**Learns:** a clot can obstruct blood flow to brain tissue; aspiration thrombectomy uses suction through a catheter to draw/remove clot material.
 
-Optional plants/animals/environmental objects may respond to hover/focus, but they must not become time-wasting distractions.
+**End check:** identify the medical problem without being handed an engineering solution.
 
-**WartsWorth role:** prompts observation and reacts to discoveries. When the boa is found, he can make a brief snack-sized-toad joke before returning immediately to the science.
+**Rubric:** Problem; introductory Technology; Clarity.
 
-**Observation rule:** the player does not remove or collect a tooth. WartsWorth uses his scanner to capture a digital observation/snapshot of the tooth geometry. This reinforces that the design process studies a biological strategy and translates it rather than physically taking the biological structure.
-
-### Beat B — Discover the Boa
-**Player does:** clicks the hidden boa to reveal it. WartsWorth reacts, then reframes the mission: we are not copying the whole animal; we are looking for a useful biological structure/function.
-
-### Beat C — Scan and Investigate Teeth
-**Player does:** uses WartsWorth's futuristic scanner to take a non-invasive digital snapshot and zoom from the boa to a tooth/jaw investigation **without leaving the nature section**. Player explores tooth hotspots and compares geometry. The boa remains in the habitat; after the scan it can calmly move away while the digital tooth model remains on screen.
-
-**Learns:** boa teeth vary in curvature; the relevant feature is recurved/inward-curving geometry; curved teeth can contribute to ensnaring/retaining prey and swallowing. The inspiration is not venom, color, or “sharpness” alone.
-
-### Beat D — Identify the Functional Principle
-**Player does:** chooses what engineering should borrow:
-- snake appearance
-- venom
-- **directional mechanical retention**
-
-Incorrect choices teach and allow retry; they never block progression.
-
-**Learns:** bioinspiration transfers useful function/principles rather than merely copying appearance.
-
-**Rubric purpose:**
-- **Biology:** this is the primary biology-teaching section; it must contain enough structure + function detail to stand on its own.
-- **Course Connections:** begins analogical reasoning, structure–function thinking, and abstraction.
-- **Creativity:** search → discover → scan → investigate rather than click-next exposition.
-- **Usefulness:** player actively identifies the feature/function that will solve the original problem.
-- **Clarity:** WartsWorth keeps the player focused on the relevant biological mechanism.
-
-**Do not design away:** hidden-boa discovery, scanner/snapshot observation, tooth morphology investigation, biological function, or the abstraction step. These are academic content, not decorative minigames.
-
-**Working WartsWorth beat (script wording still subject to source/script review):** “Hold still, buddy! We’re borrowing your idea, not your teeth.” The scanner captures the geometry, followed by a short explanation that bioinspiration studies how a biological feature works and translates the useful principle into design.
+**Guardrail:** do not portray conventional aspiration as useless or claim clinical superiority for TRAP.
 
 ---
 
-## Section 3 — Design: The Innovation
-**Visual setting:** the glowing digital tooth model from Explore travels with WartsWorth into a futuristic engineering lab. WartsWorth changes into goggles/lab-safety gear. The approved UI shell stays the same; only the environment, tools, and interaction area change.
+## 2 — Explore: Nature + Biology
+**Setting:** field habitat.
 
-### Beat A — Bring the Strategy Into the Lab
-**Player does:** arrives with the digital tooth scan and sees the original clot-retrieval challenge represented on the lab display.
+**Player:** freely investigates environmental hotspots. The task does not name the boa before discovery. Finding the animal unlocks WartsWorth's tablet scanner; the scan transitions to tooth investigation.
 
-**WartsWorth role:** briefly reconnects the biological discovery to the engineering problem. He does **not** reveal TRAP immediately.
+**Learns:** boa teeth are recurved/inward-curving; Ryerson & Van Valkenburgh (2021) links tooth shape with strike mechanics and reports curved posterior teeth ensnaring prey during some strikes. The useful project principle is retention, not venom or appearance.
 
-**Learns:** bioinspiration requires translating a useful biological principle into an engineering context rather than copying the entire organism.
+**Optional hotspot rule:** optional field dialogue may encourage observation or field reasoning, but it must not introduce unsupported bioinspiration examples merely for flavor.
 
-### Beat B — Abstraction Check
-**Player does:** isolates the useful part of the scan. The snake image fades while the recurved geometry/function remains highlighted.
-
-**Target concept:** **directional mechanical retention**.
-
-**Interaction idea:** player selects/drags the useful principle from a small set of biological observations. Incorrect choices give a short WartsWorth response and allow retry.
-
-**Course connection:** makes abstraction and structure–function reasoning visible rather than leaving them implied.
-
-### Beat C — Engineering Challenge
-**Player does:** sees a simplified catheter tip and clot and is asked where/how the borrowed principle could help. The player experiments with placing/orienting the recurved geometry **inside the distal catheter tip**, where a clot drawn in by aspiration can contact it.
-
-**Important:** the game should guide the player toward the sourced TRAP configuration; it should not imply that the student literally invented the medical device.
-
-**Learns:** the biological geometry can be translated into backward-curved microscale structures that add mechanical engagement to aspiration.
-
-### Beat D — Reveal the Real Innovation
-**Player does:** after making the biology-to-engineering connection, unlocks the real technology explanation.
-
-**WartsWorth teaches:** TRAP = **Thrombus Retrieval Aspiration Platform**. The design uses backward-curved microscale structures inside the distal catheter tip. Aspiration draws the clot toward/into the catheter opening, bringing it into contact with the structures, which provide additional mechanical engagement/retention.
-
-**Development history:** introduce the Purdue development work by Ángel Enríquez and Hyowon Lee and the licensing to Emboa Medical using the appropriate project sources.
-
-### Beat E — Side-by-Side Structure–Function Comparison
-**Player does:** toggles between or aligns:
-- recurved boa tooth → prey retention/ensnaring
-- recurved catheter microstructure → clot engagement/retention during aspiration
-
-**Learns:** similar functional logic can be transferred across very different biological and engineering contexts.
-
-### Beat F — Send It to Testing
-**Player does:** activates the completed concept. The catheter model and clot move into the Test section.
-
-**Transition:** WartsWorth makes clear that a promising design still has to be tested; the game does not treat the design step as proof of clinical effectiveness.
-
-**Rubric purpose:**
-- **Technology:** explains the engineered structure, location, mechanism, and development context.
-- **Course Connections:** explicitly demonstrates abstraction, analogical reasoning, structure–function, and biology → engineering transfer.
-- **Creativity:** player participates in translating the principle before the real technology is revealed.
-- **Clarity:** the tooth-to-microstructure transformation makes the analogy visible.
-- **Usefulness:** the player must understand *why* the geometry is relevant, not memorize that TRAP was “inspired by a snake.”
-
-**Source guardrails:**
-- Biology claims remain tied to the boa morphology/strike-mechanics evidence.
-- The explicit boa → TRAP transfer and catheter geometry/mechanism must be tied to the bioinspiration/technology sources.
-- Development claims must be tied to Purdue/technology-development sources.
-- Do not imply regulatory approval, established patient benefit, clinical superiority, or guaranteed clot capture unless later evidence specifically supports those claims.
-- Do not describe the inspiration as venom, serrations, or generic “sharp teeth.”
-
-**Do not design away:** the abstraction step, player translation decision, exact biological feature ↔ engineered feature correspondence, TRAP mechanism, or the reminder that design must still be tested.
+**Rubric:** Biology; Creativity; Course Connections; Usefulness.
 
 ---
 
-## Section 4 — Test: Does It Work?
-**Planning-only note:** rubric labels, source guardrails, timing notes, and “do not design away” notes in this document are **developer/instructor-planning annotations only**. They do not appear in the player-facing game UI.
+## 3 — Design: From Biology to Engineering
+**Setting:** engineering lab with boa tooth and catheter-tip comparison.
 
-**Visual setting:** animated blood-vessel testing simulation using the same approved UI shell. WartsWorth remains prominent in testing/safety gear. The visual focus is the catheter tip, clot, aspiration flow, and observable interaction.
+**Player:** first investigates the five conceptual links, then WartsWorth hands the reasoning task to the player and stays quiet while the player builds the connection.
 
-### Beat A — Enter the Test Bay
-**Player does:** brings the design from the lab into a simplified vessel/model-testing environment.
+**Required conceptual chain:**
+1. recurved/inward-curving boa teeth
+2. retain/ensnare prey
+3. directional mechanical retention
+4. backward-curved microscale structures inside the distal catheter tip
+5. added mechanical clot engagement/retention during aspiration
 
-**WartsWorth role:** frames the next scientific question: a design idea is not enough; it has to be tested.
+**Technology context that must remain somewhere in this scene or its immediate completion:** TRAP was developed at Purdue by Ángel Enríquez and Hyowon Lee and licensed to Emboa Medical. Project sources describe preclinical/model development; do not imply approved routine clinical use.
 
-### Beat B — Establish a Comparison
-**Player does:** first observes/tests a smooth aspiration catheter, then tests the bioinspired TRAP concept under a comparable simplified scenario.
-
-**Learns:** aspiration draws the clot toward the catheter; the bioinspired concept adds backward-curved microscale structures intended to mechanically engage/retain the clot.
-
-**Design rule:** do not turn the comparison into “old device bad / TRAP perfect.” It exists to visualize the difference in mechanism.
-
-### Beat C — Run the Simulation
-**Player does:** activates aspiration and watches the clot approach/contact the catheter tip. A close-up can show contact with the recurved microstructures.
-
-**Interactive focus:** player observes **where the clot contacts the device and what the recurved structures contribute** rather than receiving a passive animation.
-
-### Beat D — Read the Evidence Carefully
-**Player does:** opens a short evidence/results card tied to the project sources.
-
-**Learns:** current project sources report bench/model/preclinical testing. The game must distinguish those results from established patient outcomes.
-
-**WartsWorth role:** reinforces that engineers test, compare, revise, and validate designs before conclusions about real-world medical performance can be made.
-
-### Beat E — Make an Evidence-Based Conclusion
-**Player does:** chooses the statement best supported by what was shown, e.g. that the design adds a mechanical clot-engagement strategy to aspiration and has shown promising model/preclinical results, rather than claiming it is guaranteed to work in patients.
-
-**Incorrect choices:** brief corrective feedback + retry; no dead end.
-
-### Beat F — Continue to Application
-**Transition:** testing results lead into the development/application story in Section 5.
-
-**Rubric purpose (planning only; hidden from player):**
-- **Technology:** demonstrates engineered function.
-- **Usefulness:** lets the player observe why the transferred principle matters.
-- **Quality:** scientifically careful animation and evidence framing.
-- **Problem:** reconnects the design to the original clot-retrieval challenge.
-- **Clarity:** separates mechanism, reported testing, and clinical claims.
-
-**Source guardrails:**
-- Use only performance/testing claims actually supported by the project sources.
-- Label bench, model, animal/preclinical, and clinical evidence accurately.
-- Do not imply regulatory approval, guaranteed success, established patient benefit, or clinical superiority without explicit supporting evidence.
-- Any numeric performance result added later must be traced to its exact source and testing context before it enters player-facing copy.
-
-**Do not design away:** comparison to the original problem, observable mechanism, evidence limitations, or the evidence-based conclusion interaction.
+**Rubric:** Technology; Course Connections; development/history; analogical reasoning.
 
 ---
 
-## Section 5 — Apply: A Healthier Future
-**Planning-only note:** rubric labels and source guardrails stay in planning documents only; the player sees the story, interactions, and sourced facts—not grading notes.
+## 4 — Test Your Biology Observation
+**Setting:** close view of boa tooth direction and prey pulling away.
 
-**Visual setting:** transition from the testing lab into an interactive development pathway. The approved UI shell remains consistent. WartsWorth guides the player through how a bioinspired idea moves from observation and engineering toward possible real-world medical application.
+**Player:** reasons from the observed tooth geometry.
 
-### Beat A — From Test to Development
-**Player does:** carries the tested concept forward and sees that testing is one step in a longer development process.
+**Question purpose:** check understanding of the biological structure/function only. This scene must not repeat the engineering translation or final bioinspiration question.
 
-**WartsWorth role:** reinforces that promising model results do not automatically equal a finished clinical treatment.
-
-### Beat B — Follow the Innovation Path
-**Player does:** activates a short interactive timeline/pathway using sourced milestones:
-- biological inspiration / boa tooth strategy
-- Purdue research and TRAP development
-- licensing/translation to Emboa Medical
-- model/preclinical testing supported by the project sources
-- additional validation/testing needed before stronger clinical claims can be made
-
-**Design rule:** keep this active and visual—tap/activate milestones rather than presenting a paragraph-heavy history screen.
-
-### Beat C — Development Decisions
-**Player does:** identifies what engineers/researchers still need to consider before a medical technology can move toward real-world use.
-
-**Concepts:** safety, effectiveness, different clot/vessel conditions, manufacturability/device constraints, and continued validation **only where supported by our sources/course framing**.
-
-**Course connection:** constraints, trade-offs, testing, iteration, and responsible translation.
-
-### Beat D — What Could the Technology Help Address?
-**Player does:** reconnects the innovation to the original ischemic-stroke/clot-retrieval problem.
-
-**Learns:** the intended application is clot retrieval; the game describes potential/intended use without presenting preclinical evidence as established patient benefit.
-
-### Beat E — Future-Facing Handoff
-**Player does:** completes the development pathway and receives the pieces needed for the Final Challenge.
-
-**Transition:** WartsWorth summarizes that the journey began with observing biology, but useful bioinspiration requires understanding, abstraction, engineering, testing, and continued development.
-
-**Rubric purpose (planning only; hidden from player):**
-- **Technology:** covers development/history and real-world application context.
-- **Usefulness:** shows that bioinspiration is part of a larger engineering-development process.
-- **Course Connections:** reinforces constraints, trade-offs, testing, iteration, and translation.
-- **Clarity:** separates intended application and potential from demonstrated clinical outcomes.
-- **References:** creates natural places to attach source cues to development milestones.
-
-**Source guardrails:**
-- Development names, institutions, licensing, dates, and testing stages must match the project sources.
-- Do not imply FDA/regulatory approval unless a source explicitly establishes it.
-- Do not claim established patient benefit, routine hospital use, or clinical superiority from model/preclinical evidence.
-- Avoid vague future promises; distinguish intended application from demonstrated evidence.
-
-**Do not design away:** development history, player interaction with the pathway, current-evidence limitations, or the connection back to the original medical problem.
+**Rubric:** Biology understanding; Usefulness.
 
 ---
 
-## Section 6 — Final Challenge: Make a Difference
-**Planning-only note:** this is the final learning check, but it should feel like the climax of the adventure—not a conventional school quiz. Rubric notes remain hidden from the player.
+## 5 — Mission Wrap-Up
+**Setting:** outside the hospital.
 
-**Visual setting:** a celebratory mission-control interface that visually brings back elements from the hospital, habitat, tooth scan, engineering lab, testing simulation, and development pathway. WartsWorth leads the challenge.
+**Player:** reviews the case before leaving the medical context.
 
-**Character continuity rule:** concept images are layout/storyboard references, not final character sheets. In the production build WartsWorth must use one consistent base character model. Outfit changes are intentional scene transitions using normal wearable accessories—never distorted anatomy or accessories that look like extra eyes/faces. His own eyes remain clearly visible and unchanged.
+**Review only:** medical problem; biological clue; engineered translation; evidence limitation. No repeated ordering game and no second bioinspiration quiz.
 
-**Outfit continuity:**
-- Hospital: clean medical/stethoscope look.
-- Explore: field hat + exploration gear/binoculars.
-- Design: lab coat + properly fitted safety goggles (transparent lenses over/above his real eyes; no illustrated “eyes” inside goggles).
-- Test: practical lab/testing safety gear derived naturally from the Design outfit.
-- Apply: simplified science-guide/professional look appropriate to the development/application setting.
-- Final Challenge: recognizable WartsWorth in his core explorer/science-guide look, optionally with one small callback accessory rather than a new costume.
+**Evidence guardrail:** describe TRAP results as bench/model/preclinical where supported; do not claim established patient benefit, regulatory approval, or clinical superiority.
 
-**Transition rule:** outfit changes happen during location transitions (e.g. quick hat/goggle swap, doorway/wipe/gear-up animation), not as unexplained costume jumps.
-
-### Beat A — Mission Recap
-**Player does:** sees the six-stage journey briefly light up in sequence.
-
-**WartsWorth role:** reminds the player that the solution was not copied directly from nature; it was observed, understood, abstracted, translated, and tested.
-
-### Beat B — Rebuild the Bioinspiration Chain
-**Player does:** arranges five visual cards in the correct sequence:
-1. **Biological structure:** recurved/inward-curving boa teeth
-2. **Biological function:** retain/ensnare prey
-3. **Abstracted principle:** directional mechanical retention
-4. **Engineered structure:** backward-curved microscale structures inside the catheter tip
-5. **Engineered function:** added mechanical clot engagement/retention during aspiration
-
-**Interaction:** cards use recognizable imagery from earlier scenes. Incorrect placement triggers a short WartsWorth hint and retry rather than a penalty.
-
-### Beat C — Final “Why Is This Bioinspiration?” Challenge
-**Player does:** selects the explanation that best captures the project:
-- not because the catheter looks like a snake
-- not because it uses venom
-- **because engineers studied a biological structure/function, abstracted its useful principle, and translated that principle into an engineered design**
-
-**Learns:** explicitly distinguishes functional bioinspiration from superficial imitation.
-
-### Beat D — Evidence Check
-**Player does:** answers one short evidence-awareness prompt distinguishing what the current sources support from an exaggerated clinical claim.
-
-**Target:** recognize that model/preclinical evidence and intended application do not equal guaranteed patient outcomes or established clinical superiority.
-
-### Beat E — Mission Complete
-**Visual:** WartsWorth celebrates; the completed nature → engineering pathway appears behind him.
-
-**Player-facing takeaway:** a small biological feature can inspire an engineering strategy when researchers understand how it functions and responsibly translate/test that principle.
-
-**Completion controls:**
-- **Sources** — complete references
-- **Transcript** — written equivalent of narration/audio
-- **Replay** — restart the adventure
-- optional **Review Journey** — revisit sections without replaying everything
-
-**Ending rule:** Mission Complete is the final game screen. There is **no separate “What’s Next?” page** after completion. Any optional learning/resource links belong inside Sources or a small non-required area on the Mission Complete screen so the story ends cleanly.
-
-**Rubric purpose (planning only; hidden from player):**
-- **Biology:** verifies structure + biological function.
-- **Technology:** verifies engineered structure + function.
-- **Course Connections:** explicitly reinforces structure–function, abstraction, analogical reasoning, biology → engineering transfer, testing, and constraints.
-- **References:** complete source access.
-- **Accessibility:** complete transcript/text equivalent.
-- **Usefulness:** player demonstrates the ability to explain the example independently.
-- **Creativity:** assessment is integrated into the adventure.
-- **Clarity:** final takeaway resolves the full story.
-
-**Source guardrails:**
-- Final-answer wording must match the scientific claims established earlier in the game.
-- Do not introduce new facts during the final assessment.
-- Evidence-check answers must reflect the actual stage of evidence supported by the project sources.
-
-**Do not design away:** the five-link chain, explicit bioinspiration explanation, evidence check, Sources, Transcript, or Replay.
+**Rubric:** Problem; Technology; evidence limitations; Clarity.
 
 ---
 
-# Global Rubric Guardrails
+## 6 — The Bigger Connection
+**Setting:** outdoors at sunset.
 
-## Biology
-Section 2 must teach actual boa biology in enough detail that the player understands **structure + biological function**, not merely “snake teeth are curved.”
+**Player:** answers one broader transfer question about how the lesson could guide a team solving a different problem.
 
-## Problem
-Section 1 must explain both **what the clot problem is** and **why current retrieval creates an engineering challenge**.
+**Learns:** bioinspiration involves studying how biology solves a problem, identifying a useful structure/function or strategy, abstracting it, and translating it into a new engineering context. It is not superficial copying.
 
-## Technology
-Sections 3–5 must cover **device design, operation, bioinspired transfer, development history, testing, and evidence limitations**.
+**Ending:** Mission Complete is concise. Sources, Transcript, Replay, and Review Journey remain available.
 
-## Course Connections
-Sections 2, 3, 5, and 6 explicitly reinforce **analogical reasoning, structure–function, abstraction, biology → engineering transfer, constraints/trade-offs**.
-
-## Length
-Target total first-play time: **4:00–4:50**, leaving margin under five minutes.
-
-## Creativity
-Required game-like moments:
-1. investigate the hospital problem
-2. attempt retrieval
-3. search the habitat for the hidden boa
-4. scan/investigate tooth morphology
-5. identify the transferable principle
-6. build/translate the catheter feature
-7. test the design
-8. reconstruct the final chain
-
-## References
-Final product must include at least **2 recent peer-reviewed sources + 3 additional reputable sources**, with scientific claims traceable to appropriate evidence.
-
-## Accessibility
-- matching captions for narration
-- complete transcript
-- keyboard/touch equivalent for hover
-- visible focus states
-- essential information never depends only on audio, hover, color, or animation
-
-## Clarity
-WartsWorth teaches in short, focused segments. Define necessary jargon and keep instructions obvious.
-
-## Quality
-No placeholders/broken interactions in final build; visuals, audio, animations, and responsive layouts must be tested.
-
-## Usefulness
-A new player should be able to explain the complete biological inspiration and engineering transfer after finishing.
+**Rubric:** Course Connections; Usefulness; final synthesis.
 
 ---
 
-## Phase 2 Design Direction — Locked
-- **Style:** colorful animated science adventure with a light futuristic research-tech layer.
-- **Narrator:** WartsWorth, expressive toad science guide with setting-specific gear and quirky science-connected humor.
-- **UI template:** approved Hospital visual-design prototype.
-- **Section structure:** Hospital → Explore (Nature + Biology) → Design → Test → Apply → Final Challenge.
-- **Nature mechanic:** the boa is hidden in the habitat and discovered by the player before tooth investigation begins.
+# Rubric Coverage Map
+| Rubric area | Current evidence |
+| --- | --- |
+| Biology | Explore + Boa Biology Test |
+| Problem | Hospital + Mission Wrap-Up |
+| Technology | Hospital aspiration + Design + Mission Wrap-Up |
+| Development/history | Must be retained in Design/context: Purdue → Emboa Medical |
+| Course connections | Design abstraction/translation + final Bioinspiration Connection |
+| Creativity | hospital investigation, field exploration, scanner, design reasoning |
+| References | source cues + complete Sources panel |
+| Accessibility | captions/text, semantic controls, focus states, reduced-motion plan |
+| Clarity | plain-language-first WartsWorth rule |
+| Usefulness | player must reason about biology and generalize bioinspiration |
 
-## Next Phase 2 task
-Create the detailed **Explore: Nature + Biology visual wireframe** using the approved UI template while preserving every rubric function listed above.
+# Pre-graphics gates
+Before final artwork is locked:
+1. Complete Zoe's current playtest feedback.
+2. Resolve Design answer-giveaway/interaction behavior.
+3. Confirm development/history is visibly taught without restoring the old chronology game.
+4. Verify transcript matches the final player-facing build.
+5. Keyboard, zoom, responsive-layout, and first-play timing tests.
+6. Final rubric and source audit.
