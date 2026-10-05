@@ -196,7 +196,7 @@
     els.interaction.appendChild(finish);
   }
   function renderInteraction(s){
-    els.interaction.innerHTML="";els.hospitalHotspots.innerHTML="";
+    els.interaction.innerHTML="";els.hospitalHotspots.innerHTML="";els.fieldHotspots.innerHTML="";els.designHotspots.innerHTML="";
     if(s.id==="hospital"){renderHospital(s);return}
     if(s.id==="explore"&&!state.hotspots.explore){renderFieldHotspots(s);const p=document.createElement("p");p.className="interaction-setup compact-instruction";p.textContent="Click around the habitat and investigate anything that catches your attention.";els.interaction.appendChild(p);return}
     if(s.id==="design"){renderDesign(s);return}
