@@ -1,9 +1,9 @@
-# Current Six-Scene Storyboard and Rubric Guardrails
+# Current Five-Section Storyboard and Rubric Guardrails
 
 ## Status
-This document reflects the current playtest structure. Older plans for a catheter testing station, development-pathway minigame, and repeated final chain are superseded.
+This document reflects the current five-section playtest. Older plans for a separate Boa Biology Test, Mission Wrap-Up scene, catheter testing station, development-pathway minigame, and repeated final chain are superseded.
 
-**Current progression:** Hospital → Explore → Design → Boa Biology Test → Mission Wrap-Up → Bioinspiration Connection.
+**Current progression:** Hospital → Explore → Design → Technology → Bioinspiration Wrap-Up.
 
 **Target:** approximately 4–5 minutes for a first-time required playthrough.
 
@@ -23,9 +23,11 @@ This document reflects the current playtest structure. Older plans for a cathete
 
 **Player:** enters the hospital and investigates clot, blockage, and catheter hotspots.
 
-**Learns:** a clot can obstruct blood flow to brain tissue; aspiration thrombectomy uses suction through a catheter to draw/remove clot material.
+**Learns:** a clot can obstruct blood flow to brain tissue; aspiration thrombectomy uses suction through a catheter to draw clot material toward the opening for removal.
 
-**End check:** identify the medical problem without being handed an engineering solution.
+**End check:** identify clot removal as the medical problem.
+
+**Transition:** ask how nature handles a similar functional challenge, holding onto something that tries to pull away, without revealing the later organism.
 
 **Rubric:** Problem; introductory Technology; Clarity.
 
@@ -36,66 +38,68 @@ This document reflects the current playtest structure. Older plans for a cathete
 ## 2 — Explore: Nature + Biology
 **Setting:** field habitat.
 
-**Player:** freely investigates environmental hotspots. The task does not name the boa before discovery. Finding the animal unlocks WartsWorth's tablet scanner; the scan transitions to tooth investigation.
+**Player:** freely investigates environmental hotspots. The task does not name the boa before discovery. Finding the animal unlocks WartsWorth's tablet scanner and tooth investigation.
 
-**Learns:** boa teeth are recurved/inward-curving; Ryerson & Van Valkenburgh (2021) links tooth shape with strike mechanics and reports curved posterior teeth ensnaring prey during some strikes. The useful project principle is retention, not venom or appearance.
+**Learns:** boa teeth are recurved/backward-curving. Research on boa feeding links curved teeth with ensnaring and retaining prey. The useful project principle is retention, not venom or appearance.
 
-**Optional hotspot rule:** optional field dialogue may encourage observation or field reasoning, but it must not introduce unsupported bioinspiration examples merely for flavor.
+**Optional hotspots:** tree and vine observations teach the learner to ask what a biological feature does and how structure supports function. Footprints are only a story clue.
+
+**End check:** identify backward-curving structures helping hold onto soft material as the transferable idea.
+
+**Transition:** take the retention idea back to the lab to see how it could help with the clot problem.
 
 **Rubric:** Biology; Creativity; Course Connections; Usefulness.
 
 ---
 
 ## 3 — Design: From Biology to Engineering
-**Setting:** engineering lab with boa tooth and catheter-tip comparison.
+**Setting:** engineering lab comparing the boa scan with the catheter design.
 
-**Player:** first investigates the five conceptual links, then WartsWorth hands the reasoning task to the player and stays quiet while the player builds the connection.
+**Player:** investigates all five conceptual links. Only after all five are viewed does the answer bank appear. WartsWorth then stays quiet while the player reconstructs the connection independently.
 
-**Required conceptual chain:**
-1. recurved/inward-curving boa teeth
-2. retain/ensnare prey
-3. directional mechanical retention
-4. backward-curved microscale structures inside the distal catheter tip
-5. added mechanical clot engagement/retention during aspiration
+**Required reasoning framework:**
+1. nature/biological structure
+2. nature’s function
+3. function/principle we take
+4. how engineers use it
+5. why the engineered feature works
 
-**Technology context that must remain somewhere in this scene or its immediate completion:** TRAP was developed at Purdue by Ángel Enríquez and Hyowon Lee and licensed to Emboa Medical. Project sources describe preclinical/model development; do not imply approved routine clinical use.
+**Project-specific chain:**
+1. boa teeth curve backward
+2. curved teeth help hold onto prey
+3. backward curves can resist something pulling away
+4. engineers add tiny backward-curved structures inside the catheter tip
+5. curved structures help engage and retain the clot during suction
+
+**Hint rule:** after three unsuccessful attempts, WartsWorth reminds the player of the five-part reasoning framework without giving the exact sequence.
+
+**Development/history:** TRAP was developed at Purdue by Ángel Enríquez and Hyowon Lee and later licensed to Emboa Medical.
 
 **Rubric:** Technology; Course Connections; development/history; analogical reasoning.
 
 ---
 
-## 4 — Test Your Biology Observation
-**Setting:** close view of boa tooth direction and prey pulling away.
+## 4 — Technology: How the Engineered Design Works
+**Purpose:** explain the mechanism clearly without another quiz.
 
-**Player:** reasons from the observed tooth geometry.
+**Core mechanism:** aspiration supplies suction that draws the clot toward and into the catheter opening. The boa-inspired part is the added backward-curved structures inside the distal catheter tip. Those structures are designed to engage the clot and add mechanical grip/retention. In simple terms, suction moves the clot in while the boa-inspired feature helps hold onto it.
 
-**Question purpose:** check understanding of the biological structure/function only. This scene must not repeat the engineering translation or final bioinspiration question.
+**Presentation:** use one continuous results explanation rather than separate answer-choice-looking cards.
 
-**Rubric:** Biology understanding; Usefulness.
+**Development/evidence context:** retain the supported Purdue/Emboa history and state that project sources describe model/preclinical development. Do not claim guaranteed patient benefit, regulatory approval, or established clinical superiority.
 
----
-
-## 5 — Mission Wrap-Up
-**Setting:** outside the hospital.
-
-**Player:** reviews the case before leaving the medical context.
-
-**Review only:** medical problem; biological clue; engineered translation; evidence limitation. No repeated ordering game and no second bioinspiration quiz.
-
-**Evidence guardrail:** describe TRAP results as bench/model/preclinical where supported; do not claim established patient benefit, regulatory approval, or clinical superiority.
-
-**Rubric:** Problem; Technology; evidence limitations; Clarity.
+**Rubric:** Technology; development/history; evidence limitations; Clarity.
 
 ---
 
-## 6 — The Bigger Connection
+## 5 — Bioinspiration Wrap-Up
 **Setting:** outdoors at sunset.
 
 **Player:** answers one broader transfer question about how the lesson could guide a team solving a different problem.
 
-**Learns:** bioinspiration involves studying how biology solves a problem, identifying a useful structure/function or strategy, abstracting it, and translating it into a new engineering context. It is not superficial copying.
+**Learns:** bioinspiration involves studying how biology solves a challenge, identifying a useful structure/function or strategy, abstracting it, and translating that strategy into a new engineering context rather than copying appearance.
 
-**Ending:** Mission Complete is concise. Sources, Transcript, Replay, and Review Journey remain available.
+**Ending:** Mission Complete stays concise. Sources, Transcript, Replay, and Review Journey remain available.
 
 **Rubric:** Course Connections; Usefulness; final synthesis.
 
@@ -104,22 +108,21 @@ This document reflects the current playtest structure. Older plans for a cathete
 # Rubric Coverage Map
 | Rubric area | Current evidence |
 | --- | --- |
-| Biology | Explore + Boa Biology Test |
-| Problem | Hospital + Mission Wrap-Up |
-| Technology | Hospital aspiration + Design + Mission Wrap-Up |
-| Development/history | Must be retained in Design/context: Purdue → Emboa Medical |
-| Course connections | Design abstraction/translation + final Bioinspiration Connection |
-| Creativity | hospital investigation, field exploration, scanner, design reasoning |
+| Biology | Explore + Design structure/function reasoning |
+| Problem | Hospital |
+| Technology | Hospital aspiration + Design + Technology explanation |
+| Development/history | Design + Technology context: Purdue → Emboa Medical |
+| Course connections | Explore structure/function thinking + Design abstraction/translation + Bioinspiration Wrap-Up |
+| Creativity | hospital investigation, field exploration, tablet scanner, design reasoning |
 | References | source cues + complete Sources panel |
-| Accessibility | captions/text, semantic controls, focus states, reduced-motion plan |
-| Clarity | plain-language-first WartsWorth rule |
-| Usefulness | player must reason about biology and generalize bioinspiration |
+| Accessibility | narration text, semantic controls, focus states, reduced-motion consideration |
+| Clarity | plain-language-first WartsWorth rule + explicit suction versus retention explanation |
+| Usefulness | player reasons through biology-to-engineering transfer and generalizes bioinspiration |
 
-# Pre-graphics gates
-Before final artwork is locked:
-1. Complete Zoe's current playtest feedback.
-2. Resolve Design answer-giveaway/interaction behavior.
-3. Confirm development/history is visibly taught without restoring the old chronology game.
-4. Verify transcript matches the final player-facing build.
-5. Keyboard, zoom, responsive-layout, and first-play timing tests.
-6. Final rubric and source audit.
+# Remaining verification gates
+1. Re-test the five-section flow with a first-time player.
+2. Verify the player can explain what the boa inspired versus what suction does.
+3. Verify transcript matches final player-facing wording.
+4. Test keyboard operation, contrast, browser zoom, and mobile/tablet/desktop layouts.
+5. Human-time the first-play required path.
+6. Complete the final rubric and source audit.
