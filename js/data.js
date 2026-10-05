@@ -59,12 +59,8 @@ window.GAME_DATA = {
       prompt:"Review how the bioinspired catheter combines suction with mechanical clot engagement.",
       sourceCue:"Technology: AskNature; Purdue University News (2025); Interventional News (2025).",
       interaction:{type:"wrap",points:[
-        "Start with the boa: when prey pulls away, its backward-curving teeth help resist that movement and keep the prey from slipping free.",
-        "TRAP borrows that retention idea. Aspiration provides the suction that draws the clot toward and into the catheter opening.",
-        "Inside the distal tip, tiny backward-curved structures are designed to engage the clot. As the clot is pulled in, those structures add mechanical grip that can help resist the clot slipping back out.",
-        "So the two parts work together: suction moves the clot into the catheter, while the boa-inspired curved structures add mechanical engagement and retention.",
-        "Ángel Enríquez and Hyowon Lee developed TRAP at Purdue University, and Purdue later licensed the technology to Emboa Medical for further development.",
-        "The project sources describe model and preclinical development. That evidence can support continued testing, but it should not be presented as guaranteed patient benefit or established clinical superiority."
+        "Here’s what our investigation found. A boa’s backward curving teeth help it hold onto prey when the prey tries to pull away. TRAP uses that same retention idea inside the catheter. Suction draws the blood clot into the catheter opening, while tiny backward curved structures inside the tip are designed to engage the clot and help keep it from slipping back out. The boa did not inspire the suction. It inspired the added grip that works with the suction. This is bioinspiration because engineers studied how a biological structure performs a useful function and adapted that strategy to solve a different problem.",
+        "Ángel Enríquez and Hyowon Lee developed TRAP at Purdue University, and Purdue later licensed the technology to Emboa Medical for further development. The project sources describe model and preclinical development, so the results should not be presented as guaranteed patient benefit or established clinical superiority."
       ],buttonText:"Continue to bioinspiration →"},
       takeaway:"The boa inspired the added retention strategy: suction draws the clot in, and backward-curved structures are designed to help engage and retain it."
     },
