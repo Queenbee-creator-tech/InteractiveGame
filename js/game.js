@@ -155,8 +155,8 @@
         }else{
           state.designAttempts++;
           if(state.designAttempts>=3){
-            feedback("Here’s a hint: begin with what you physically observed on the boa. Next comes what that feature helps the animal do. After that, move from the biological idea into the catheter.");
-            els.dialogue.textContent="Need a hand? Start with the boa itself: what did you see, and what did that feature help the snake do? Once those two are in place, carry the same idea into the catheter.";
+            feedback("Here’s a hint: begin with what you physically observed on the boa, then think about what that feature does naturally. From there, identify the useful idea before deciding what the medical design needs that idea to accomplish.");
+            els.dialogue.textContent="Need a hand? Start with the boa itself: what did you see, and what did that feature help the snake do? Then think about the useful idea you can carry into the medical problem.";
           }else{
             feedback(s.interaction.feedbackWrong+" Attempt "+state.designAttempts+" of 3 before WartsWorth offers a hint.");
           }
