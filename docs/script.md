@@ -1,17 +1,17 @@
 # Current Player Script Guide
 
 ## Status
-This file tracks the current playtest, not superseded versions of the game. Exact live strings remain in `js/data.js`; this document records the intended conversational beat and scientific purpose.
+This file tracks the current five-section playtest. Exact live strings remain in `js/data.js`; this document records the intended conversational beat and scientific purpose.
 
 ## Voice rules for WartsWorth
 - Talk to the player as a fellow researcher.
 - Prefer natural sentences over assignment language.
-- No em-dash-heavy dialogue.
+- Avoid dash-heavy dialogue.
 - Explain the simple idea first; name the scientific term second.
 - Do not announce discoveries before the player makes them.
 - Do not praise without adding information.
 - Once WartsWorth has briefed the Design activity, he stops coaching while the player solves it.
-- Do not repeat the same explanation in Test, Wrap-Up, Bioinspiration, and Mission Complete.
+- Do not repeat the same explanation across Technology, Bioinspiration, and Mission Complete.
 
 ## 1 — Hospital
 **Opening intent:** invite the researcher inside to investigate a medical problem.
@@ -20,49 +20,52 @@ This file tracks the current playtest, not superseded versions of the game. Exac
 
 **Hotspot teaching:** clot → blockage/ischemic stroke → catheter/aspiration.
 
-**Transition intent:** the player should leave knowing the problem is clot removal, while the solution remains open.
+**Transition intent:** the player leaves knowing the problem is clot removal. WartsWorth then asks how nature handles a similar functional challenge: holding onto something that tries to pull away.
 
 ## 2 — Explore
-**Opening intent:** encourage observation of the habitat. Do not mention a boa.
+**Opening intent:** encourage observation of the habitat. Do not mention a boa before discovery.
 
-**Optional hotspots:** give useful observation/field-science context. Do not add unsupported engineering examples.
+**Optional hotspots:** teach structure-to-function and bioinspiration thinking without adding unsupported engineering examples. Footprints are only a narrative clue.
 
-**Boa discovery:** only after the player clicks the animal may WartsWorth identify it as a boa and suggest using the tablet.
+**Boa discovery:** only after the player finds the animal may WartsWorth identify it as a boa and suggest using the tablet.
 
-**Scan:** explain that the teeth curve backward and connect the recurved geometry to ensnaring/retaining prey. Then ask the player to identify the useful idea.
+**Scan:** explain that the teeth curve backward and connect that geometry to ensnaring/retaining prey. The player identifies the transferable retention idea.
+
+**Transition intent:** WartsWorth explicitly takes the discovered idea back to the lab to see how it could help with the clot problem.
 
 ## 3 — Design
-**Opening intent:** “We have a biological clue. Now we need to work out what part of that clue can transfer into engineering.”
+**Opening intent:** establish that the researcher is back in the lab comparing the boa scan with the catheter design.
 
-**Briefing:** allow the player to inspect the five conceptual links. Each explanation answers why that link matters.
+**Briefing:** the player investigates all five conceptual links before the answer bank appears.
 
-**Independent reasoning:** after briefing, WartsWorth hands over the task and stays quiet until submission.
+**Independent reasoning:** after all five clues are viewed, the player chooses “I’m ready to build it myself.” WartsWorth then stays quiet while the player orders the ideas.
 
-**Scientific chain:** recurved boa tooth → prey retention → directional mechanical retention → backward-curved microscale structures inside distal catheter tip → added clot engagement/retention during aspiration.
+**Reasoning framework:** nature/biological structure → nature’s function → function/principle we take → how engineers use it → why the engineered feature works.
 
-**Development/history requirement:** include a concise supported note that TRAP was developed at Purdue by Ángel Enríquez and Hyowon Lee and licensed to Emboa Medical. This must not become another chronology quiz.
+**Project-specific chain:** boa teeth curve backward → curved teeth help hold onto prey → backward curves can resist something pulling away → engineers add tiny backward-curved structures inside the catheter tip → the curved structures help engage and retain the clot during suction.
 
-## 4 — Boa Biology Test
-**Purpose:** test the snake biology, not the catheter.
+**Hint rule:** after three unsuccessful checks, guide the player through that same five-part reasoning framework without revealing the exact answer.
 
-The player uses tooth direction to reason about retention when prey pulls away. Feedback stays tied to Ryerson & Van Valkenburgh (2021).
+**Development/history:** TRAP was developed at Purdue by Ángel Enríquez and Hyowon Lee and later licensed to Emboa Medical.
 
-## 5 — Mission Wrap-Up
-**Setting:** outside the hospital.
+## 4 — Technology: How the Engineered Design Works
+**Purpose:** explain the finished mechanism clearly rather than giving another quiz.
 
-**Purpose:** review, not retest. Summarize the medical problem, biological clue, engineering translation, and evidence boundary.
+**Core explanation:** a boa’s backward-curving teeth help retain prey when it pulls away. TRAP borrows that retention idea. Aspiration supplies the suction that draws the clot toward and into the catheter opening. Backward-curved structures inside the catheter tip are designed to engage the clot and add mechanical grip/retention. The boa inspired the added retention feature, not the suction.
 
-**Evidence language:** model/preclinical evidence can support that a design is promising or worth further investigation; it does not establish guaranteed patient outcomes.
+**Presentation:** show the result as a continuous explanation rather than answer-choice-style cards.
 
-## 6 — Bioinspiration Connection
+**Evidence language:** project sources describe model/preclinical development. Do not present guaranteed patient benefit or established clinical superiority.
+
+## 5 — Bioinspiration Wrap-Up
 **Setting:** outdoors at sunset.
 
-**Purpose:** generalize beyond the snake/catheter example.
+**Purpose:** generalize beyond the snake/catheter example with one broader transfer question.
 
-Ask what a new engineering team should learn from this mission when approaching a completely different problem. Correct reasoning focuses on studying biological function/strategy and translating the useful principle, not copying appearance.
+The correct reasoning is to find organisms facing a useful challenge, study how a biological feature works, identify the transferable strategy/function, and adapt that strategy to a new engineering context rather than copying appearance.
 
 ## Mission Complete
-Keep it short: acknowledge completion and provide Review Journey / Replay plus Sources and Transcript access. Do not teach the full chain again.
+Keep it short. Acknowledge completion and provide Review Journey / Replay plus Sources and Transcript access. Do not teach the full chain again.
 
 # Source map
 - Boa morphology/function: Ryerson & Van Valkenburgh (2021).
