@@ -87,7 +87,7 @@
     if(state.boaFound)boa.classList.add("visited");
     boa.addEventListener("click",()=>{
       state.boaFound=true;
-      els.dialogue.textContent="There! A boa constrictor. Look at those teeth—we should get a closer view. My tablet can scan them.";
+      els.dialogue.textContent="Whoa... look at those teeth! They curve backward. That has to help it hold onto— You know what? Maybe we investigate this one from a respectful distance.";
       els.direction.textContent="Use WartsWorth's tablet to examine the teeth.";
       renderFieldHotspots(s);
       const scan=$("sceneHotspot");scan.hidden=false;scan.textContent="Open tablet scanner";
