@@ -1,7 +1,7 @@
 window.GAME_DATA = {
   sections: [
     {
-      id:"hospital", label:"1 of 6", short:"Hospital", title:"Hospital: The Challenge", icon:"🏥", outfit:"Hospital gear",
+      id:"hospital", label:"1 of 5", short:"Hospital", title:"Hospital: The Challenge", icon:"🏥", outfit:"Hospital gear",
       intro:"Hey, researcher! I’m WartsWorth. We’ve been called in to investigate a medical problem. Let’s head inside and see what is happening.",
       prompt:"Enter the hospital and investigate the vessel scan.",
       sourceCue:"Medical context: Purdue University News (2025).",
@@ -24,7 +24,7 @@ window.GAME_DATA = {
       takeaway:"Medical problem: a clot can block blood flow in the brain, and removing it is the challenge."
     },
     {
-      id:"explore", label:"2 of 6", short:"Explore", title:"Explore: Nature + Biology", icon:"🌿", outfit:"Field hat + exploration gear",
+      id:"explore", label:"2 of 5", short:"Explore", title:"Explore: Nature + Biology", icon:"🌿", outfit:"Field hat + exploration gear",
       intro:"Welcome to the field. Somewhere in this habitat, an organism may have a useful solution to our problem. Look around and see what you notice.",
       prompt:"Explore the environment.",
       sourceCue:"Biology: Ryerson & Van Valkenburgh (2021); bioinspiration connection: AskNature.",
@@ -40,7 +40,7 @@ window.GAME_DATA = {
       takeaway:"Boa teeth curve backward and can help retain prey. That structure–function relationship gives engineers a retention strategy to investigate."
     },
     {
-      id:"design", label:"3 of 6", short:"Design", title:"Design: From Biology to Engineering", icon:"🔬", outfit:"Lab coat + transparent safety goggles",
+      id:"design", label:"3 of 5", short:"Design", title:"Design: From Biology to Engineering", icon:"🔬", outfit:"Lab coat + transparent safety goggles",
       intro:"We found our biological clue. In the lab, let’s follow the idea from what we noticed in the boa to how it could become an engineering design.",
       prompt:"Build the connection from biology to engineering.",
       sourceCue:"Technology: AskNature; Purdue University News (2025); Interventional News (2025).",
