@@ -472,16 +472,19 @@ The current teaching experience uses **five sections**:
    - Footprints are only a narrative clue that an animal may be nearby.
    - Discovering the boa unlocks the tablet/tooth scan.
    - Boa evidence teaches recurved/backward-curving teeth and prey retention, then asks the learner to identify the transferable retention idea.
+   - After the retention idea is identified, WartsWorth explicitly says the team is taking the idea back to the lab to see how it could help with the clot problem.
 
 3. **Design — Biology to Engineering**
+   - The Design scene explicitly establishes that the researcher has returned to the lab and that the boa scan is being compared with the catheter design.
    - The player must investigate all five diagram clues before the answer bank appears.
    - Only after all five clues are viewed can the player select **I’m ready to build it myself**.
    - WartsWorth then stops coaching and the numbered diagram controls are disabled.
    - The player independently reconstructs:
      **biological structure → biological function → abstracted principle → engineering function → engineered structure**
    - In project-specific terms:
-     **backward-curving boa teeth → helps retain prey → shape resists material pulling away → added clot engagement during suction → backward-curved structures inside catheter tip**
-   - Answer choices are shuffled and do not contain Step 1–5 labels.
+     **boa teeth curve backward → the curved teeth help hold onto prey → backward curves can resist something pulling away → the catheter needs help holding onto the clot during suction → engineers add tiny backward-curved structures inside the catheter tip**
+   - Answer choices are shuffled, use clear sentence-style wording based on the five clues the learner just investigated, and do not contain Step 1–5 labels.
+   - The instruction explicitly tells the learner to put the pieces together **in order**.
    - After three unsuccessful checks, WartsWorth provides a reasoning hint rather than the exact answer.
    - Supported development context is included: Ángel Enríquez and Hyowon Lee developed TRAP at Purdue; Purdue later licensed the technology to Emboa Medical.
 
