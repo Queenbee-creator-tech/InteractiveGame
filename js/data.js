@@ -34,22 +34,22 @@ window.GAME_DATA = {
         {id:"track",label:"Inspect tracks",x:71,y:68,text:"Tracks! Something has been moving through here. We might be getting close. Keep looking."}
       ],setup:"The teeth curve backward, and research on boa feeding links curved teeth with ensnaring and retaining prey. Which idea is useful to engineers?",choices:[
         {text:"Copy what the snake looks like.",correct:false,feedback:"The useful clue is not the snake’s appearance. Think about what the curved teeth help the snake do."},
-        {text:"Use backward-curving structures to help hold onto soft material.",correct:true,feedback:"Yes. The useful idea comes from how the curved structure helps with retention. Engineers call this directional mechanical retention."},
+        {text:"Use backward-curving structures to help hold onto soft material.",correct:true,feedback:"Yes. The useful idea comes from how the curved structure helps with retention. Engineers call this directional mechanical retention. I think we found what we came for. Let’s take this idea back to the lab and see how it could help with our clot problem."},
         {text:"Use venom to hold the material in place.",correct:false,feedback:"Our evidence here is about tooth shape and retention, not venom."}
       ]},
       takeaway:"Boa teeth curve backward and can help retain prey. That structure–function relationship gives engineers a retention strategy to investigate."
     },
     {
       id:"design", label:"3 of 5", short:"Design", title:"Design: From Biology to Engineering", icon:"🔬", outfit:"Lab coat + transparent safety goggles",
-      intro:"We found our biological clue. In the lab, let’s follow the idea from what we noticed in the boa to how it could become an engineering design.",
+      intro:"Welcome back to the lab. I pulled up the boa scan next to the catheter design. Let’s see how engineers turned what we observed in nature into something useful.",
       prompt:"Build the connection from biology to engineering.",
       sourceCue:"Technology: AskNature; Purdue University News (2025); Interventional News (2025).",
       interaction:{type:"design",pieces:[
-        {id:"teeth",label:"Backward-curving boa teeth",detail:"Start with what we actually saw. The boa’s teeth curve backward."},
-        {id:"function",label:"Helps keep prey from pulling away",detail:"Now ask what that shape does. The backward curve can help ensnare and retain prey."},
-        {id:"principle",label:"A shape that resists material pulling away",detail:"Here’s the useful idea without the snake attached to it: a backward-curving shape can help resist material pulling away. Engineers call that directional mechanical retention."},
-        {id:"engFunction",label:"Adds grip on the clot during suction",detail:"Now ask what we need the idea to accomplish in the medical problem. During aspiration, added grip could help engage and retain the clot instead of relying on suction alone."},
-        {id:"device",label:"Backward-curved structures inside a catheter tip",detail:"Now turn that goal into a physical design. TRAP uses tiny backward-curved structures inside the end of the catheter. Engineers call these microscale structures in the distal catheter tip."}
+        {id:"teeth",label:"Boa teeth curve backward",detail:"Start with what we actually saw. The boa’s teeth curve backward."},
+        {id:"function",label:"The curved teeth help hold onto prey",detail:"Now ask what that shape does. The backward curve can help ensnare and retain prey."},
+        {id:"principle",label:"Backward curves can resist something pulling away",detail:"Here’s the useful idea without the snake attached to it: a backward-curving shape can help resist material pulling away. Engineers call that directional mechanical retention."},
+        {id:"engFunction",label:"The catheter needs help holding onto the clot during suction",detail:"Now ask what we need the idea to accomplish in the medical problem. During aspiration, added grip could help engage and retain the clot instead of relying on suction alone."},
+        {id:"device",label:"Engineers add tiny backward-curved structures inside the catheter tip",detail:"Now turn that goal into a physical design. TRAP uses tiny backward-curved structures inside the end of the catheter. Engineers call these microscale structures in the distal catheter tip."}
       ],displayOrder:[2,4,0,3,1],setup:"You’ve investigated all five clues. Now put the pieces together in order to show how an observation from a boa became an engineering design.",history:"One more piece of the story: Ángel Enríquez and Hyowon Lee developed TRAP at Purdue University. Purdue later licensed the technology to Emboa Medical for further development.",feedbackWrong:"Not quite. Think about the path you followed during the investigation, from what you noticed in the boa to how that idea became a physical design.",feedbackCorrect:"You built the connection yourself. You moved from the boa’s tooth shape, to its natural function, to a transferable retention idea, then used that idea to define what the catheter needed to do before turning it into a physical design."},
       takeaway:"TRAP translates a biological retention strategy into backward-curved microscale structures inside the catheter tip."
     },
