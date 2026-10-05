@@ -188,9 +188,8 @@
   }
   function renderWrap(s){
     els.interaction.innerHTML="";
-    const list=document.createElement("div");list.className="wrap-summary";
-    (s.interaction.points||[]).forEach(point=>{const p=document.createElement("p");p.className="wrap-point";p.textContent=point;list.appendChild(p)});
-    els.interaction.appendChild(list);
+    const summary=document.createElement("p");summary.className="wrap-summary wrap-paragraph";summary.textContent=(s.interaction.points||[]).join(" ");
+    els.interaction.appendChild(summary);
     const finish=document.createElement("button");finish.type="button";finish.className="choice primary inline-action";finish.textContent=s.interaction.buttonText||"Continue →";
     finish.addEventListener("click",()=>completeCurrent("Mission review complete."));
     els.interaction.appendChild(finish);
