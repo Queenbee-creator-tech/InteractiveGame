@@ -54,33 +54,22 @@ window.GAME_DATA = {
       takeaway:"TRAP translates a biological retention strategy into backward-curved microscale structures inside the catheter tip."
     },
     {
-      id:"test", label:"4 of 6", short:"Test", title:"Test Your Biology Observation", icon:"🧪", outfit:"Field researcher gear",
-      intro:"Before we leave the biology behind, I want to see what you noticed about the snake. Take a look at the tooth shape again, then make your call.",
-      prompt:"Use the boa evidence to answer the question.",
-      sourceCue:"Biology: Ryerson & Van Valkenburgh (2021).",
-      interaction:{type:"choice",setup:"If prey pulls away from a boa’s mouth, which tooth feature is most useful for helping the snake retain it?",choices:[
-        {text:"The teeth curve backward toward the mouth.",correct:true,feedback:"That fits the evidence. The recurved tooth shape is linked with ensnaring and retaining prey."},
-        {text:"The teeth point straight outward from the mouth.",correct:false,feedback:"Look again at the tooth shape you scanned. Think about which direction would resist prey pulling away."},
-        {text:"The teeth are shaped mainly to crush hard material.",correct:false,feedback:"That is not the function supported by our boa source. Focus on prey retention."}
-      ]},
-      takeaway:"The recurved tooth shape is linked with ensnaring and retaining prey."
-    },
-    {
-      id:"wrap", label:"5 of 6", short:"Wrap-Up", title:"Mission Wrap-Up", icon:"🏥", outfit:"Research gear",
-      intro:"We made it back to the hospital. Nice work, researcher. Before we head out, here’s the case we just worked through.",
-      prompt:"Review the mission, then continue.",
-      sourceCue:"Mission review: biology and technology sources used throughout the investigation.",
+      id:"technology", label:"4 of 5", short:"Technology", title:"How the Engineered Design Works", icon:"🩺", outfit:"Research gear",
+      intro:"We followed the idea from the boa into the design. Now let’s put the engineered side together and see how TRAP is meant to work.",
+      prompt:"Review how the bioinspired catheter combines suction with mechanical clot engagement.",
+      sourceCue:"Technology: AskNature; Purdue University News (2025); Interventional News (2025).",
       interaction:{type:"wrap",points:[
-        "The problem: a clot can block blood flow in the brain, and doctors need ways to remove it.",
-        "The biological clue: recurved boa teeth can help ensnare and retain prey.",
-        "The design connection: TRAP uses tiny backward-curved structures inside the catheter tip to help engage and retain the clot during aspiration.",
-        "The evidence: testing in models can show whether the idea is promising, but that is not the same as proving better outcomes for patients."
-      ]},
-      takeaway:"Case reviewed. One last question connects this mission to the bigger idea behind IB 411."
+        "Aspiration draws the clot toward the catheter opening using suction.",
+        "Inside the distal tip, TRAP adds tiny backward-curved structures inspired by the retention strategy of recurved boa teeth.",
+        "As clot material enters the tip, those structures are designed to engage and help retain it, adding mechanical engagement instead of relying on suction alone.",
+        "Ángel Enríquez and Hyowon Lee developed TRAP at Purdue University, and Purdue later licensed the technology to Emboa Medical for further development.",
+        "The project sources describe model and preclinical development. That evidence can support continued testing, but it should not be presented as guaranteed patient benefit or established clinical superiority."
+      ],buttonText:"Continue to bioinspiration →"},
+      takeaway:"TRAP combines aspiration with a bioinspired mechanical retention feature inside the catheter tip."
     },
     {
-      id:"apply", label:"6 of 6", short:"Bioinspiration", title:"The Bigger Connection", icon:"🌅", outfit:"Explorer gear",
-      intro:"Not a bad day in the field, researcher. We started with a medical problem and ended up learning from a snake. Before we call it a day, think bigger than this one device.",
+      id:"apply", label:"5 of 5", short:"Bioinspiration", title:"Bioinspiration Wrap-Up", icon:"🌅", outfit:"Explorer gear",
+      intro:"Nice work, researcher. We started with a medical problem, learned from a boa, and followed that biological idea into an engineered design. Before we call it a day, think bigger than this one example.",
       prompt:"Use the mission to explain bioinspiration in your own thinking.",
       sourceCue:"Course connection: structure, function, abstraction, and biology to engineering transfer.",
       interaction:{type:"choice",setup:"A new engineering team wants to use bioinspiration for a completely different problem. What lesson from this mission would help them most?",choices:[
@@ -102,7 +91,6 @@ window.GAME_DATA = {
     ["Hospital: The Challenge","WartsWorth invites the researcher into the hospital to investigate a medical problem. The vessel scan shows a blood clot, an arterial blockage that can interrupt blood and oxygen delivery to brain tissue, and an aspiration catheter. Aspiration thrombectomy uses suction through a catheter to draw clot material toward the opening for removal. The player identifies clot removal as the medical problem before moving into nature for ideas."],
     ["Explore: Nature + Biology","The researcher explores the habitat without being told what organism to find. Optional observations encourage careful field investigation. After the animal is discovered, WartsWorth identifies it as a boa constrictor and unlocks the tablet scanner. The tooth scan shows recurved, backward-curving teeth. Research on boa feeding links curved teeth with ensnaring and retaining prey. The player identifies retention, rather than appearance or venom, as the useful idea."],
     ["Design: From Biology to Engineering","In the lab, the researcher follows the design reasoning from recurved boa teeth, to prey retention, to the abstracted principle of directional mechanical retention, to the engineering goal of adding clot engagement during aspiration, and finally to backward-curved microscale structures inside the catheter tip. Ángel Enríquez and Hyowon Lee developed TRAP at Purdue University, and Purdue later licensed the technology to Emboa Medical. After the briefing, WartsWorth stays quiet while the player builds the connection independently."],
-    ["Test Your Biology Observation","The researcher looks again at the direction of the boa teeth and reasons about what happens when prey pulls away. The correct conclusion is that backward-curving, recurved teeth are useful for ensnaring and retaining prey."],
-    ["Mission Wrap-Up","Outside the hospital, the case is reviewed: a clot can block blood flow in the brain; recurved boa teeth provide the biological clue; TRAP translates the retention strategy into backward-curved microscale structures inside the catheter tip; and testing or preclinical/model evidence should not be overstated as guaranteed patient benefit."],
-    ["The Bigger Connection","At sunset, the researcher generalizes the lesson beyond this one device. Bioinspiration can begin by finding organisms that face a useful challenge, studying how a biological feature works, identifying the underlying strategy or function, and translating that principle into a new engineering context rather than simply copying appearance."]
+    ["How the Engineered Design Works","The engineered wrap-up explains that aspiration draws clot material toward the catheter opening. TRAP adds backward-curved microscale structures inside the distal catheter tip, inspired by the retention strategy of recurved boa teeth. Those structures are designed to add mechanical clot engagement and retention rather than relying on suction alone. Ángel Enríquez and Hyowon Lee developed TRAP at Purdue University, which later licensed the technology to Emboa Medical. Project sources describe model and preclinical development, so the tool does not present guaranteed patient benefit or established clinical superiority."],
+    ["Bioinspiration Wrap-Up","At sunset, the researcher generalizes the lesson beyond this one device. Bioinspiration can begin by finding organisms that face a useful challenge, studying how a biological feature works, identifying the underlying strategy or function, and translating that principle into a new engineering context rather than simply copying appearance."]
   ]};
