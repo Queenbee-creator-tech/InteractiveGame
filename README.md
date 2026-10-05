@@ -446,9 +446,9 @@ Scientific story locked:
 
 **recurved/inward-curving boa teeth → prey retention/ensnaring → directional mechanical retention → backward-curved microscale structures inside the TRAP catheter tip → added mechanical clot engagement during aspiration.**
 
-Detailed evidence and claim guardrails are in `references/sources.md`. The complete six-section player journey is in `docs/storyboard.md`, and the matching six-section production script is in `docs/script.md`.
+Detailed evidence and claim guardrails are in `references/sources.md`. The current five-section player journey is in `docs/storyboard.md`, and the matching five-section production script is in `docs/script.md`.
 
-Phase 2 visual direction is locked. The six-section browser shell, gated progression, choices, feedback, persistent sequence progress, randomized final ordering challenge, final bioinspiration check, restart/replay controls, full in-game transcript, source cues, linked references, responsive styling, and scientific teaching flow are implemented. GitHub Pages deployment has been verified in the browser. The first original SVG production-art pass is wired into all six scenes, including WartsWorth, clot/device diagrams, and a keyboard-accessible boa scan hotspot. Live-browser QA caught and resolved the initial JavaScript/cache/display issues. The opening now begins outside the hospital: the player meets WartsWorth, receives the mission, then enters the hospital before learning what a blood clot and ischemic stroke are. Narrator dialogue is visually separated from player directions, the medical problem is explained in plain language with source cues, and Apply is a scrambled development-pathway challenge with WartsWorth feedback. Cache-busting asset versions were also added so GitHub Pages reliably serves new CSS/JavaScript builds. The Explore scan now reveals a dedicated boa-tooth structure/function diagram before the abstraction question. Following desktop play-test feedback, the Hospital was redesigned around the visual scene: WartsWorth now speaks in an in-scene speech bubble, the player enters the hospital with one action, then investigates a pediatric-room computer scan through three interactive bubbles for the clot, blockage, and aspiration. Only after all three findings are explored does a short design-need question appear. Visual scenes were enlarged relative to the text panels across the game. Apply artwork was also revised so it no longer gives away the sequencing answer. Next priority is browser verification of this redesigned Hospital interaction before the final rubric audit.
+Phase 2 visual direction is locked. The five-section browser shell, gated progression, choices, feedback, persistent sequence progress, randomized final ordering challenge, final bioinspiration check, restart/replay controls, full in-game transcript, source cues, linked references, responsive styling, and scientific teaching flow are implemented. GitHub Pages deployment has been verified in the browser. The first original SVG production-art pass is wired into all six scenes, including WartsWorth, clot/device diagrams, and a keyboard-accessible boa scan hotspot. Live-browser QA caught and resolved the initial JavaScript/cache/display issues. The opening now begins outside the hospital: the player meets WartsWorth, receives the mission, then enters the hospital before learning what a blood clot and ischemic stroke are. Narrator dialogue is visually separated from player directions, the medical problem is explained in plain language with source cues, and Design is an independent biology-to-engineering reasoning challenge with WartsWorth feedback after repeated difficulty. Cache-busting asset versions were also added so GitHub Pages reliably serves new CSS/JavaScript builds. The Explore scan now reveals a dedicated boa-tooth structure/function diagram before the abstraction question. Following desktop play-test feedback, the Hospital was redesigned around the visual scene: WartsWorth now speaks in an in-scene speech bubble, the player enters the hospital with one action, then investigates a pediatric-room computer scan through three interactive bubbles for the clot, blockage, and aspiration. Only after all three findings are explored does a short design-need question appear. Visual scenes were enlarged relative to the text panels across the game. Apply artwork was also revised so it no longer gives away the sequencing answer. Next priority is browser verification of this redesigned Hospital interaction before the final rubric audit.
 
 ---
 
@@ -456,13 +456,61 @@ Phase 2 visual direction is locked. The six-section browser shell, gated progres
 
 **Do not mark a task complete because code exists. Mark it complete only when it has been tested and meets the purpose described in this README.**
 
+## Current Locked Player Flow — 2026-10-05
 
-## 2026-10-04 Playtest decisions
-- WartsWorth should sound like a natural research partner, not a textbook. Avoid em dashes in his dialogue.
-- When WartsWorth speaks, preserve the illustrated environment but strengthen visual focus/readability around his speech.
-- Design instruction must teach the purpose of the five links without putting the ordered answer directly into the answer buttons.
-- After the Design briefing/exploration, WartsWorth should explicitly hand the problem to the player and stay quiet while the player reasons through it.
-- Test is a boa-biology observation check.
-- Mission Wrap-Up comes before the final bioinspiration connection and takes place outside the hospital.
-- The final bioinspiration connection takes place outside at sunset and asks the player to generalize what bioinspiration means beyond this one snake/catheter example.
-- Do not repeat the same bioinspiration question in Test, Wrap-Up, Connection, and Mission Complete.
+The current teaching experience uses **five sections**:
+
+1. **Hospital — Medical Problem**
+   - Enter the hospital and investigate the vessel scan.
+   - Learn clot, arterial blockage/ischemic-stroke context, and aspiration.
+   - Identify clot removal as the design problem.
+   - Transition explicitly asks how nature handles a similar functional challenge.
+
+2. **Explore — Nature + Biology**
+   - The task does **not** reveal the boa before discovery.
+   - Tree and vine are optional bioinspiration-thinking hotspots. They teach the learner to ask what a biological feature does and how structure supports function; they do not claim that these specific objects inspired an engineered product.
+   - Footprints are only a narrative clue that an animal may be nearby.
+   - Discovering the boa unlocks the tablet/tooth scan.
+   - Boa evidence teaches recurved/backward-curving teeth and prey retention, then asks the learner to identify the transferable retention idea.
+
+3. **Design — Biology to Engineering**
+   - The player must investigate all five diagram clues before the answer bank appears.
+   - Only after all five clues are viewed can the player select **I’m ready to build it myself**.
+   - WartsWorth then stops coaching and the numbered diagram controls are disabled.
+   - The player independently reconstructs:
+     **biological structure → biological function → abstracted principle → engineering function → engineered structure**
+   - In project-specific terms:
+     **backward-curving boa teeth → helps retain prey → shape resists material pulling away → added clot engagement during suction → backward-curved structures inside catheter tip**
+   - Answer choices are shuffled and do not contain Step 1–5 labels.
+   - After three unsuccessful checks, WartsWorth provides a reasoning hint rather than the exact answer.
+   - Supported development context is included: Ángel Enríquez and Hyowon Lee developed TRAP at Purdue; Purdue later licensed the technology to Emboa Medical.
+
+4. **Technology — How the Engineered Design Works**
+   - This is an explanation, **not another quiz**.
+   - Explain aspiration plus the added backward-curved structures inside the distal catheter tip.
+   - Explain that the structures are designed to add mechanical clot engagement/retention rather than relying on suction alone.
+   - Keep evidence language within model/preclinical support; do not claim guaranteed patient benefit or established clinical superiority.
+   - No numbered/clickable hotspot overlays belong on this scene.
+
+5. **Bioinspiration Wrap-Up**
+   - End outdoors at sunset.
+   - Ask one broader transfer question about what a different engineering team should learn from the mission.
+   - The learning target is that bioinspiration studies how biological features/functions solve challenges, abstracts a useful strategy, and translates that strategy into a new engineering context rather than simply copying appearance.
+   - No numbered/clickable hotspot overlays belong on this scene.
+
+### Current interaction rules
+- WartsWorth speaks naturally as a research partner, not as an assignment prompt.
+- Teach the simple idea first and introduce technical terminology second.
+- Do not announce discoveries before the player makes them.
+- Exploration and investigation carry the lesson; multiple choice is supporting comprehension, not the primary mechanic.
+- Optional hotspots must teach something useful without creating unsupported scientific claims.
+- If a visual element looks interactive, it must have a purpose. Remove leftover controls from noninteractive scenes.
+- Wrong answers should teach or guide and allow another attempt.
+- Keep scientific claims within the approved source guardrails in `references/sources.md`.
+- Required path should remain approximately 4–5 minutes; verify by human timing before submission.
+
+### Pre-graphics status
+The educational structure is now locked enough for final visual work **after one more complete playtest confirms the five-scene flow**. Remaining non-art verification includes timing, keyboard operation, contrast/zoom, mobile/tablet/desktop QA, reference qualification, and final transcript/source synchronization.
+
+---
+
