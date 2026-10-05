@@ -1,7 +1,7 @@
 (() => {
   const data=window.GAME_DATA;
   const $=id=>document.getElementById(id);
-  const state={section:0,completed:new Set(),hotspots:{},orders:{},finalChainDone:false,hospitalInside:false,hospitalSeen:new Set(),fieldSeen:new Set(),boaFound:false,designSeen:new Set(),designOrder:[],designBriefingDone:false};
+  const state={section:0,completed:new Set(),hotspots:{},orders:{},finalChainDone:false,hospitalInside:false,hospitalSeen:new Set(),fieldSeen:new Set(),boaFound:false,designSeen:new Set(),designOrder:[],designBriefingDone:false,designAttempts:0};
   const els={progress:$("progress"),title:$("sceneTitle"),label:$("sectionLabel"),dialogue:$("dialogue"),image:$("sceneImage"),outfit:$("guideOutfit"),interaction:$("interaction"),back:$("backBtn"),next:$("nextBtn"),sourceCue:$("sourceCue"),direction:$("directionText"),hospitalHotspots:$("hospitalHotspots"),fieldHotspots:$("fieldHotspots"),designHotspots:$("designHotspots")};
 
   function buildProgress(){
@@ -51,7 +51,7 @@
       enter.addEventListener("click",()=>{
         state.hospitalInside=true;
         setScene("assets/images/hospital.svg","Child-friendly hospital room with a large computer displaying a cerebral artery, blood clot, and aspiration catheter.");
-        els.dialogue.textContent="We’re inside! The computer has a vessel scan ready. Instead of me giving you all the answers, investigate the glowing markers on the scan.";
+        els.dialogue.textContent="We’re inside! The computer has a vessel scan ready. Check the glowing markers and see what each one tells us about the problem.";
         els.direction.textContent="Use all three scan bubbles on the hospital computer. Each one reveals part of the medical problem.";
         renderHospital(s);
       });
@@ -153,7 +153,13 @@
           els.dialogue.textContent=s.interaction.history;
           completeCurrent(s.interaction.feedbackCorrect+" "+s.interaction.history);
         }else{
-          feedback(s.interaction.feedbackWrong);
+          state.designAttempts++;
+          if(state.designAttempts>=3){
+            feedback("Here’s a hint: begin with what you physically observed on the boa. Next comes what that feature helps the animal do. After that, move from the biological idea into the catheter.");
+            els.dialogue.textContent="Need a hand? Start with the boa itself: what did you see, and what did that feature help the snake do? Once those two are in place, carry the same idea into the catheter.";
+          }else{
+            feedback(s.interaction.feedbackWrong+" Attempt "+state.designAttempts+" of 3 before WartsWorth offers a hint.");
+          }
         }
       });
       els.interaction.appendChild(check);
@@ -220,7 +226,7 @@
     openInfo("Mission Complete","<p><strong>Nice work, researcher.</strong> You finished the Clot Quest investigation and connected it to the larger idea of bioinspiration.</p><div class='mission-actions'><button id='reviewMission' type='button'>Review journey</button><button id='replayMission' type='button'>Replay mission</button></div>");
     setTimeout(()=>{const review=$("reviewMission"),replay=$("replayMission");if(review)review.addEventListener("click",()=>{$("infoDialog").close();state.section=0;render()});if(replay)replay.addEventListener("click",()=>{$("infoDialog").close();restart()})},0);
   }
-  function restart(){state.section=0;state.completed.clear();state.hotspots={};state.orders={};state.finalChainDone=false;state.hospitalInside=false;state.hospitalSeen=new Set();state.fieldSeen=new Set();state.boaFound=false;state.designSeen=new Set();state.designOrder=[];state.designBriefingDone=false;render()}
+  function restart(){state.section=0;state.completed.clear();state.hotspots={};state.orders={};state.finalChainDone=false;state.hospitalInside=false;state.hospitalSeen=new Set();state.fieldSeen=new Set();state.boaFound=false;state.designSeen=new Set();state.designOrder=[];state.designBriefingDone=false;state.designAttempts=0;render()}
   els.next.addEventListener("click",()=>{if(!state.completed.has(state.section))return;if(state.section<data.sections.length-1){state.section++;render()}else missionComplete()});
   els.back.addEventListener("click",()=>{if(state.section>0){state.section--;render()}});
   $("restartBtn").addEventListener("click",restart);
