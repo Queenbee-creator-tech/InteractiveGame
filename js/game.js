@@ -210,7 +210,7 @@
     els.label.textContent=s.label;els.title.textContent=s.title;els.outfit.textContent=s.outfit;els.sourceCue.textContent=s.sourceCue||"";
     els.dialogue.textContent=s.intro;els.direction.textContent=s.prompt;document.querySelector(".scene").classList.remove("speaking-focus");
     const hospitalExterior=s.id==="hospital"&&!state.hospitalInside;
-    const src=hospitalExterior?"hospital-exterior":(s.id==="wrap"?"hospital-exterior":s.id);
+    const src=hospitalExterior?"hospital-exterior":(s.id==="technology"?"hospital-exterior":s.id);
     els.image.src="assets/images/"+src+".svg";
     els.image.alt=({hospital:hospitalExterior?"Illustrated hospital exterior where WartsWorth introduces the mission.":"Child-friendly hospital room with a computer displaying a cerebral vessel scan.",explore:"Illustrated tropical field habitat with trees, vines, tracks, and places to investigate.",design:"Illustrated lab comparison translating recurved tooth geometry into recurved microscale structures inside a catheter tip.",technology:"Illustrated hospital exterior representing the engineered catheter wrap-up.",apply:"Illustrated sunset field scene representing the broader bioinspiration connection."})[s.id];
     const hotspot=$("sceneHotspot");hotspot.hidden=s.id!=="explore"||!!state.hotspots.explore||!state.boaFound;if(s.id==="explore"&&!state.hotspots.explore&&state.boaFound){hotspot.style.right="12%";hotspot.style.top="72%";hotspot.textContent="Open tablet scanner"}
