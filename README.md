@@ -480,9 +480,9 @@ The current teaching experience uses **five sections**:
    - Only after all five clues are viewed can the player select **I’m ready to build it myself**.
    - WartsWorth then stops coaching and the numbered diagram controls are disabled.
    - The player independently reconstructs:
-     **biological structure → biological function → abstracted principle → engineering function → engineered structure**
+     **nature/biological structure → nature’s function → function/principle we take → how engineers use it → why the engineered feature works**
    - In project-specific terms:
-     **boa teeth curve backward → the curved teeth help hold onto prey → backward curves can resist something pulling away → the catheter needs help holding onto the clot during suction → engineers add tiny backward-curved structures inside the catheter tip**
+     **boa teeth curve backward → the curved teeth help hold onto prey → backward curves can resist something pulling away → engineers add tiny backward-curved structures inside the catheter tip → the curved structures help engage and retain the clot during suction**
    - Answer choices are shuffled, use clear sentence-style wording based on the five clues the learner just investigated, and do not contain Step 1–5 labels.
    - The instruction explicitly tells the learner to put the pieces together **in order**.
    - After three unsuccessful checks, WartsWorth provides a reasoning hint rather than the exact answer.
