@@ -92,14 +92,16 @@ This document reflects the current five-section playtest. Older plans for a sepa
 
 ---
 
-## 5 — Bioinspiration Wrap-Up
-**Setting:** outdoors at sunset.
+## 5 — Results / Game Wrap-Up → Bioinspiration Wrap-Up
+**Results screen:** the tablet closes the boa/TRAP investigation by revealing the real-world technology, supported testing results, and the evidence boundary. This is where the game-specific story ends.
 
-**Player:** answers one broader transfer question about how the lesson could guide a team solving a different problem.
+**Final setting:** outdoors at sunset.
 
-**Learns:** bioinspiration involves studying how biology solves a challenge, identifying a useful structure/function or strategy, abstracting it, and translating that strategy into a new engineering context rather than copying appearance.
+**Player:** does not take another quiz and does not repeat the mission.
 
-**Ending:** Mission Complete stays concise. Sources, Transcript, Replay, and Review Journey remain available.
+**Learns:** bioinspiration can begin anywhere in nature by noticing how animals, plants, insects, structures, surfaces, movements, or behaviors solve challenges and asking, “How does that work?” The ending broadens the idea beyond the boa/TRAP example without reteaching the five-step chain.
+
+**Ending:** WartsWorth gives a short, natural bioinspiration send-off. Sources, Transcript, Replay, and Review Journey remain available.
 
 **Rubric:** Course Connections; Usefulness; final synthesis.
 
