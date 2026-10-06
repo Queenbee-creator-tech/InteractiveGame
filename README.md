@@ -37,8 +37,8 @@ WartsWorth is an active research partner rather than a static narrator box. He m
 2. **Field Exploration + Tablet Scan** — freely explore; the task does not name the boa before discovery. Finding it unlocks the tablet/tooth investigation.
 3. **Design / Biology-to-Engineering Translation** — investigate the five conceptual links, then solve the translation independently while WartsWorth stays quiet.
 4. **Boa Biology Test** — reason from recurved tooth geometry and prey-retention evidence. This tests biology rather than repeating the catheter lesson.
-5. **Mission Wrap-Up** — return outside the hospital and review the case, including the evidence boundary, without another quiz.
-6. **Bioinspiration Connection** — end outdoors at sunset with one broader transfer question about how bioinspiration can guide a completely different engineering problem.
+5. **Results / Game Wrap-Up** — finish the boa/TRAP investigation by revealing the real-world technology and explaining the supported testing results and evidence boundary. This scene closes the game itself; do not repeat the full mission afterward.
+6. **Bioinspiration Wrap-Up** — end outdoors at sunset with a short, natural summary of bioinspiration: useful ideas can be discovered throughout nature by noticing how organisms, structures, surfaces, movements, and behaviors solve problems. Encourage the learner to look more closely at nature and ask how something works. Do not repeat the boa/TRAP mission or add another quiz.
 
 ### Scope Guardrails
 
@@ -60,8 +60,8 @@ Each scene now has **one primary teaching job** so the player is not asked to le
 | **Explore** | Discover the biological model and learn how recurved boa teeth function in retention. | The task says only to explore; it does not reveal that the player is looking for a boa. |
 | **Design** | Understand how the biological structure–function idea was translated into an engineered catheter feature. | Prefer visual comparison/assembly over a terminology-heavy quiz. |
 | **Boa Biology Test** | Check whether the player understands how recurved tooth geometry relates to prey retention. | Test the snake biology, not the catheter or evidence lesson again. |
-| **Mission Wrap-Up** | Return outside the hospital and briefly review the case before the final course connection. | No duplicate quiz; summarize the medical problem, biological clue, design translation, and evidence. |
-| **Bioinspiration Connection** | End outside at sunset with a broader transfer question: how could the lesson from this case guide bioinspiration for a completely different problem? | This is the final conceptual connection, not another step-by-step snake-to-catheter question. |
+| **Results / Game Wrap-Up** | Finish the boa/TRAP story by revealing the real technology, explaining the supported results, and stating the evidence boundary. | This closes the game. Explain what the reported testing showed without implying established clinical effectiveness; do not add another quiz. |
+| **Bioinspiration Wrap-Up** | End outside at sunset with a natural summary of what bioinspiration is and where inspiration can be found in nature. | Broaden beyond the boa example: notice animals, plants, insects, structures, surfaces, movements, and behaviors; ask how they work and what useful strategy they reveal. Do not repeat the mission or test the learner again. |
 
 ### Player-Facing Writing Rules
 
@@ -127,12 +127,13 @@ Do not replace the existing project wholesale. Upgrade one sequence at a time, t
 - [ ] Do not repeat the engineering translation or final bioinspiration question
 - [ ] Test accessibility, clarity, and timing
 
-### Prototype E — Mission Wrap-Up → Bioinspiration Connection
-- [ ] Return outside the hospital for a concise case review
-- [ ] Review problem, biological clue, design translation, and evidence limitation without another quiz
-- [ ] Preserve supported development/history context without restoring the old chronology game
-- [ ] End outside at sunset with one broader bioinspiration transfer question
-- [ ] Make the final question generalize beyond the snake/catheter example
+### Prototype E — Results / Game Wrap-Up → Bioinspiration Wrap-Up
+- [ ] Use the results screen to finish the boa/TRAP game and explain the supported testing results and evidence limitation
+- [ ] Keep development/history context concise and source-supported without restoring the old chronology game
+- [ ] Do not repeat the mission after the results screen; the game itself is already resolved
+- [ ] End outside at sunset with a short, natural explanation of bioinspiration and where ideas can be noticed in nature
+- [ ] Mention that inspiration can come from animals, plants, insects, structures, surfaces, movements, and behaviors, and encourage asking how a biological feature works
+- [ ] Do not add a final quiz or another snake-to-catheter recap
 - [ ] Preserve references/credits/transcript/accessibility materials
 - [ ] Test full story continuity
 
@@ -495,11 +496,14 @@ The current teaching experience uses **five sections**:
    - Keep evidence language within model/preclinical support; do not claim guaranteed patient benefit or established clinical superiority.
    - No numbered/clickable hotspot overlays belong on this scene.
 
-5. **Bioinspiration Wrap-Up**
-   - End outdoors at sunset.
-   - Ask one broader transfer question about what a different engineering team should learn from the mission.
-   - The learning target is that bioinspiration studies how biological features/functions solve challenges, abstracts a useful strategy, and translates that strategy into a new engineering context rather than simply copying appearance.
-   - No numbered/clickable hotspot overlays belong on this scene.
+5. **Results / Game Wrap-Up → Bioinspiration Wrap-Up**
+   - The preceding results screen finishes the boa/TRAP game: reveal the real-world technology, explain the supported testing results, and clearly state the evidence boundary.
+   - Do not use the final scene to repeat the mission, the five design steps, or the TRAP results; those have already been resolved.
+   - End outdoors at sunset with WartsWorth speaking naturally about bioinspiration in general.
+   - Summarize bioinspiration as finding useful ideas in nature by noticing how biological features and behaviors work and asking what strategy they use to solve a challenge.
+   - Broaden the learner's attention beyond this example: inspiration can be found in animals, plants, insects, structures, surfaces, movements, and behaviors—including things people might normally walk past.
+   - Encourage the learner to look more closely at nature and ask, “How does that work?”
+   - No final quiz, transfer question, numbered hotspot overlay, or repeated snake-to-catheter recap belongs on this scene.
 
 ### Current interaction rules
 - WartsWorth speaks naturally as a research partner, not as an assignment prompt.
