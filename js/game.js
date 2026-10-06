@@ -50,7 +50,7 @@
       const enter=document.createElement("button");enter.type="button";enter.className="primary enter-hospital";enter.textContent="Enter the hospital →";
       enter.addEventListener("click",()=>{
         state.hospitalInside=true;
-        setScene("assets/images/hospital.svg","Child-friendly hospital room with a large computer displaying a cerebral artery, blood clot, and aspiration catheter.");
+        setScene("assets/images/hospital-interior.png?v=20261006-8","Hospital diagnostic room with a large cerebral vessel scan showing a blood clot and ischemic stroke imaging.");
         els.dialogue.textContent="We’re inside! The computer has a vessel scan ready. Check the glowing markers and see what each one tells us about the problem.";
         els.direction.textContent="Use all three scan bubbles on the hospital computer. Each one reveals part of the medical problem.";
         renderHospital(s);
@@ -210,8 +210,8 @@
     els.dialogue.textContent=s.intro;els.direction.textContent=s.prompt;document.querySelector(".scene").classList.remove("speaking-focus");
     const hospitalExterior=s.id==="hospital"&&!state.hospitalInside;
     const src=hospitalExterior?"hospital-exterior":(s.id==="technology"?"hospital-exterior":s.id);
-    els.image.src=hospitalExterior?"assets/images/hospital-exterior.png?v=20261006-7":"assets/images/"+src+".svg";
-    els.image.alt=({hospital:hospitalExterior?"Illustrated hospital exterior where WartsWorth introduces the mission.":"Child-friendly hospital room with a computer displaying a cerebral vessel scan.",explore:"Illustrated tropical field habitat with trees, vines, tracks, and places to investigate.",design:"Illustrated lab comparison translating recurved tooth geometry into recurved microscale structures inside a catheter tip.",technology:"Illustrated hospital exterior representing the engineered catheter wrap-up.",apply:"Illustrated sunset field scene representing the broader bioinspiration connection."})[s.id];
+    els.image.src=hospitalExterior?"assets/images/hospital-exterior.png?v=20261006-8":(s.id==="hospital"&&state.hospitalInside?"assets/images/hospital-interior.png?v=20261006-8":"assets/images/"+src+".svg");
+    els.image.alt=({hospital:hospitalExterior?"Illustrated hospital exterior where WartsWorth introduces the mission.":"Hospital diagnostic room with a large cerebral vessel scan showing a blood clot and ischemic stroke imaging.",explore:"Illustrated tropical field habitat with trees, vines, tracks, and places to investigate.",design:"Illustrated lab comparison translating recurved tooth geometry into recurved microscale structures inside a catheter tip.",technology:"Illustrated hospital exterior representing the engineered catheter wrap-up.",apply:"Illustrated sunset field scene representing the broader bioinspiration connection."})[s.id];
     const hotspot=$("sceneHotspot");hotspot.hidden=s.id!=="explore"||!!state.hotspots.explore||!state.boaFound;if(s.id==="explore"&&!state.hotspots.explore&&state.boaFound){hotspot.style.right="12%";hotspot.style.top="72%";hotspot.textContent="Open tablet scanner"}
     updateProgress();els.back.disabled=state.section===0;els.next.disabled=!state.completed.has(state.section);els.next.textContent=state.section===data.sections.length-1?"Mission Complete":"Continue";renderInteraction(s);
   }
