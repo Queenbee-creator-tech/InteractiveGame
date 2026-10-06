@@ -57,15 +57,17 @@ This file tracks the current five-section playtest. Exact live strings remain in
 
 **Evidence language:** project sources describe model/preclinical development. Do not present guaranteed patient benefit or established clinical superiority.
 
-## 5 — Bioinspiration Wrap-Up
-**Setting:** outdoors at sunset.
+## 5 — Results / Game Wrap-Up → Bioinspiration Wrap-Up
+**Results screen purpose:** finish the boa/TRAP game on the tablet by revealing the real-world technology, supported testing results, and evidence limitation. Do not turn this into another quiz.
 
-**Purpose:** generalize beyond the snake/catheter example with one broader transfer question.
+**Final setting:** outdoors at sunset.
 
-The correct reasoning is to find organisms facing a useful challenge, study how a biological feature works, identify the transferable strategy/function, and adapt that strategy to a new engineering context rather than copying appearance.
+**Final purpose:** move beyond the project example and leave the learner with a natural understanding of bioinspiration. WartsWorth should explain that ideas can be noticed throughout nature—in animals, plants, insects, structures, surfaces, movements, and behaviors—by looking closely and asking, “How does that work?”
+
+Do not repeat the mission, the boa-to-catheter chain, the five design steps, or the TRAP results in this final scene. Do not add a transfer question or final quiz.
 
 ## Mission Complete
-Keep it short. Acknowledge completion and provide Review Journey / Replay plus Sources and Transcript access. Do not teach the full chain again.
+Keep it short. Provide Review Journey / Replay plus Sources and Transcript access without reteaching the lesson.
 
 # Source map
 - Boa morphology/function: Ryerson & Van Valkenburgh (2021).
