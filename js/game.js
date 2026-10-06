@@ -83,7 +83,7 @@
       b.addEventListener("click",()=>{state.fieldSeen.add(spot.id);els.dialogue.textContent=spot.text;renderFieldHotspots(s)});
       els.fieldHotspots.appendChild(b);
     });
-    const boa=document.createElement("button");boa.type="button";boa.className="field-hotspot boa-discovery";boa.style.left="79%";boa.style.top="34%";boa.setAttribute("aria-label","Investigate animal");boa.title="Investigate what you found";boa.textContent=state.boaFound?"✓":"?";
+    const boa=document.createElement("button");boa.type="button";boa.className="field-hotspot boa-discovery";boa.style.left="31%";boa.style.top="18%";boa.setAttribute("aria-label","Investigate animal");boa.title="Investigate what you found";boa.textContent=state.boaFound?"✓":"?";
     if(state.boaFound)boa.classList.add("visited");
     boa.addEventListener("click",()=>{
       state.boaFound=true;
@@ -210,7 +210,7 @@
     els.dialogue.textContent=s.intro;els.direction.textContent=s.prompt;document.querySelector(".scene").classList.remove("speaking-focus");
     const hospitalExterior=s.id==="hospital"&&!state.hospitalInside;
     const src=hospitalExterior?"hospital-exterior":(s.id==="technology"?"hospital-exterior":s.id);
-    els.image.src=hospitalExterior?"assets/images/hospital-exterior.png?v=20261006-8":(s.id==="hospital"&&state.hospitalInside?"assets/images/hospital-interior.png?v=20261006-8":"assets/images/"+src+".svg");
+    els.image.src=hospitalExterior?"assets/images/hospital-exterior.png?v=20261006-9":(s.id==="hospital"&&state.hospitalInside?"assets/images/hospital-interior.png?v=20261006-9":(s.id==="explore"&&!state.hotspots.explore?"assets/images/explore.png?v=20261006-9":"assets/images/"+src+".svg"));
     els.image.alt=({hospital:hospitalExterior?"Illustrated hospital exterior where WartsWorth introduces the mission.":"Hospital diagnostic room with a large cerebral vessel scan showing a blood clot and ischemic stroke imaging.",explore:"Illustrated tropical field habitat with trees, vines, tracks, and places to investigate.",design:"Illustrated lab comparison translating recurved tooth geometry into recurved microscale structures inside a catheter tip.",technology:"Illustrated hospital exterior representing the engineered catheter wrap-up.",apply:"Illustrated sunset field scene representing the broader bioinspiration connection."})[s.id];
     const hotspot=$("sceneHotspot");hotspot.hidden=s.id!=="explore"||!!state.hotspots.explore||!state.boaFound;if(s.id==="explore"&&!state.hotspots.explore&&state.boaFound){hotspot.style.right="12%";hotspot.style.top="72%";hotspot.textContent="Open tablet scanner"}
     updateProgress();els.back.disabled=state.section===0;els.next.disabled=!state.completed.has(state.section);els.next.textContent=state.section===data.sections.length-1?"Mission Complete":"Continue";renderInteraction(s);
