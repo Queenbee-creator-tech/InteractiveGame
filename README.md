@@ -320,10 +320,13 @@ We will check these boxes off as each step is completed.
 
 ## Phase 6 — Art, Animation, and Polish
 
-- [x] Replace placeholder graphics
+- [ ] Replace all remaining placeholder graphics (production-art pass still in progress)
 - [x] Add snake-tooth diagram
 - [x] Add blood-clot/device visuals
 - [x] Add visual transition from organism → tooth scan → lab/design
+- [x] Add final lab workflow production graphic
+- [x] Add tablet close-up production graphic
+- [ ] Add final outdoors-at-sunset bioinspiration wrap-up graphic
 - [x] Add subtle scene-reveal animation with reduced-motion fallback
 - [x] Add hover/focus/selected states
 - [x] Add success/error feedback
