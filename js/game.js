@@ -247,7 +247,7 @@
   function render(){
     const s=data.sections[state.section];setWartsworth(defaultWartsworth(s));
     els.label.textContent=s.label;els.title.textContent=s.title;els.sourceCue.textContent=s.sourceCue||"";
-    els.dialogue.textContent=s.intro;els.direction.textContent=s.prompt;setWartsworth(defaultWartsworth(s));document.querySelector(".scene").classList.remove("speaking-focus");
+    els.dialogue.textContent=s.intro;els.direction.textContent=s.prompt;setWartsworth(defaultWartsworth(s));document.querySelector(".scene").classList.remove("speaking-focus");\n    const speechBubble=els.dialogue.closest(".scene-speech");\n    if(speechBubble)speechBubble.style.display=s.id==="apply"?"none":"";
     const hospitalExterior=s.id==="hospital"&&!state.hospitalInside;
     const src=hospitalExterior?"hospital-exterior":(s.id==="technology"?"hospital-exterior":s.id);
     els.image.src=hospitalExterior?"assets/images/hospital-exterior.png?v=20261006-10":(s.id==="hospital"&&state.hospitalInside?"assets/images/hospital-interior.png?v=20261006-10":(s.id==="explore"&&!state.hotspots.explore?"assets/images/explore.png?v=20261006-10":(s.id==="design"?"assets/images/lab-bioinspiration-workflow.png?v=20261006-1":(s.id==="technology"?"assets/lab-tablet-closeup.png?v=20261006-1":(s.id==="apply"?"assets/images/bioinspiration-sunset-wrapup.png?v=20261006-1":"assets/images/"+src+".svg")))));
