@@ -29,7 +29,7 @@ The final product should feel like a **short interactive role-playing scientific
 
 Large illustrated environments should carry the experience. Each major environment can contain multiple keyboard-accessible hotspots: some advance the investigation, while others reward exploration with scientific facts, environmental details, source-supported context, or brief WartsWorth reactions. Multiple-choice remains available when it genuinely checks understanding or evidence boundaries, but it is a supporting mechanic rather than the main gameplay.
 
-WartsWorth is an active research partner rather than a static narrator box. He may change clothing/equipment for each environment, use his tablet and other research tools, react to discoveries, explain scientific evidence, and use occasional humor without compromising scientific accuracy.
+WartsWorth is an active research partner rather than a static narrator box. His approved character design is locked: his face, body/proportions, eyes, goggles, shell/backpack, coloring, and illustration style do not change. His already-approved scene-specific clothing/equipment also remains locked. Only his facial expression and pose may change as needed to match the moment, while preserving the same WartsWorth identity and approved outfit for that scene. He can use his tablet and other research tools, react to discoveries, explain scientific evidence, and use occasional humor without compromising scientific accuracy.
 
 ### Target Story / Environment Progression
 
@@ -389,49 +389,51 @@ A graphic is only marked **wired** when the live game code actually uses the pro
 ## Phase 8 — Rubric Audit
 
 ### Biology
-- [ ] Snake-tooth biology is introduced clearly
-- [ ] Relevant structure is identified
-- [ ] Structure and biological function are connected
+- [x] Snake-tooth biology is introduced clearly
+- [x] Relevant structure is identified
+- [x] Structure and biological function are connected
 
 ### Problem
-- [ ] Blood-clot problem is clearly defined
-- [ ] Player understands why the problem matters
+- [x] Blood-clot problem is clearly defined
+- [x] Player understands why the problem matters
 
 ### Technology
-- [ ] Engineered product/device is explained
-- [ ] Player understands how it works
-- [ ] Nature → engineering transfer is explicit
-- [ ] Development/history is included where supported
+- [x] Engineered product/device is explained
+- [x] Player understands how it works
+- [x] Nature → engineering transfer is explicit
+- [x] Development/history is included where supported
 
 ### Course Connections
-- [ ] Specific IB 411 concept(s) are named or clearly demonstrated
-- [ ] Analogical reasoning / biological mechanism transfer is clear
+- [x] Specific IB 411 concept(s) are named or clearly demonstrated
+- [x] Analogical reasoning / biological mechanism transfer is clear
 
 ### Creativity
-- [ ] Player actively participates
-- [ ] Interactions support learning instead of being decorative
+- [x] Player actively participates
+- [x] Interactions support learning instead of being decorative
 
 ### References
-- [ ] At least 2 recent peer-reviewed sources
-- [ ] At least 3 additional reputable sources
-- [ ] Scientific claims can be traced to sources
+- [x] At least 2 recent peer-reviewed sources
+- [x] At least 3 additional reputable sources
+- [x] Scientific claims can be traced to sources
 
 ### Accessibility
-- [ ] Required textual equivalents are included
+- [x] Required textual equivalents are included
 
 ### Clarity
-- [ ] Jargon is defined
-- [ ] Instructions are easy to follow
-- [ ] Navigation is obvious
+- [x] Jargon is defined
+- [x] Instructions are easy to follow
+- [x] Navigation is obvious
 
 ### Quality
 - [ ] No broken links
-- [ ] No placeholder content
-- [ ] Visuals are legible
+- [x] No placeholder content
+- [x] Visuals are legible
 - [ ] Game works consistently
 
 ### Usefulness
-- [ ] Tool could realistically help another bioinspiration student learn the topic
+- [x] Tool could realistically help another bioinspiration student learn the topic
+
+**Phase 8 audit note:** Content-level rubric evidence is present in the current game. The two unchecked Quality items require a final live-browser QA pass; they should not be marked complete from code inspection alone.
 
 **Phase 8 exit condition:** Every grading category has visible evidence inside the final product.
 
