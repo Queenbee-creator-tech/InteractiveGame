@@ -332,7 +332,7 @@ A graphic is only marked **wired** when the live game code actually uses the pro
 | Boa tooth scan | Yes — `assets/images/tooth-scan.png` | Yes | ✅ Complete |
 | WartsWorth character overlay | Yes — `assets/images/wartsworth.svg` | Yes | ✅ Keep as separate overlay |
 | Design lab workflow | Yes — `assets/images/lab-bioinspiration-workflow.png` | Yes | ✅ Production art wired; five HTML hotspots aligned to the five visual stations |
-| Results / Technology tablet close-up | Yes — `assets/lab-tablet-closeup.png` | No; live renderer still falls back to `test.svg` | 🔧 Needs wiring + editable HTML/CSS results content |
+| Results / Technology tablet close-up | Yes — `assets/lab-tablet-closeup.png` | Yes | ✅ Production tablet wired; sourced results remain editable live content |
 | Final bioinspiration sunset | Created by the graphics pass as `bioinspiration-sunset-wrapup.png`; add under `assets/images/` | No; live renderer still falls back to `final.svg` | 🔧 Needs repo asset + wiring |
 
 **Graphics rule:** production scene images are background/environment art only. Dialogue, buttons, labels, hotspot numbers, results text, and other instructional copy remain editable HTML/CSS/JavaScript overlays for accessibility, source accuracy, and revision.
@@ -349,15 +349,19 @@ A graphic is only marked **wired** when the live game code actually uses the pro
 - [x] Final sunset bioinspiration background created locally
 - [ ] Add `bioinspiration-sunset-wrapup.png` to `assets/images/`
 - [x] Wire Design scene to `lab-bioinspiration-workflow.png`
-- [ ] Wire Technology/Results scene to the tablet close-up production graphic
-- [ ] Build the editable results content over the tablet screen using source-supported wording
+- [x] Wire Technology/Results scene to the tablet close-up production graphic
+- [x] Build editable, source-supported Results scene content (including experimental/model evidence boundary)
 - [ ] Wire Final scene to `bioinspiration-sunset-wrapup.png`
-- [ ] Remove/retire `test.svg` and `final.svg` as live scene fallbacks after replacement is verified
+- [ ] Remove/retire `final.svg` as the live scene fallback after the sunset PNG is added and verified
+- [x] Retire `test.svg` as the live Technology/Results scene fallback
 - [x] Retire `design.svg` as the live Design scene fallback
 - [ ] Verify hotspot/overlay placement against each final background
 - [ ] Check desktop layout
 - [ ] Check tablet layout
 - [ ] Check mobile layout
+
+
+**Ending-content reconciliation:** The live final section now matches the locked storyboard: the TRAP Results scene closes the game-specific investigation, and the sunset Bioinspiration Wrap-Up is a natural general sendoff with no final transfer quiz or repeated boa-to-catheter mission recap.
 
 **Phase 6 exit condition:** Every required scene uses its intended production visual, editable overlays remain accessible and source-correct, and the game feels intentional and finished rather than like a prototype.
 
