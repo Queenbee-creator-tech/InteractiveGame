@@ -100,7 +100,7 @@
 
     s.interaction.pieces.forEach((piece,i)=>{
       const h=document.createElement("button");h.type="button";h.className="design-hotspot";h.textContent=String(i+1);h.setAttribute("aria-label","Investigate design clue "+(i+1));
-      const pos=[[31,31],[39,43],[50,50],[66,40],[76,31]][i];h.style.left=pos[0]+"%";h.style.top=pos[1]+"%";
+      const pos=[[18,42],[34,42],[50,42],[66,42],[82,42]][i];h.style.left=pos[0]+"%";h.style.top=pos[1]+"%";
       if(state.designSeen.has(i))h.classList.add("visited");
       if(state.designBriefingDone){h.disabled=true;h.setAttribute("aria-disabled","true")}
       h.addEventListener("click",()=>{
@@ -210,8 +210,8 @@
     els.dialogue.textContent=s.intro;els.direction.textContent=s.prompt;document.querySelector(".scene").classList.remove("speaking-focus");
     const hospitalExterior=s.id==="hospital"&&!state.hospitalInside;
     const src=hospitalExterior?"hospital-exterior":(s.id==="technology"?"hospital-exterior":s.id);
-    els.image.src=hospitalExterior?"assets/images/hospital-exterior.png?v=20261006-10":(s.id==="hospital"&&state.hospitalInside?"assets/images/hospital-interior.png?v=20261006-10":(s.id==="explore"&&!state.hotspots.explore?"assets/images/explore.png?v=20261006-10":"assets/images/"+src+".svg"));
-    els.image.alt=({hospital:hospitalExterior?"Illustrated hospital exterior where WartsWorth introduces the mission.":"Hospital diagnostic room with a large cerebral vessel scan showing a blood clot and ischemic stroke imaging.",explore:"Illustrated tropical field habitat with trees, vines, tracks, and places to investigate.",design:"Illustrated lab comparison translating recurved tooth geometry into recurved microscale structures inside a catheter tip.",technology:"Illustrated hospital exterior representing the engineered catheter wrap-up.",apply:"Illustrated sunset field scene representing the broader bioinspiration connection."})[s.id];
+    els.image.src=hospitalExterior?"assets/images/hospital-exterior.png?v=20261006-10":(s.id==="hospital"&&state.hospitalInside?"assets/images/hospital-interior.png?v=20261006-10":(s.id==="explore"&&!state.hotspots.explore?"assets/images/explore.png?v=20261006-10":(s.id==="design"?"assets/images/lab-bioinspiration-workflow.png?v=20261006-1":"assets/images/"+src+".svg")));
+    els.image.alt=({hospital:hospitalExterior?"Illustrated hospital exterior where WartsWorth introduces the mission.":"Hospital diagnostic room with a large cerebral vessel scan showing a blood clot and ischemic stroke imaging.",explore:"Illustrated tropical field habitat with trees, vines, tracks, and places to investigate.",design:"Futuristic research lab showing five visual stations from a boa jaw and recurved tooth geometry through abstraction, catheter design, and simulated clot testing.",technology:"Illustrated hospital exterior representing the engineered catheter wrap-up.",apply:"Illustrated sunset field scene representing the broader bioinspiration connection."})[s.id];
     const hotspot=$("sceneHotspot");hotspot.hidden=s.id!=="explore"||!!state.hotspots.explore||!state.boaFound;if(s.id==="explore"&&!state.hotspots.explore&&state.boaFound){hotspot.style.right="12%";hotspot.style.top="72%";hotspot.textContent="Open tablet scanner"}
     updateProgress();els.back.disabled=state.section===0;els.next.disabled=!state.completed.has(state.section);els.next.textContent=state.section===data.sections.length-1?"Mission Complete":"Continue";renderInteraction(s);
   }
