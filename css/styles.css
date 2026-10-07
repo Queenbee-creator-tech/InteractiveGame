@@ -206,3 +206,10 @@ button:disabled{cursor:not-allowed}
   .wartsworth{width:100px;height:130px}
   .scene-speech{left:7rem;right:.5rem;bottom:.55rem;width:auto;max-height:145px}
 }
+
+
+/* 2026-10-07 keep WartsWorth's speech visually connected to him. */
+@media(min-width:901px){
+  .scene-speech{left:205px;right:auto;width:min(430px,34%)}
+  .scene-speech::before{left:-18px;right:auto;transform:none}
+}
