@@ -331,7 +331,7 @@ A graphic is only marked **wired** when the live game code actually uses the pro
 | Explore field habitat | Yes — `assets/images/explore.png` | Yes | ✅ Complete |
 | Boa tooth scan | Yes — `assets/images/tooth-scan.png` | Yes | ✅ Complete |
 | WartsWorth character overlay | Yes — `assets/images/wartsworth.svg` | Yes | ✅ Keep as separate overlay |
-| Design lab workflow | Yes — `assets/images/lab-bioinspiration-workflow.png` | No; live renderer still falls back to `design.svg` | 🔧 Needs wiring |
+| Design lab workflow | Yes — `assets/images/lab-bioinspiration-workflow.png` | Yes | ✅ Production art wired; five HTML hotspots aligned to the five visual stations |
 | Results / Technology tablet close-up | Yes — `assets/lab-tablet-closeup.png` | No; live renderer still falls back to `test.svg` | 🔧 Needs wiring + editable HTML/CSS results content |
 | Final bioinspiration sunset | Created by the graphics pass as `bioinspiration-sunset-wrapup.png`; add under `assets/images/` | No; live renderer still falls back to `final.svg` | 🔧 Needs repo asset + wiring |
 
@@ -348,11 +348,12 @@ A graphic is only marked **wired** when the live game code actually uses the pro
 - [x] Tablet close-up production graphic created
 - [x] Final sunset bioinspiration background created locally
 - [ ] Add `bioinspiration-sunset-wrapup.png` to `assets/images/`
-- [ ] Wire Design scene to `lab-bioinspiration-workflow.png`
+- [x] Wire Design scene to `lab-bioinspiration-workflow.png`
 - [ ] Wire Technology/Results scene to the tablet close-up production graphic
 - [ ] Build the editable results content over the tablet screen using source-supported wording
 - [ ] Wire Final scene to `bioinspiration-sunset-wrapup.png`
-- [ ] Remove/retire `design.svg`, `test.svg`, and `final.svg` as live scene fallbacks after replacement is verified
+- [ ] Remove/retire `test.svg` and `final.svg` as live scene fallbacks after replacement is verified
+- [x] Retire `design.svg` as the live Design scene fallback
 - [ ] Verify hotspot/overlay placement against each final background
 - [ ] Check desktop layout
 - [ ] Check tablet layout
