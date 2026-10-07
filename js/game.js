@@ -10,10 +10,23 @@
     technology:"assets/images/wartsworth-results.png",
     apply:"assets/images/wartsworth-sunset.png"
   };
+  const wartsworthExpressions={
+    talking:"assets/images/wartsworth-talking.png",
+    thinking:"assets/images/wartsworth-thinking.png",
+    excited:"assets/images/wartsworth-excited.png",
+    focused:"assets/images/wartsworth-focused.png",
+    encouraging:"assets/images/wartsworth-encouraging.png",
+    proud:"assets/images/wartsworth-proud.png"
+  };
   function setWartsworth(expression="talking"){
     const s=data.sections[state.section];
-    const src=wartsworthOutfits[s?.id]||wartsworthOutfits.hospital;
-    els.wartsworth.src=src+"?v=20261007-3";
+    const sceneOutfit=wartsworthOutfits[s?.id]||wartsworthOutfits.hospital;
+    const expressionSprite=wartsworthExpressions[expression];
+    // Use approved expression sprites when available. Scene outfit remains the fallback,
+    // and unsupported expressions (such as scared) deliberately fall back rather than
+    // substituting the wrong facial expression.
+    const src=expressionSprite||sceneOutfit;
+    els.wartsworth.src=src+"?v=20261007-4";
     els.wartsworth.dataset.expression=expression;
     els.wartsworth.dataset.scene=s?.id||"hospital";
   }
