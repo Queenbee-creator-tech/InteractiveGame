@@ -205,7 +205,10 @@
     const summary=document.createElement("p");summary.className="wrap-summary wrap-paragraph";summary.textContent=(s.interaction.points||[]).join(" ");
     els.interaction.appendChild(summary);
     const finish=document.createElement("button");finish.type="button";finish.className="choice primary inline-action";finish.textContent=s.interaction.buttonText||"Continue →";
-    finish.addEventListener("click",()=>completeCurrent("Mission review complete."));
+    finish.addEventListener("click",()=>{
+      completeCurrent("Mission review complete.");
+      if(s.id==="technology"&&state.section<data.sections.length-1){state.section++;render();}
+    });
     els.interaction.appendChild(finish);
   }
   function renderInteraction(s){
