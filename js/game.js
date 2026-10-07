@@ -211,7 +211,7 @@
   function renderWrap(s){
     els.interaction.innerHTML="";
     const summary=document.createElement("div");summary.className="wrap-summary";
-    (s.interaction.points||[]).forEach(point=>{const p=document.createElement("p");p.className="wrap-point";p.textContent=point;summary.appendChild(p)});
+    if(s.interaction.paragraph){const p=document.createElement("p");p.className="wrap-paragraph";p.textContent=s.interaction.paragraph;summary.appendChild(p)}else{(s.interaction.points||[]).forEach(point=>{const p=document.createElement("p");p.className="wrap-point";p.textContent=point;summary.appendChild(p)})}
     els.interaction.appendChild(summary);
     const finish=document.createElement("button");finish.type="button";finish.className="choice primary inline-action";finish.textContent=s.interaction.buttonText||"Continue →";
     finish.addEventListener("click",()=>{
