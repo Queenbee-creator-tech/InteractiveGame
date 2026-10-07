@@ -320,22 +320,45 @@ We will check these boxes off as each step is completed.
 
 ## Phase 6 — Art, Animation, and Polish
 
-- [ ] Replace all remaining placeholder graphics (production-art pass still in progress)
-- [x] Add snake-tooth diagram
-- [x] Add blood-clot/device visuals
-- [x] Add visual transition from organism → tooth scan → lab/design
-- [x] Add final lab workflow production graphic
-- [x] Add tablet close-up production graphic
-- [ ] Add final outdoors-at-sunset bioinspiration wrap-up graphic
-- [x] Add subtle scene-reveal animation with reduced-motion fallback
-- [x] Add hover/focus/selected states
-- [x] Add success/error feedback
-- [x] Optimize image sizes
+### Production Graphics Status — reconciled 2026-10-06
+
+A graphic is only marked **wired** when the live game code actually uses the production asset. Creating/saving an image does not by itself complete the scene.
+
+| Scene / asset | Production graphic created? | Wired into live game? | Current status |
+| --- | --- | --- | --- |
+| Hospital exterior | Yes — `assets/images/hospital-exterior.png` | Yes | ✅ Complete |
+| Hospital interior / vessel investigation | Yes — `assets/images/hospital-interior.png` | Yes | ✅ Complete |
+| Explore field habitat | Yes — `assets/images/explore.png` | Yes | ✅ Complete |
+| Boa tooth scan | Yes — `assets/images/tooth-scan.png` | Yes | ✅ Complete |
+| WartsWorth character overlay | Yes — `assets/images/wartsworth.svg` | Yes | ✅ Keep as separate overlay |
+| Design lab workflow | Yes — `assets/images/lab-bioinspiration-workflow.png` | No; live renderer still falls back to `design.svg` | 🔧 Needs wiring |
+| Results / Technology tablet close-up | Yes — `assets/lab-tablet-closeup.png` | No; live renderer still falls back to `test.svg` | 🔧 Needs wiring + editable HTML/CSS results content |
+| Final bioinspiration sunset | Created by the graphics pass as `bioinspiration-sunset-wrapup.png`; add under `assets/images/` | No; live renderer still falls back to `final.svg` | 🔧 Needs repo asset + wiring |
+
+**Graphics rule:** production scene images are background/environment art only. Dialogue, buttons, labels, hotspot numbers, results text, and other instructional copy remain editable HTML/CSS/JavaScript overlays for accessibility, source accuracy, and revision.
+
+**Scientific/rubric rule:** visuals support the locked teaching flow; player-facing scientific wording must stay within `references/sources.md` and the PRTT rubric. Do not bake scientific claims into generated background images.
+
+### Remaining graphics work
+- [x] Hospital exterior production graphic
+- [x] Hospital interior production graphic
+- [x] Explore field production graphic
+- [x] Boa tooth scan production graphic
+- [x] Design lab workflow production graphic created
+- [x] Tablet close-up production graphic created
+- [x] Final sunset bioinspiration background created locally
+- [ ] Add `bioinspiration-sunset-wrapup.png` to `assets/images/`
+- [ ] Wire Design scene to `lab-bioinspiration-workflow.png`
+- [ ] Wire Technology/Results scene to the tablet close-up production graphic
+- [ ] Build the editable results content over the tablet screen using source-supported wording
+- [ ] Wire Final scene to `bioinspiration-sunset-wrapup.png`
+- [ ] Remove/retire `design.svg`, `test.svg`, and `final.svg` as live scene fallbacks after replacement is verified
+- [ ] Verify hotspot/overlay placement against each final background
 - [ ] Check desktop layout
 - [ ] Check tablet layout
 - [ ] Check mobile layout
 
-**Phase 6 exit condition:** The game feels intentional and finished rather than like a prototype.
+**Phase 6 exit condition:** Every required scene uses its intended production visual, editable overlays remain accessible and source-correct, and the game feels intentional and finished rather than like a prototype.
 
 ---
 
