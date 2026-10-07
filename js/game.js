@@ -16,7 +16,8 @@
     excited:"assets/images/wartsworth-excited.png",
     focused:"assets/images/wartsworth-focused.png",
     encouraging:"assets/images/wartsworth-encouraging.png",
-    proud:"assets/images/wartsworth-proud.png"
+    proud:"assets/images/wartsworth-proud.png",
+    scared:"assets/images/wartsworth-explore-scared.png"
   };
   function setWartsworth(expression="talking"){
     const s=data.sections[state.section];
