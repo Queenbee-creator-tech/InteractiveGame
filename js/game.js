@@ -2,7 +2,21 @@
   const data=window.GAME_DATA;
   const $=id=>document.getElementById(id);
   const state={section:0,completed:new Set(),hotspots:{},orders:{},finalChainDone:false,hospitalInside:false,hospitalSeen:new Set(),fieldSeen:new Set(),boaFound:false,designSeen:new Set(),designOrder:[],designBriefingDone:false,designAttempts:0};
-  const els={progress:$("progress"),title:$("sceneTitle"),label:$("sectionLabel"),dialogue:$("dialogue"),image:$("sceneImage"),outfit:$("guideOutfit"),interaction:$("interaction"),back:$("backBtn"),next:$("nextBtn"),sourceCue:$("sourceCue"),direction:$("directionText"),hospitalHotspots:$("hospitalHotspots"),fieldHotspots:$("fieldHotspots"),designHotspots:$("designHotspots")};
+  const els={progress:$("progress"),title:$("sceneTitle"),label:$("sectionLabel"),dialogue:$("dialogue"),image:$("sceneImage"),wartsworth:$("wartsworthSprite"),outfit:$("guideOutfit"),interaction:$("interaction"),back:$("backBtn"),next:$("nextBtn"),sourceCue:$("sourceCue"),direction:$("directionText"),hospitalHotspots:$("hospitalHotspots"),fieldHotspots:$("fieldHotspots"),designHotspots:$("designHotspots")};
+  const wartsworthSprites={talking:"assets/images/wartsworth-talking.png",thinking:"assets/images/wartsworth-thinking.png",excited:"assets/images/wartsworth-excited.png",focused:"assets/images/wartsworth-focused.png",encouraging:"assets/images/wartsworth-encouraging.png",proud:"assets/images/wartsworth-proud.png"};
+  function setWartsworth(expression="talking"){
+    const src=wartsworthSprites[expression]||wartsworthSprites.talking;
+    if(els.wartsworth.getAttribute("data-expression")===expression)return;
+    els.wartsworth.src=src+"?v=20261007-1";els.wartsworth.dataset.expression=expression;
+  }
+  function defaultWartsworth(s){
+    if(s.id==="hospital")return state.hospitalInside?"focused":"talking";
+    if(s.id==="explore")return state.hotspots.explore?"excited":"thinking";
+    if(s.id==="design")return state.designBriefingDone?"focused":"thinking";
+    if(s.id==="technology")return "focused";
+    if(s.id==="apply")return "proud";
+    return "talking";
+  }
 
   function buildProgress(){
     els.progress.innerHTML="";
@@ -11,7 +25,7 @@
   function feedback(text,good=false){
     let box=$("feedback");
     if(!box){box=document.createElement("div");box.id="feedback";box.className="feedback";els.interaction.appendChild(box)}
-    box.textContent=text;box.dataset.good=good?"true":"false";box.setAttribute("role","status");
+    box.textContent=text;box.dataset.good=good?"true":"false";box.setAttribute("role","status");setWartsworth(good?"encouraging":"focused");
   }
   function completeCurrent(message){
     state.completed.add(state.section);els.next.disabled=false;
@@ -33,12 +47,12 @@
         [...wrap.children].forEach(x=>{x.classList.remove("selected");x.setAttribute("aria-pressed","false")});
         if(wasSelected){
           const old=document.getElementById("feedback");if(old)old.remove();
-          els.dialogue.textContent=s.intro;
+          els.dialogue.textContent=s.intro;setWartsworth(defaultWartsworth(s));
           return;
         }
         b.classList.add("selected");b.setAttribute("aria-pressed","true");
         feedback(choice.feedback,choice.correct);
-        els.dialogue.textContent=choice.feedback;
+        els.dialogue.textContent=choice.feedback;setWartsworth(choice.correct?"encouraging":"focused");
         if(choice.correct)onCorrect(choice);
       });
       b.setAttribute("aria-pressed","false");wrap.appendChild(b);
@@ -51,7 +65,7 @@
       enter.addEventListener("click",()=>{
         state.hospitalInside=true;
         setScene("assets/images/hospital-interior.png?v=20261006-8","Hospital diagnostic room with a large cerebral vessel scan showing a blood clot and ischemic stroke imaging.");
-        els.dialogue.textContent="We’re inside! The computer has a vessel scan ready. Check the glowing markers and see what each one tells us about the problem.";
+        els.dialogue.textContent="We’re inside! The computer has a vessel scan ready. Check the glowing markers and see what each one tells us about the problem.";setWartsworth("focused");
         els.direction.textContent="Use all three scan bubbles on the hospital computer. Each one reveals part of the medical problem.";
         renderHospital(s);
       });
@@ -62,7 +76,7 @@
       if(state.hospitalSeen.has(spot.id))b.classList.add("visited");
       b.addEventListener("click",()=>{
         state.hospitalSeen.add(spot.id);
-        els.dialogue.textContent=spot.text;
+        els.dialogue.textContent=spot.text;setWartsworth("focused");
         renderHospital(s);
         if(spot.extra){const info=document.createElement("div");info.className="scan-info";info.setAttribute("role","status");info.innerHTML="<strong>"+spot.label+"</strong><span>"+spot.extra+"</span>";els.hospitalHotspots.appendChild(info);}
       });
@@ -80,14 +94,14 @@
     (s.interaction.fieldHotspots||[]).forEach(spot=>{
       const b=document.createElement("button");b.type="button";b.className="field-hotspot";b.style.left=spot.x+"%";b.style.top=spot.y+"%";b.setAttribute("aria-label",spot.label);b.title=spot.label;b.textContent="?";
       if(state.fieldSeen.has(spot.id)){b.classList.add("visited");b.textContent="✓"}
-      b.addEventListener("click",()=>{state.fieldSeen.add(spot.id);els.dialogue.textContent=spot.text;renderFieldHotspots(s)});
+      b.addEventListener("click",()=>{state.fieldSeen.add(spot.id);els.dialogue.textContent=spot.text;setWartsworth("thinking");renderFieldHotspots(s)});
       els.fieldHotspots.appendChild(b);
     });
     const boa=document.createElement("button");boa.type="button";boa.className="field-hotspot boa-discovery";boa.style.left="31%";boa.style.top="18%";boa.setAttribute("aria-label","Investigate animal");boa.title="Investigate what you found";boa.textContent=state.boaFound?"✓":"?";
     if(state.boaFound)boa.classList.add("visited");
     boa.addEventListener("click",()=>{
       state.boaFound=true;
-      els.dialogue.textContent="Whoa... look at those teeth! They curve backward. That has to help it hold onto— You know what? Maybe we investigate this one from a respectful distance.";
+      els.dialogue.textContent="Whoa... look at those teeth! They curve backward. That has to help it hold onto— You know what? Maybe we investigate this one from a respectful distance.";setWartsworth("excited");
       els.direction.textContent="Use WartsWorth's tablet to examine the teeth.";
       renderFieldHotspots(s);
       const scan=$("sceneHotspot");scan.hidden=false;scan.textContent="Open tablet scanner";
@@ -106,7 +120,7 @@
       h.addEventListener("click",()=>{
         if(state.designBriefingDone)return;
         state.designSeen.add(i);
-        els.dialogue.textContent=piece.detail;
+        els.dialogue.textContent=piece.detail;setWartsworth("thinking");
         renderDesign(s);
       });
       els.designHotspots.appendChild(h);
@@ -119,7 +133,7 @@
       ready.disabled=state.designSeen.size!==s.interaction.pieces.length;
       ready.addEventListener("click",()=>{
         state.designBriefingDone=true;state.designOrder=[];state.designAttempts=0;
-        els.dialogue.textContent="Your turn, researcher. I’ll stay quiet while you work it out.";
+        els.dialogue.textContent="Your turn, researcher. I’ll stay quiet while you work it out.";setWartsworth("focused");
         renderDesign(s);
       });
       els.interaction.appendChild(ready);
@@ -149,13 +163,13 @@
       check.addEventListener("click",()=>{
         const correct=state.designOrder.every((v,i)=>v===i);
         if(correct){
-          els.dialogue.textContent=s.interaction.history;
+          els.dialogue.textContent=s.interaction.history;setWartsworth("encouraging");
           completeCurrent(s.interaction.feedbackCorrect+" "+s.interaction.history);
         }else{
           state.designAttempts++;
           if(state.designAttempts>=3){
             feedback("Here’s a hint: start with what you observed in nature, then what that feature does for the boa. Next identify the useful function we can carry over, how engineers built that idea into the catheter, and finally why that engineered feature helps.");
-            els.dialogue.textContent="Need a hand? Follow the same path as the investigation: what did you see in nature, what does it do, what useful function can we take, how did engineers use it, and why does that engineered feature work?";
+            els.dialogue.textContent="Need a hand? Follow the same path as the investigation: what did you see in nature, what does it do, what useful function can we take, how did engineers use it, and why does that engineered feature work?";setWartsworth("encouraging");
           }else feedback(s.interaction.feedbackWrong+" Attempt "+state.designAttempts+" of 3 before WartsWorth offers a hint.");
         }
       });
@@ -207,7 +221,7 @@
   function render(){
     const s=data.sections[state.section];
     els.label.textContent=s.label;els.title.textContent=s.title;els.outfit.textContent=s.outfit;els.sourceCue.textContent=s.sourceCue||"";
-    els.dialogue.textContent=s.intro;els.direction.textContent=s.prompt;document.querySelector(".scene").classList.remove("speaking-focus");
+    els.dialogue.textContent=s.intro;els.direction.textContent=s.prompt;setWartsworth(defaultWartsworth(s));document.querySelector(".scene").classList.remove("speaking-focus");
     const hospitalExterior=s.id==="hospital"&&!state.hospitalInside;
     const src=hospitalExterior?"hospital-exterior":(s.id==="technology"?"hospital-exterior":s.id);
     els.image.src=hospitalExterior?"assets/images/hospital-exterior.png?v=20261006-10":(s.id==="hospital"&&state.hospitalInside?"assets/images/hospital-interior.png?v=20261006-10":(s.id==="explore"&&!state.hotspots.explore?"assets/images/explore.png?v=20261006-10":(s.id==="design"?"assets/images/lab-bioinspiration-workflow.png?v=20261006-1":(s.id==="technology"?"assets/lab-tablet-closeup.png?v=20261006-1":(s.id==="apply"?"assets/images/bioinspiration-sunset-wrapup.png?v=20261006-1":"assets/images/"+src+".svg")))));
@@ -226,7 +240,7 @@
   els.next.addEventListener("click",()=>{if(!state.completed.has(state.section))return;if(state.section<data.sections.length-1){state.section++;render()}else missionComplete()});
   els.back.addEventListener("click",()=>{if(state.section>0){state.section--;render()}});
   $("restartBtn").addEventListener("click",restart);
-  $("sceneHotspot").addEventListener("click",()=>{if(data.sections[state.section].id!=="explore")return;state.hotspots.explore=true;els.fieldHotspots.innerHTML="";$("sceneHotspot").hidden=true;setScene("assets/images/tooth-scan.png?v=20261006-10","Field scanner view of a boa constrictor with a close-up showing its backward-curving teeth and their prey-retention function.");els.dialogue.textContent="Scan complete! See how the teeth curve backward? Research on boa feeding links curved teeth with ensnaring and retaining prey. Look closely at what that shape helps the snake do.";renderInteraction(data.sections[state.section])});
+  $("sceneHotspot").addEventListener("click",()=>{if(data.sections[state.section].id!=="explore")return;state.hotspots.explore=true;els.fieldHotspots.innerHTML="";$("sceneHotspot").hidden=true;setScene("assets/images/tooth-scan.png?v=20261006-10","Field scanner view of a boa constrictor with a close-up showing its backward-curving teeth and their prey-retention function.");els.dialogue.textContent="Scan complete! See how the teeth curve backward? Research on boa feeding links curved teeth with ensnaring and retaining prey. Look closely at what that shape helps the snake do.";setWartsworth("excited");renderInteraction(data.sections[state.section])});
   $("captionsBtn").addEventListener("click",e=>{const on=e.currentTarget.getAttribute("aria-pressed")==="true";e.currentTarget.setAttribute("aria-pressed",String(!on));e.currentTarget.textContent="Narration text: "+(!on?"On":"Off");$("sceneSpeech").hidden=on});
   $("sourcesBtn").addEventListener("click",()=>openInfo("Sources",sourceHtml()));
   $("transcriptBtn").addEventListener("click",()=>openInfo("Transcript",transcriptHtml()));
