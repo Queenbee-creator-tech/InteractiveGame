@@ -2,7 +2,7 @@
   const data=window.GAME_DATA;
   const $=id=>document.getElementById(id);
   const state={section:0,completed:new Set(),hotspots:{},orders:{},finalChainDone:false,hospitalInside:false,hospitalSeen:new Set(),fieldSeen:new Set(),boaFound:false,designSeen:new Set(),designOrder:[],designBriefingDone:false,designAttempts:0};
-  const els={progress:$("progress"),title:$("sceneTitle"),label:$("sectionLabel"),dialogue:$("dialogue"),image:$("sceneImage"),wartsworth:$("wartsworthSprite"),outfit:$("guideOutfit"),interaction:$("interaction"),back:$("backBtn"),next:$("nextBtn"),sourceCue:$("sourceCue"),direction:$("directionText"),hospitalHotspots:$("hospitalHotspots"),fieldHotspots:$("fieldHotspots"),designHotspots:$("designHotspots")};
+  const els={progress:$("progress"),title:$("sceneTitle"),label:$("sectionLabel"),dialogue:$("dialogue"),image:$("sceneImage"),wartsworth:$("wartsworthSprite"),interaction:$("interaction"),back:$("backBtn"),next:$("nextBtn"),sourceCue:$("sourceCue"),direction:$("directionText"),hospitalHotspots:$("hospitalHotspots"),fieldHotspots:$("fieldHotspots"),designHotspots:$("designHotspots")};
   const wartsworthSprites={talking:"assets/images/wartsworth-talking.png",thinking:"assets/images/wartsworth-thinking.png",excited:"assets/images/wartsworth-excited.png",focused:"assets/images/wartsworth-focused.png",encouraging:"assets/images/wartsworth-encouraging.png",proud:"assets/images/wartsworth-proud.png"};
   function setWartsworth(expression="talking"){
     const src=wartsworthSprites[expression]||wartsworthSprites.talking;
@@ -220,7 +220,7 @@
   }
   function render(){
     const s=data.sections[state.section];
-    els.label.textContent=s.label;els.title.textContent=s.title;els.outfit.textContent=s.outfit;els.sourceCue.textContent=s.sourceCue||"";
+    els.label.textContent=s.label;els.title.textContent=s.title;els.sourceCue.textContent=s.sourceCue||"";
     els.dialogue.textContent=s.intro;els.direction.textContent=s.prompt;setWartsworth(defaultWartsworth(s));document.querySelector(".scene").classList.remove("speaking-focus");
     const hospitalExterior=s.id==="hospital"&&!state.hospitalInside;
     const src=hospitalExterior?"hospital-exterior":(s.id==="technology"?"hospital-exterior":s.id);
