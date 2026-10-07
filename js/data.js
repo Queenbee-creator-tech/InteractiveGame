@@ -63,13 +63,10 @@ window.GAME_DATA = {
     },
     {
       id:"apply", label:"5 of 5", short:"Bioinspiration", title:"Bioinspiration Wrap-Up", icon:"🌅", outfit:"Explorer gear",
-      intro:"Pretty cool, right? Bioinspiration is everywhere. It starts by noticing something interesting in nature and asking, ‘How does that work?’",
+      intro:"",
       prompt:"Take one last look around before you head out.",
       sourceCue:"Course connection: observing biological structure and function, abstracting a useful strategy, and translating it into a different design context.",
-      interaction:{type:"wrap",points:[
-        "You can find inspiration in animals, plants, insects — even tiny structures you might normally walk right past. A shape, surface, movement, or behavior could inspire a completely different way to solve a problem.",
-        "So next time you’re outside, take a closer look. You never know where the next great idea might be hiding."
-      ],buttonText:"Complete journey"},
+      interaction:{type:"wrap",paragraph:"Bioinspiration starts by looking closely at how living things solve problems. Instead of simply copying what an organism looks like, we study how a structure, behavior, or process works, identify the useful strategy behind it, and translate that idea into a new design. In this journey, the boa’s backward-curving teeth showed how a biological structure can help hold onto soft material, and that same retention strategy inspired an engineering feature for a catheter. The bigger lesson is that useful design ideas can come from animals, plants, and other living systems when we stay curious, ask how their adaptations work, and think about where those strategies could solve a different problem.",buttonText:"Complete journey"},
       takeaway:"Bioinspiration starts with curiosity: notice how nature works, understand the useful strategy, and think about where that strategy could solve a different problem."
     }
   ],
