@@ -54,27 +54,27 @@ window.GAME_DATA = {
       takeaway:"TRAP translates a biological retention strategy into backward-curved microscale structures inside the catheter tip."
     },
     {
-      id:"technology", label:"4 of 5", short:"Technology", title:"How the Engineered Design Works", icon:"🩺", outfit:"Research gear",
-      intro:"We followed the idea from the boa into the design. Now let’s put the engineered side together and see how TRAP is meant to work.",
-      prompt:"Review how the bioinspired catheter combines suction with mechanical clot engagement.",
-      sourceCue:"Technology: AskNature; Purdue University News (2025); Interventional News (2025).",
+      id:"technology", label:"4 of 5", short:"Technology", title:"Results: Meet TRAP", icon:"🩺", outfit:"Research gear",
+      intro:"There it is — the real technology behind our investigation. TRAP takes the retention strategy we studied in the boa and adds it to an aspiration catheter.",
+      prompt:"Review what the reported testing showed and what those results do — and do not — tell us.",
+      sourceCue:"Technology/results: Purdue Research Foundation (2025); AskNature; Interventional News (2025).",
       interaction:{type:"wrap",points:[
-        "Here’s what our investigation found. A boa’s backward curving teeth help it hold onto prey when the prey tries to pull away. TRAP uses that same retention idea inside the catheter. Suction draws the blood clot into the catheter opening, while tiny backward curved structures inside the tip are designed to engage the clot and help keep it from slipping back out. The boa did not inspire the suction. It inspired the added grip that works with the suction. This is bioinspiration because engineers studied how a biological structure performs a useful function and adapted that strategy to solve a different problem.",
-        "Ángel Enríquez and Hyowon Lee developed TRAP at Purdue University, and Purdue later licensed the technology to Emboa Medical for further development. The project sources describe model and preclinical development, so the results should not be presented as guaranteed patient benefit or established clinical superiority."
-      ],buttonText:"Continue to bioinspiration →"},
-      takeaway:"The boa inspired the added retention strategy: suction draws the clot in, and backward-curved structures are designed to help engage and retain it."
+        "Aspiration provides the suction. The boa-inspired part is the added backward-curved microscale structures inside the catheter tip, designed to mechanically engage and retain the clot as suction draws it in.",
+        "In reported in-vitro/model testing, the TRAP design showed greater than a 200% increase in blockage-removal force compared with a traditional catheter. In a reported worst-case neurovascular model, first-attempt clot removal was 40% with TRAP versus 10% with a conventional smooth-inner-diameter catheter.",
+        "Those are experimental model results, not patient clinical outcomes. The project sources describe TRAP as a developing technology moving through preclinical testing and toward regulatory work."
+      ],buttonText:"Finish the mission →"},
+      takeaway:"TRAP adds boa-inspired mechanical retention to aspiration, with promising reported model results that should not be treated as established clinical outcomes."
     },
     {
       id:"apply", label:"5 of 5", short:"Bioinspiration", title:"Bioinspiration Wrap-Up", icon:"🌅", outfit:"Explorer gear",
-      intro:"Nice work, researcher. We started with a medical problem, learned from a boa, and followed that biological idea into an engineered design. Before we call it a day, think bigger than this one example.",
-      prompt:"Use the mission to explain bioinspiration in your own thinking.",
-      sourceCue:"Course connection: structure, function, abstraction, and biology to engineering transfer.",
-      interaction:{type:"choice",setup:"A new engineering team wants to use bioinspiration for a completely different problem. What lesson from this mission would help them most?",choices:[
-        {text:"Look for organisms that face a similar challenge, study how a useful feature works, then adapt the underlying strategy to the new problem.",correct:true,feedback:"Exactly. Bioinspiration is about learning from how biology solves problems and translating a useful strategy into a new design context."},
-        {text:"Choose an organism that looks interesting and copy its appearance into the product.",correct:false,feedback:"Appearance alone is not the goal. Ask what the biological feature does and why it works."},
-        {text:"Use a biological idea only when the engineered product can perform the exact same job as the organism.",correct:false,feedback:"The contexts can be completely different. What transfers is the useful strategy or function."}
-      ]},
-      takeaway:"Bioinspiration means learning from biological strategies and translating useful principles into new engineering contexts."
+      intro:"Pretty cool, right? Bioinspiration is everywhere. It starts by noticing something interesting in nature and asking, ‘How does that work?’",
+      prompt:"Take one last look around before you head out.",
+      sourceCue:"Course connection: observing biological structure and function, abstracting a useful strategy, and translating it into a different design context.",
+      interaction:{type:"wrap",points:[
+        "You can find inspiration in animals, plants, insects — even tiny structures you might normally walk right past. A shape, surface, movement, or behavior could inspire a completely different way to solve a problem.",
+        "So next time you’re outside, take a closer look. You never know where the next great idea might be hiding."
+      ],buttonText:"Complete journey"},
+      takeaway:"Bioinspiration starts with curiosity: notice how nature works, understand the useful strategy, and think about where that strategy could solve a different problem."
     }
   ],
   sources:[
