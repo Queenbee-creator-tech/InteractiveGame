@@ -165,3 +165,44 @@ button:disabled{cursor:not-allowed}
   .scene-speech{left:auto;right:1rem;width:min(430px,34%);}
   .scene-speech::before{left:auto;right:-18px;transform:scaleX(-1);}
 }
+
+
+/* 2026-10-07 approved WartsWorth outfits: free-standing guide, no white profile card. */
+.guide-card{
+  left:1rem;
+  bottom:.65rem;
+  width:190px;
+  max-width:none;
+  min-height:0;
+  padding:0;
+  gap:0;
+  background:transparent;
+  border-radius:0;
+  box-shadow:none;
+  pointer-events:none;
+  align-items:flex-end;
+}
+.guide-card::after{display:none}
+.guide-card>div{display:none}
+.wartsworth{
+  width:180px;
+  height:230px;
+  max-width:none;
+  object-fit:contain;
+  object-position:left bottom;
+  filter:drop-shadow(0 8px 10px rgba(0,0,0,.28));
+}
+@media(min-width:901px){
+  .guide-card{left:1rem;bottom:.65rem;width:190px;max-width:none;padding:0}
+  .wartsworth{width:180px;height:230px}
+  .scene-speech{right:1rem;left:auto;width:min(430px,34%)}
+}
+@media(max-width:900px){
+  .guide-card{left:.75rem;bottom:.55rem;width:145px;max-width:none}
+  .wartsworth{width:140px;height:180px}
+}
+@media(max-width:560px){
+  .guide-card{position:absolute;left:.45rem;bottom:.35rem;width:105px;max-width:none;margin:0;padding:0;min-height:0}
+  .wartsworth{width:100px;height:130px}
+  .scene-speech{left:7rem;right:.5rem;bottom:.55rem;width:auto;max-height:145px}
+}
