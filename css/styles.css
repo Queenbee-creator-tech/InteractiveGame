@@ -149,3 +149,12 @@ button:disabled{cursor:not-allowed}
 .scene-speech p{font-size:1rem;line-height:1.45}
 .wrap-summary{display:grid;gap:.45rem}
 .wrap-point{margin:0;padding:.65rem .8rem;background:#eef4ef;border-left:4px solid #2f7975;border-radius:.55rem}
+
+
+/* 2026-10-07 WartsWorth expression sprites */
+.wartsworth{width:92px;height:112px;object-fit:contain;object-position:center bottom;transition:transform .18s ease,opacity .18s ease}
+.guide-card{min-height:104px}
+@media(min-width:901px){.wartsworth{width:86px;height:104px}.guide-card{max-width:230px}}
+@media(max-width:720px){.wartsworth{width:76px;height:92px}}
+@media(max-width:560px){.wartsworth{width:68px;height:82px}.guide-card{min-height:78px}}
+@media(prefers-reduced-motion:reduce){.wartsworth{transition:none}}
