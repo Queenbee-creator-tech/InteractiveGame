@@ -122,7 +122,7 @@
     if(state.boaFound)boa.classList.add("visited");
     boa.addEventListener("click",()=>{
       state.boaFound=true;
-      els.dialogue.textContent="Okay... I was expecting a clue, not a boa staring back at us. You go ahead, researcher. I’ll be right over here doing the very important job of not becoming lunch. Let’s scan those teeth from a respectful distance.";setWartsworth("scared");
+      els.dialogue.textContent="Oh! Okay, that is a lot more snake than I was prepared for. You go ahead, researcher. I’ll be right over here doing the very important job of not becoming lunch. Let’s scan those teeth from a respectful distance.";setWartsworth("scared");
       els.direction.textContent="Use WartsWorth's tablet to examine the teeth.";
       renderFieldHotspots(s);
       const scan=$("sceneHotspot");scan.hidden=false;scan.textContent="Open tablet scanner";
