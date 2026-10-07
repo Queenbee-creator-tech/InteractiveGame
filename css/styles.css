@@ -158,3 +158,10 @@ button:disabled{cursor:not-allowed}
 @media(max-width:720px){.wartsworth{width:76px;height:92px}}
 @media(max-width:560px){.wartsworth{width:68px;height:82px}.guide-card{min-height:78px}}
 @media(prefers-reduced-motion:reduce){.wartsworth{transition:none}}
+
+
+/* 2026-10-07 visual QA: keep WartsWorth dialogue off the Explore discovery trail. */
+@media(min-width:901px){
+  .scene-speech{left:auto;right:1rem;width:min(430px,34%);}
+  .scene-speech::before{left:auto;right:-18px;transform:scaleX(-1);}
+}
