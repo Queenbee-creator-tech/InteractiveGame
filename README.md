@@ -330,7 +330,7 @@ A graphic is only marked **wired** when the live game code actually uses the pro
 | Hospital interior / vessel investigation | Yes — `assets/images/hospital-interior.png` | Yes | ✅ Complete |
 | Explore field habitat | Yes — `assets/images/explore.png` | Yes | ✅ Complete |
 | Boa tooth scan | Yes — `assets/images/tooth-scan.png` | Yes | ✅ Complete |
-| WartsWorth character overlay | Yes — `assets/images/wartsworth.svg` | Yes | ✅ Keep as separate overlay |
+| WartsWorth character overlay | Yes — six approved transparent PNG expression sprites | Yes | ✅ Dynamic expression system wired: talking, thinking, excited, focused, encouraging, proud/playful |
 | Design lab workflow | Yes — `assets/images/lab-bioinspiration-workflow.png` | Yes | ✅ Production art wired; five HTML hotspots aligned to the five visual stations |
 | Results / Technology tablet close-up | Yes — `assets/lab-tablet-closeup.png` | Yes | ✅ Production tablet wired; sourced results remain editable live content |
 | Final bioinspiration sunset | Yes — `assets/images/bioinspiration-sunset-wrapup.png` | Yes | ✅ Complete |
@@ -344,6 +344,7 @@ A graphic is only marked **wired** when the live game code actually uses the pro
 - [x] Hospital interior production graphic
 - [x] Explore field production graphic
 - [x] Boa tooth scan production graphic
+- [x] Create and wire six WartsWorth expression sprites
 - [x] Design lab workflow production graphic created
 - [x] Tablet close-up production graphic created
 - [x] Final sunset bioinspiration background created and added to `assets/images/`
