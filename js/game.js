@@ -3,11 +3,19 @@
   const $=id=>document.getElementById(id);
   const state={section:0,completed:new Set(),hotspots:{},orders:{},finalChainDone:false,hospitalInside:false,hospitalSeen:new Set(),fieldSeen:new Set(),boaFound:false,designSeen:new Set(),designOrder:[],designBriefingDone:false,designAttempts:0};
   const els={progress:$("progress"),title:$("sceneTitle"),label:$("sectionLabel"),dialogue:$("dialogue"),image:$("sceneImage"),wartsworth:$("wartsworthSprite"),interaction:$("interaction"),back:$("backBtn"),next:$("nextBtn"),sourceCue:$("sourceCue"),direction:$("directionText"),hospitalHotspots:$("hospitalHotspots"),fieldHotspots:$("fieldHotspots"),designHotspots:$("designHotspots")};
-  const wartsworthSprites={talking:"assets/images/wartsworth-talking.png",thinking:"assets/images/wartsworth-thinking.png",excited:"assets/images/wartsworth-excited.png",focused:"assets/images/wartsworth-focused.png",encouraging:"assets/images/wartsworth-encouraging.png",proud:"assets/images/wartsworth-proud.png"};
+  const wartsworthOutfits={
+    hospital:"assets/images/wartsworth-hospital.png",
+    explore:"assets/images/wartsworth-explore.png",
+    design:"assets/images/wartsworth-design.png",
+    technology:"assets/images/wartsworth-results.png",
+    apply:"assets/images/wartsworth-sunset.png"
+  };
   function setWartsworth(expression="talking"){
-    const src=wartsworthSprites[expression]||wartsworthSprites.talking;
-    if(els.wartsworth.getAttribute("data-expression")===expression)return;
-    els.wartsworth.src=src+"?v=20261007-1";els.wartsworth.dataset.expression=expression;
+    const s=data.sections[state.section];
+    const src=wartsworthOutfits[s?.id]||wartsworthOutfits.hospital;
+    els.wartsworth.src=src+"?v=20261007-3";
+    els.wartsworth.dataset.expression=expression;
+    els.wartsworth.dataset.scene=s?.id||"hospital";
   }
   function defaultWartsworth(s){
     if(s.id==="hospital")return state.hospitalInside?"focused":"talking";
@@ -223,7 +231,7 @@
     if(s.interaction.type==="order")renderOrder(s);
   }
   function render(){
-    const s=data.sections[state.section];
+    const s=data.sections[state.section];setWartsworth(defaultWartsworth(s));
     els.label.textContent=s.label;els.title.textContent=s.title;els.sourceCue.textContent=s.sourceCue||"";
     els.dialogue.textContent=s.intro;els.direction.textContent=s.prompt;setWartsworth(defaultWartsworth(s));document.querySelector(".scene").classList.remove("speaking-focus");
     const hospitalExterior=s.id==="hospital"&&!state.hospitalInside;
