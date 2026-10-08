@@ -236,3 +236,9 @@ html::-webkit-scrollbar-thumb{background:#63b2ac;border:3px solid #082d32;border
 .scene-speech{position:absolute}
 .scene-speech.has-overflow{padding-right:1.5rem}
 .scene-speech.has-overflow::after{content:"";position:absolute;right:7px;top:10px;bottom:10px;width:7px;border-radius:9px;background:linear-gradient(#2f7975,#2f7975) center top/100% 36% no-repeat,rgba(23,50,56,.2);pointer-events:none}
+
+/* Visible activity scrollbar for overflow in the yellow teaching/quiz panel. */
+.dialogue-panel{position:relative}
+.activity-scroll-track{position:absolute;right:12px;width:10px;border-radius:10px;background:rgba(23,50,56,.2);pointer-events:none;z-index:5}
+.activity-scroll-track[hidden]{display:none!important}
+.activity-scroll-thumb{width:100%;border-radius:10px;background:#2f7975;border:1px solid #e7f0eb;box-sizing:border-box}
