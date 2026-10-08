@@ -41,6 +41,34 @@
     new MutationObserver(()=>requestAnimationFrame(refreshSpeechOverflow)).observe(els.dialogue,{childList:true,characterData:true,subtree:true});
     window.addEventListener("resize",refreshSpeechOverflow);
   }
+  // A visible track for long activities, including the Design ordering quiz.
+  // The track is hidden when the yellow activity panel fits without scrolling.
+  const activityPanel=els.interaction;
+  const activityTrack=document.createElement("div");
+  activityTrack.className="activity-scroll-track";
+  activityTrack.setAttribute("aria-hidden","true");
+  const activityThumb=document.createElement("div");
+  activityThumb.className="activity-scroll-thumb";
+  activityTrack.appendChild(activityThumb);
+  activityPanel.parentElement.appendChild(activityTrack);
+  function refreshActivityScroll(){
+    const overflow=activityPanel.scrollHeight>activityPanel.clientHeight+3;
+    activityTrack.hidden=!overflow;
+    if(!overflow)return;
+    const parentRect=activityPanel.parentElement.getBoundingClientRect();
+    const panelRect=activityPanel.getBoundingClientRect();
+    activityTrack.style.top=(panelRect.top-parentRect.top)+"px";
+    activityTrack.style.height=panelRect.height+"px";
+    const ratio=activityPanel.clientHeight/activityPanel.scrollHeight;
+    const trackHeight=panelRect.height;
+    const thumbHeight=Math.max(32,trackHeight*ratio);
+    activityThumb.style.height=thumbHeight+"px";
+    activityThumb.style.transform="translateY("+((trackHeight-thumbHeight)*(activityPanel.scrollTop/(activityPanel.scrollHeight-activityPanel.clientHeight)))+"px)";
+  }
+  activityPanel.addEventListener("scroll",refreshActivityScroll,{passive:true});
+  new MutationObserver(()=>requestAnimationFrame(refreshActivityScroll)).observe(activityPanel,{childList:true,subtree:true,characterData:true});
+  window.addEventListener("resize",refreshActivityScroll);
+  requestAnimationFrame(refreshActivityScroll);
   function defaultWartsworth(s){
     if(s.id==="hospital")return state.hospitalInside?"focused":"talking";
     if(s.id==="explore")return state.hotspots.explore?"excited":"thinking";
