@@ -247,7 +247,7 @@
   function render(){
     const s=data.sections[state.section];setWartsworth(defaultWartsworth(s));
     els.label.textContent=s.label;els.title.textContent=s.title;els.sourceCue.textContent=s.sourceCue||"";
-    els.dialogue.textContent=s.intro;els.direction.textContent=s.prompt+" ↓ Scroll down to continue the activity.";setWartsworth(defaultWartsworth(s));document.querySelector(".scene").classList.remove("speaking-focus");
+    els.dialogue.textContent=s.intro;els.direction.textContent=s.prompt;setWartsworth(defaultWartsworth(s));document.querySelector(".scene").classList.remove("speaking-focus");
     const speechBubble=els.dialogue.closest(".scene-speech");
     if(speechBubble)speechBubble.style.display=s.id==="apply"?"none":"";
     const hospitalExterior=s.id==="hospital"&&!state.hospitalInside;
