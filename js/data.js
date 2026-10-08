@@ -10,7 +10,7 @@ window.GAME_DATA = {
         hotspots:[
           {id:"clot",label:"Inspect the clot",x:66,y:41,text:"This dark red mass is a blood clot. Clotting normally helps stop bleeding, but a clot becomes dangerous when it blocks blood flow where it should not.",extra:""},
           {id:"blockage",label:"Inspect the blockage",x:60,y:48,text:"Here the clot is blocking an artery that carries blood to part of the brain. If brain tissue loses blood and oxygen, an ischemic stroke can occur.",extra:""},
-          {id:"aspiration",label:"Inspect the catheter",x:83,y:41,text:"This thin tube is a catheter. In aspiration thrombectomy, doctors use suction through the catheter to draw the clot toward the opening so it can be removed.",extra:"Now we know the medical challenge: the clot is blocking blood flow. Next, we can look for ideas that might help with clot removal."}
+          {id:"aspiration",label:"Learn about clot removal",x:83,y:41,text:"Doctors can remove some blood clots using aspiration thrombectomy. This procedure uses a thin tube called a catheter and suction to draw a clot toward its opening. The catheter is not shown in this vessel scan; we’ll explore the technology later.",extra:"Now we know the medical challenge: the clot is blocking blood flow. Next, we can look for ideas that might help with clot removal."}
         ],
         quiz:{
           setup:"What problem are we trying to solve?",
