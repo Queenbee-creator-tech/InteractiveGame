@@ -220,3 +220,14 @@ button:disabled{cursor:not-allowed}
 .scene-speech::-webkit-scrollbar-track{background:rgba(23,50,56,.12);border-radius:12px}
 .scene-speech::-webkit-scrollbar-thumb{background:#2f7975;border:2px solid rgba(255,255,255,.9);border-radius:12px}
 .scene-speech::-webkit-scrollbar-thumb:hover{background:#205c59}
+
+/* Scrollbars are visual cues, not written instructions. They appear only for overflow. */
+html{overflow-y:auto;scrollbar-width:auto;scrollbar-color:#63b2ac #082d32}
+html::-webkit-scrollbar{width:13px}
+html::-webkit-scrollbar-track{background:#082d32}
+html::-webkit-scrollbar-thumb{background:#63b2ac;border:3px solid #082d32;border-radius:12px}
+.interaction{max-height:min(65vh,640px);overflow-y:auto;overscroll-behavior:contain;scrollbar-width:auto;scrollbar-color:#2f7975 #e5e9df}
+.interaction::-webkit-scrollbar{width:12px}
+.interaction::-webkit-scrollbar-track{background:#e5e9df;border-radius:12px}
+.interaction::-webkit-scrollbar-thumb{background:#2f7975;border:2px solid #e5e9df;border-radius:12px}
+@media(max-width:560px){.interaction{max-height:70vh}}
