@@ -231,3 +231,8 @@ html::-webkit-scrollbar-thumb{background:#63b2ac;border:3px solid #082d32;border
 .interaction::-webkit-scrollbar-track{background:#e5e9df;border-radius:12px}
 .interaction::-webkit-scrollbar-thumb{background:#2f7975;border:2px solid #e5e9df;border-radius:12px}
 @media(max-width:560px){.interaction{max-height:70vh}}
+
+/* Persistent visible overflow indicator for Wartsworth dialogue on systems that hide native scrollbars. */
+.scene-speech{position:absolute}
+.scene-speech.has-overflow{padding-right:1.5rem}
+.scene-speech.has-overflow::after{content:"";position:absolute;right:7px;top:10px;bottom:10px;width:7px;border-radius:9px;background:linear-gradient(#2f7975,#2f7975) center top/100% 36% no-repeat,rgba(23,50,56,.2);pointer-events:none}
