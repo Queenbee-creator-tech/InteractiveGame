@@ -213,3 +213,10 @@ button:disabled{cursor:not-allowed}
   .scene-speech{left:205px;right:auto;width:min(430px,34%)}
   .scene-speech::before{left:-18px;right:auto;transform:none}
 }
+
+/* Keep Wartsworth narration visibly scrollable when dialogue exceeds the bubble. */
+.scene-speech{scrollbar-width:auto;scrollbar-color:#2f7975 rgba(255,255,255,.55);overscroll-behavior:contain}
+.scene-speech::-webkit-scrollbar{width:12px}
+.scene-speech::-webkit-scrollbar-track{background:rgba(23,50,56,.12);border-radius:12px}
+.scene-speech::-webkit-scrollbar-thumb{background:#2f7975;border:2px solid rgba(255,255,255,.9);border-radius:12px}
+.scene-speech::-webkit-scrollbar-thumb:hover{background:#205c59}
