@@ -247,7 +247,7 @@
   function render(){
     const s=data.sections[state.section];setWartsworth(defaultWartsworth(s));
     els.label.textContent=s.label;els.title.textContent=s.title;els.sourceCue.textContent=s.sourceCue||"";
-    els.dialogue.textContent=s.intro;els.direction.textContent=s.prompt;setWartsworth(defaultWartsworth(s));document.querySelector(".scene").classList.remove("speaking-focus");
+    els.dialogue.textContent=s.intro;els.direction.textContent=s.prompt+" ↓ Scroll down to continue the activity.";setWartsworth(defaultWartsworth(s));document.querySelector(".scene").classList.remove("speaking-focus");
     const speechBubble=els.dialogue.closest(".scene-speech");
     if(speechBubble)speechBubble.style.display=s.id==="apply"?"none":"";
     const hospitalExterior=s.id==="hospital"&&!state.hospitalInside;
@@ -266,7 +266,7 @@
   }
   function restart(){state.section=0;state.completed.clear();state.hotspots={};state.orders={};state.finalChainDone=false;state.hospitalInside=false;state.hospitalSeen=new Set();state.fieldSeen=new Set();state.boaFound=false;state.designSeen=new Set();state.designOrder=[];state.designBriefingDone=false;state.designAttempts=0;render()}
   els.next.addEventListener("click",()=>{if(!state.completed.has(state.section))return;if(state.section<data.sections.length-1){state.section++;render()}else missionComplete()});
-  els.back.addEventListener("click",()=>{if(state.section>0){state.section--;render()}});
+  els.back.addEventListener("click",()=>{if(state.section>0){state.section--;if(data.sections[state.section].id==="explore"){state.hotspots.explore=false;state.boaFound=false;state.fieldSeen.clear();}render()}});
   $("restartBtn").addEventListener("click",restart);
   $("sceneHotspot").addEventListener("click",()=>{if(data.sections[state.section].id!=="explore")return;state.hotspots.explore=true;els.fieldHotspots.innerHTML="";$("sceneHotspot").hidden=true;setScene("assets/images/tooth-scan.png?v=20261006-10","Field scanner view of a boa constrictor with a close-up showing its backward-curving teeth and their prey-retention function.");els.dialogue.textContent="Scan complete! See how the teeth curve backward? Research on boa feeding links curved teeth with ensnaring and retaining prey. Look closely at what that shape helps the snake do.";setWartsworth("excited");renderInteraction(data.sections[state.section])});
   $("captionsBtn").addEventListener("click",e=>{const on=e.currentTarget.getAttribute("aria-pressed")==="true";e.currentTarget.setAttribute("aria-pressed",String(!on));e.currentTarget.textContent="Narration text: "+(!on?"On":"Off");$("sceneSpeech").hidden=on});
