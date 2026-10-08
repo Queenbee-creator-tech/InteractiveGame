@@ -31,6 +31,16 @@
     els.wartsworth.dataset.expression=expression;
     els.wartsworth.dataset.scene=s?.id||"hospital";
   }
+  // Update the visual overflow track whenever Wartsworth's dialogue changes.
+  const speechPanel=els.dialogue.closest(".scene-speech");
+  function refreshSpeechOverflow(){
+    if(!speechPanel)return;
+    speechPanel.classList.toggle("has-overflow",speechPanel.scrollHeight>speechPanel.clientHeight+2);
+  }
+  if(speechPanel){
+    new MutationObserver(()=>requestAnimationFrame(refreshSpeechOverflow)).observe(els.dialogue,{childList:true,characterData:true,subtree:true});
+    window.addEventListener("resize",refreshSpeechOverflow);
+  }
   function defaultWartsworth(s){
     if(s.id==="hospital")return state.hospitalInside?"focused":"talking";
     if(s.id==="explore")return state.hotspots.explore?"excited":"thinking";
